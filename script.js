@@ -5,10 +5,10 @@ const items = {
     pets: [
         { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', rarity: 'común' },
         { name: 'Blue kougra', img: 'assets/Blue Kougra.png', rarity: 'raro' },
-        { name: 'Baby Kougra', img: 'assets/Biscuit Kougra.png', rarity: 'legendario' },
+        { name: 'Baby Kougra', img: 'assets/Baby kougra.png', rarity: 'legendario' },
     ],
     comida: [
-        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida'  },
+        { name: 'Comida para Gato', img: 'assets/Jugo de pera.png', type: 'comida'  },
         { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida' },
         { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida' }
     ],
@@ -75,7 +75,10 @@ function updateInventory() {
 
     inventory.forEach(item => {
         const listItem = document.createElement('li');
-        listItem.textContent = `${item.name} (${item.type})`;
+        listItem.innerHTML = `
+            <img src="${item.img}" alt="${item.name}" width="50">
+            <p>${item.name} (${item.type})</p>
+        `;
         inventoryList.appendChild(listItem);
     });
 }
