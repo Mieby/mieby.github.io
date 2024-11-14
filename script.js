@@ -3,22 +3,22 @@ let coins = 100;
 // Listado de posibles premios en el gacha
 const items = {
     pets: [
-        { name: 'Biscuit kougra', img: 'assets/Baby Kougra.png', rarity: 'común' },
+        { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', rarity: 'común' },
         { name: 'Blue kougra', img: 'assets/Blue Kougra.png', rarity: 'raro' },
         { name: 'Baby Kougra', img: 'assets/Biscuit Kougra.png', rarity: 'legendario' },
     ],
-    ccomida: [
-        { name: 'Tortilla de huevo y cebolla', img: 'assets/cat_food.png', type: 'comida' },
-        { name: 'Manzana Comida', img: 'assets/dog_food.png', type: 'comida' },
-        { name: 'Jugo de Pero', img: 'assets/dragon_food.png', type: 'comida' }
+    comida: [
+        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida'  },
+        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida' },
+        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida' }
     ],
     libros: [
-        { name: 'Libro de Entrenamiento', img: 'assets/book_training.png', type: 'libro' },
-        { name: 'Guía de Mascotas', img: 'assets/book_guide.png', type: 'libro' }
+        { name: 'Libro de Entrenamiento', type: 'libro' },
+        { name: 'Guía de Mascotas', type: 'libro' }
     ],
     fondos: [
-        { name: 'Fondo de Bosque', img: 'assets/forest_background.png', type: 'fondo' },
-        { name: 'Fondo de Ciudad', img: 'assets/city_background.png', type: 'fondo' }
+        { name: 'Fondo de Bosque', type: 'fondo' },
+        { name: 'Fondo de Ciudad', type: 'fondo' }
     ]
 };
 
@@ -61,20 +61,12 @@ function pullGacha() {
         prize = items.fondos[Math.floor(Math.random() * items.fondos.length)];
     }
 
-    // Mostrar el resultado del gacha con imagen y nombre del objeto
-    document.getElementById('gacha-result').innerHTML = `
-        <h3>¡Has obtenido un item!</h3>
-        <img src="${prize.img}" alt="${prize.name}" width="100">
-        <p>${prize.name}</p>
-    `;
-
     // Almacenar items obtenidos en el inventario
     if (prize.type !== 'pet') {
         inventory.push(prize);
         updateInventory();
     }
 }
-
 
 // Actualizar el inventario visualmente
 function updateInventory() {
@@ -83,10 +75,7 @@ function updateInventory() {
 
     inventory.forEach(item => {
         const listItem = document.createElement('li');
-        listItem.innerHTML = `
-            <img src="${item.img}" alt="${item.name}" width="50">
-            ${item.name} (${item.type})
-        `;
+        listItem.textContent = `${item.name} (${item.type})`;
         inventoryList.appendChild(listItem);
     });
 }
