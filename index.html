@@ -11,11 +11,10 @@
     <nav>
         <button onclick="showTab('tab1')">Gacha</button>
         <button onclick="showTab('tab2')">Inventario</button>
-        <button onclick="showTab('tab2')">Pets</button>
-
-        
-    <!-- Tab 1: Gacha -->
+        <button onclick="showTab('tab3')">Mascotas</button>
     </nav>
+
+    <!-- Tab 1: Gacha -->
     <div id="tab1" class="tab">
         <h1>Gacha de Mascotas</h1>
         <div id="pet-area">
@@ -27,14 +26,16 @@
             <button id="pull-gacha">Tirar en el Gacha (10 Monedas)</button>
         </div>
     </div>
+
+    <!-- Tab 2: Inventario -->
     <div id="tab2" class="tab" style="display: none;">
-        <h2>Inventario</h2>
+        <h2>Inventario de Items</h2>
         <ul id="inventory-list"></ul>
     </div>
 
     <!-- Tab 3: Mascotas -->
     <div id="tab3" class="tab" style="display: none;">
-        <h2>Pets</h2>
+        <h2>Mascotas Obtenidas</h2>
         <div id="pets-list"></div>
     </div>
 
