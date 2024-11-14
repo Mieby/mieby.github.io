@@ -4,8 +4,8 @@ let coins = 100;
 const items = {
     pets: [
         { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', rarity: 'común' },
-        { name: 'Blue kougra', img: 'assets/dog.png', rarity: 'raro' },
-        { name: 'Dragón', img: 'assets/dragon.png', rarity: 'legendario' },
+        { name: 'Blue kougra', img: 'assets/Blue Kougra.png', rarity: 'raro' },
+        { name: 'Baby Kougra', img: 'assets/Biscuit Kougra.png', rarity: 'legendario' },
     ],
     comida: [
         { name: 'Comida para Gato', type: 'comida' },
