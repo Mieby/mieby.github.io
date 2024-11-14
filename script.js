@@ -11,6 +11,7 @@ const items = [
 ];
 
 let inventory = [];
+let ownedPets = [];
 
 function updateCoinsDisplay() {
     document.getElementById('coins').textContent = coins;
@@ -31,6 +32,13 @@ function pullGacha() {
     if (isPet) {
         prize = pets[Math.floor(Math.random() * pets.length)];
         document.getElementById('current-pet').src = prize.img;
+
+    // Si es una mascota nueva, la añadimos al listado de mascotas obtenidas
+        if (!ownedPets.some(pet => pet.name === prize.name)) {
+            ownedPets.push(prize);
+            updateOwnedPets();
+        }
+        
     } else {
         prize = items[Math.floor(Math.random() * items.length)];
     }
@@ -50,7 +58,24 @@ function updateInventory() {
     });
 }
 
+
+function updateOwnedPets() {
+    const petsList = document.getElementById('pets-list');
+    petsList.innerHTML = '';
+
+    ownedPets.forEach(pet => {
+        const petDiv = document.createElement('div');
+        petDiv.classList.add('pet-item');
+        petDiv.innerHTML = `
+            <img src="${pet.img}" alt="${pet.name}" width="100">
+            <p>${pet.name} (${pet.rarity})</p>
+        `;
+        petsList.appendChild(petDiv);
+    });
+}
+
 document.getElementById('pull-gacha').addEventListener('click', pullGacha);
 
 updateCoinsDisplay();
 updateInventory();
+updateOwnedPets();
