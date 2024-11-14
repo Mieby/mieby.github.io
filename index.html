@@ -1,1 +1,40 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pet Gacha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <button onclick="showTab('tab1')">Gacha</button>
+        <button onclick="showTab('tab2')">Inventario</button>
+    </nav>
+    <div id="tab1" class="tab">
+        <h1>Gacha de Mascotas</h1>
+        <div id="pet-area">
+            <h2>Mascota Actual</h2>
+            <img id="current-pet" src="assets/no-pet.png" alt="No pet" width="200">
+        </div>
+        <div id="coins-area">
+            <p>Monedas: <span id="coins">100</span></p>
+            <button id="pull-gacha">Tirar en el Gacha (10 Monedas)</button>
+        </div>
+    </div>
+    <div id="tab2" class="tab" style="display: none;">
+        <h2>Inventario</h2>
+        <ul id="inventory-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function showTab(tab) {
+            document.getElementById('tab1').style.display = 'none';
+            document.getElementById('tab2').style.display = 'none';
+            document.getElementById(tab).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
