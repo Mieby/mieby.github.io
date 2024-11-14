@@ -56,8 +56,8 @@ button:hover {
 
 /* Estilo para las imágenes en el inventario y las mascotas */
 img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 8px;
     margin: 5px;
 }
@@ -77,8 +77,8 @@ img {
 
 /* Estilo de los elementos del inventario */
 #inventory-list li img, .pet-item img {
-    max-width: 80px;  /* Ajusta el tamaño de las imágenes */
-    max-height: 80px;
+    max-width: 120px;  /* Ajusta el tamaño de las imágenes */
+    max-height: 120px;
 }
 
 #inventory-list li p, .pet-item p {
