@@ -8,9 +8,9 @@ const items = {
         { name: 'Baby Kougra', img: 'assets/Biscuit Kougra.png', rarity: 'legendario' },
     ],
     ccomida: [
-        { name: 'Comida para Gato', img: 'assets/cat_food.png', type: 'comida' },
-        { name: 'Comida para Perro', img: 'assets/dog_food.png', type: 'comida' },
-        { name: 'Comida para Dragón', img: 'assets/dragon_food.png', type: 'comida' }
+        { name: 'Tortilla de huevo y cebolla', img: 'assets/cat_food.png', type: 'comida' },
+        { name: 'Manzana Comida', img: 'assets/dog_food.png', type: 'comida' },
+        { name: 'Jugo de Pero', img: 'assets/dragon_food.png', type: 'comida' }
     ],
     libros: [
         { name: 'Libro de Entrenamiento', img: 'assets/book_training.png', type: 'libro' },
