@@ -8,7 +8,7 @@ const items = {
         { name: 'Baby Kougra', img: 'assets/Baby kougra.png', rarity: 'legendario' },
     ],
     comida: [
-        { name: 'Comida para Gato', img: 'assets/Jugo de pera.png', type: 'comida'  },
+        { name: 'Jugo de Pera', img: 'assets/Jugo de pera.gif', type: 'comida'  },
         { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida' },
         { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida' }
     ],
