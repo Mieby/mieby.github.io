@@ -44,7 +44,7 @@ function pullGacha() {
     const randomNum = Math.random() * 100;  // Genera un número entre 0 y 100
     let prize;
 
-    if (randomNum < 0.5) {  // 0.5% de probabilidad de obtener un pet
+    if (randomNum < 60.5) {  // 0.5% de probabilidad de obtener un pet
         prize = items.pets[Math.floor(Math.random() * items.pets.length)];
         document.getElementById('current-pet').src = prize.img;
 
