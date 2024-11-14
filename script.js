@@ -3,8 +3,8 @@ let coins = 100;
 // Listado de posibles premios en el gacha
 const items = {
     pets: [
-        { name: 'kougra', img: 'assets/Biscuit Kougra.png', rarity: 'común' },
-        { name: 'Perro', img: 'assets/dog.png', rarity: 'raro' },
+        { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', rarity: 'común' },
+        { name: 'Blue kougra', img: 'assets/dog.png', rarity: 'raro' },
         { name: 'Dragón', img: 'assets/dragon.png', rarity: 'legendario' },
     ],
     comida: [
