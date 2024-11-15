@@ -44,7 +44,7 @@ function pullGacha() {
     const randomNum = Math.random() * 100;  // Genera un número entre 0 y 100
     let prize;
 
-    if (randomNum < 0.5) {  // 0.5% de probabilidad de obtener un pet
+    if (randomNum < 20.5) {  // 0.5% de probabilidad de obtener un pet
         prize = items.pets[Math.floor(Math.random() * items.pets.length)];
         document.getElementById('gacha-name').src = prize.img;
 
@@ -55,7 +55,7 @@ function pullGacha() {
         }
     } else if (randomNum < 60.5) {  // 60% de probabilidad de obtener comida
         prize = items.comida[Math.floor(Math.random() * items.comida.length)];
-    } else if (randomNum < 80.5) {  // 20% de probabilidad de obtener un libro
+    } else if (randomNum < 20.5) {  // 20% de probabilidad de obtener un libro
         prize = items.libros[Math.floor(Math.random() * items.libros.length)];
     } else {  // 10% de probabilidad de obtener un fondo
         prize = items.fondos[Math.floor(Math.random() * items.fondos.length)];
