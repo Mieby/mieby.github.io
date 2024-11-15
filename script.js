@@ -46,7 +46,7 @@ function pullGacha() {
 
     if (randomNum < 0.5) {  // 0.5% de probabilidad de obtener un pet
         prize = items.pets[Math.floor(Math.random() * items.pets.length)];
-        document.getElementById('current-pet').src = prize.img;
+        document.getElementById('gacha-name').src = prize.img;
 
         // Si la mascota es nueva, añadirla a la lista de mascotas obtenidas
         if (!ownedPets.some(pet => pet.name === prize.name)) {
