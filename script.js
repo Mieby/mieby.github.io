@@ -62,9 +62,12 @@ function pullGacha() {
         inventory.push(prize);
         updateInventory();
     } else {
-        document.getElementById('current-pet').src = prize.img;  // Mostrar solo imágenes de mascotas
-    }
-    }
+    prize = items.comida.concat(items.libros, items.fondos)[Math.floor(Math.random() * 
+items.comida.concat(items.libros, items.fondos).length)];
+    document.getElementById('current-pet').src = prize.img; // Mostrar temporalmente el premio
+    inventory.push(prize);
+    updateInventory();
+}
     
 }
 
