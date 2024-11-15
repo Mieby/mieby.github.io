@@ -103,10 +103,10 @@ function updateOwnedPets() {
        
         petDiv.innerHTML = `
             <img src="${pet.img}" alt="${pet.name}" width="100">
+            <p><strong>Apodo:</strong> ${pet.nickname || 'Sin Apodo'}</p>
             <p>${pet.name}</p>
             <p><strong>Nivel:</strong> ${pet.level}</p>
             <p><strong>Libros Leídos:</strong> ${pet.booksRead}</p>
-            <p><strong>Apodo:</strong> ${pet.nickname || 'Sin Apodo'}</p>
             <button onclick="giveNickname(${ownedPets.indexOf(pet)})">Asignar Apodo</button>
         `;
         petsList.appendChild(petDiv);
