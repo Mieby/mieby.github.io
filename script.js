@@ -8,17 +8,17 @@ const items = {
         { name: 'Baby Kougra', img: 'assets/Baby kougra.png', rarity: 'legendario' },
     ],
     comida: [
-        { name: 'Jugo de Pera', img: 'assets/Jugo de pera.gif', rarity: 'común'  },
-        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', rarity: 'común' },
-        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', rarity: 'común' }
+        { name: 'Jugo de Pera', img: 'assets/Jugo de pera.gif', type: 'comida'  },
+        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida' },
+        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', type: 'comida' }
     ],
     libros: [
-        { name: 'Libro de Entrenamiento', type: 'libro' },
-        { name: 'Guía de Mascotas', type: 'libro' }
+        { name: 'Libro de Entrenamiento' , img: 'assets/Jugo de pera.gif', type: 'libro' },
+        { name: 'Guía de Mascotas', img: 'assets/Jugo de pera.gif', type: 'libro' }
     ],
     fondos: [
-        { name: 'Fondo de Bosque', type: 'fondo' },
-        { name: 'Fondo de Ciudad', type: 'fondo' }
+        { name: 'Fondo de Bosque',  img: 'assets/Jugo de pera.gif', type: 'fondo' },
+        { name: 'Fondo de Ciudad', img: 'assets/Jugo de pera.gif', type: 'fondo' }
     ]
 };
 
