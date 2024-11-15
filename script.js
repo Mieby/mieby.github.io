@@ -36,12 +36,8 @@ function pullGacha() {
 
     console.log('Tirando en el gacha...')
     
-    const gachaButton = document.getElementById('pull-gacha');
-    gachaButton.disabled = true;  // Deshabilita el botón temporalmente
-    
     if (coins < 10) {
         alert('No tienes suficientes monedas');
-         gachaButton.disabled = false; // Reactiva el botón si no hay suficientes monedas
         return;
     }
 
@@ -64,8 +60,6 @@ function pullGacha() {
     prize = items.comida.concat(items.libros, items.fondos)[Math.floor(Math.random() * 
     items.comida.concat(items.libros, items.fondos).length)];
     document.getElementById('current-pet').src = prize.img; // Mostrar temporalmente el premio
-    inventory.push(prize);
-    updateInventory();
     }
 
 
