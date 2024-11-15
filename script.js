@@ -1,94 +1,107 @@
-const gachaItems = [
-  { type: "pet", name: "Cute Dog", image: "assets/pet1.png", probability: 0.5 },
-  { type: "pet", name: "Adorable Cat", image: "assets/pet2.png", probability: 0.5 },
-  { type: "food", name: "Fish Food", image: "assets/food.png", probability: 0.6 },
-  { type: "book", name: "Magic Book", image: "assets/book.png", probability: 0.2 },
-  { type: "background", name: "Beach Background", image: "assets/background.png", probability: 0.1 }
-];
+let coins = 100;
 
-document.getElementById('pull-gacha').addEventListener('click', function() {
-    const coinsElement = document.getElementById('coins');
-    let coins = parseInt(coinsElement.textContent);
+// Listado de posibles premios en el gacha
+const items = {
+    pets: [
+        { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', rarity: 'común' },
+        { name: 'Blue kougra', img: 'assets/Blue Kougra.png', rarity: 'raro' },
+        { name: 'Baby Kougra', img: 'assets/Baby kougra.png', rarity: 'legendario' },
+    ],
+    comida: [
+        { name: 'Jugo de Pera', img: 'assets/Jugo de pera.gif', rarity: 'común'  },
+        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', rarity: 'común'' },
+        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', rarity: 'común'' }
+    ],
+    libros: [
+        { name: 'Libro de Entrenamiento', type: 'libro' },
+        { name: 'Guía de Mascotas', type: 'libro' }
+    ],
+    fondos: [
+        { name: 'Fondo de Bosque', type: 'fondo' },
+        { name: 'Fondo de Ciudad', type: 'fondo' }
+    ]
+};
 
-    // Verificar si el jugador tiene suficientes monedas
-    if (coins >= 10) {
-        coins -= 10; // Reducir monedas
-        coinsElement.textContent = coins;
+// Inventario para items y lista de mascotas obtenidas
+let inventory = [];
+let ownedPets = [];
 
-        // Realizar la tirada del gacha
-        const result = pullGacha();
-        updateGachaResult(result);
-    } else {
-        alert('¡No tienes suficientes monedas!');
-    }
-});
+// Actualizar la cantidad de monedas
+function updateCoinsDisplay() {
+    document.getElementById('coins').textContent = coins;
+}
 
+// Función para determinar el tipo de item en función de las probabilidades
 function pullGacha() {
-    // Calculamos el total de probabilidad
-    const totalProbability = gachaItems.reduce((sum, item) => sum + item.probability, 0);
-    
-    // Generar un número aleatorio para determinar qué item o mascota tocará
-    const random = Math.random() * totalProbability;
-    let accumulatedProbability = 0;
+    if (coins < 10) {
+        alert('No tienes suficientes monedas');
+        return;
+    }
 
-    // Determinar el item tocado según la probabilidad
-    for (let i = 0; i < gachaItems.length; i++) {
-        accumulatedProbability += gachaItems[i].probability;
-        if (random < accumulatedProbability) {
-            return gachaItems[i];
+    coins -= 10;
+    updateCoinsDisplay();
+
+    const randomNum = Math.random() * 100;  // Genera un número entre 0 y 100
+    let prize;
+
+    if (randomNum < 0.5) {  // 0.5% de probabilidad de obtener un pet
+        prize = items.pets[Math.floor(Math.random() * items.pets.length)];
+        document.getElementById('gacha-name').src = prize.img;
+
+        // Si la mascota es nueva, añadirla a la lista de mascotas obtenidas
+        if (!ownedPets.some(pet => pet.name === prize.name)) {
+            ownedPets.push(prize);
+            updateOwnedPets();
         }
+    } else if (randomNum < 60.5) {  // 60% de probabilidad de obtener comida
+        prize = items.comida[Math.floor(Math.random() * items.comida.length)];
+    } else if (randomNum < 80.5) {  // 20% de probabilidad de obtener un libro
+        prize = items.libros[Math.floor(Math.random() * items.libros.length)];
+    } else {  // 10% de probabilidad de obtener un fondo
+        prize = items.fondos[Math.floor(Math.random() * items.fondos.length)];
     }
-    return null; // Si no se encuentra nada, lo cual no debería pasar
-}
 
-function updateGachaResult(item) {
-    const gachaImage = document.getElementById('gacha-image');
-    const gachaName = document.getElementById('gacha-name');
-
-    // Actualizar la imagen y el nombre según el item tocado
-    gachaImage.src = item.image;
-    gachaName.textContent = item.name;
-
-    // Si es una mascota, añadirla a la sección "Your Pets"
-    if (item.type === "pet") {
-        addPetToYourPets(item);
-    } else {
-        addItemToInventory(item);
+    // Almacenar items obtenidos en el inventario
+    if (prize.type !== 'pet') {
+        inventory.push(prize);
+        updateInventory();
     }
 }
 
-function addPetToYourPets(pet) {
-    const petArea = document.getElementById('your-pets');
-    const petElement = document.createElement('div');
-    petElement.classList.add('pet');
-    
-    const petImage = document.createElement('img');
-    petImage.src = pet.image;
-    petImage.alt = pet.name;
-    petImage.width = 100;  // Ajusta el tamaño si es necesario
+// Actualizar el inventario visualmente
+function updateInventory() {
+    const inventoryList = document.getElementById('inventory-list');
+    inventoryList.innerHTML = '';
 
-    const petName = document.createElement('p');
-    petName.textContent = pet.name;
-
-    petElement.appendChild(petImage);
-    petElement.appendChild(petName);
-    petArea.appendChild(petElement);
+    inventory.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <img src="${item.img}" alt="${item.name}" width="50">
+            <p>${item.name} (${item.type})</p>
+        `;
+        inventoryList.appendChild(listItem);
+    });
 }
 
-function addItemToInventory(item) {
-    const inventoryArea = document.getElementById('inventory');
-    const itemElement = document.createElement('div');
-    itemElement.classList.add('item');
-    
-    const itemImage = document.createElement('img');
-    itemImage.src = item.image;
-    itemImage.alt = item.name;
-    itemImage.width = 100;
+// Actualizar la lista de mascotas obtenidas visualmente
+function updateOwnedPets() {
+    const petsList = document.getElementById('pets-list');
+    petsList.innerHTML = '';
 
-    const itemName = document.createElement('p');
-    itemName.textContent = item.name;
-
-    itemElement.appendChild(itemImage);
-    itemElement.appendChild(itemName);
-    inventoryArea.appendChild(itemElement);
+    ownedPets.forEach(pet => {
+        const petDiv = document.createElement('div');
+        petDiv.classList.add('pet-item');
+        petDiv.innerHTML = `
+            <img src="${pet.img}" alt="${pet.name}" width="100">
+            <p>${pet.name} (${pet.rarity})</p>
+        `;
+        petsList.appendChild(petDiv);
+    });
 }
+
+// Evento para tirar en el gacha
+document.getElementById('pull-gacha').addEventListener('click', pullGacha);
+
+updateCoinsDisplay();
+updateInventory();
+updateOwnedPets();
