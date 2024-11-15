@@ -1,4 +1,4 @@
-import { items } from './items.js';
+import { items } from './Items.js';
 
 let coins = 100;
 
