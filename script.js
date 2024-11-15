@@ -3,9 +3,9 @@ let coins = 100;
 // Listado de posibles premios en el gacha
 const items = {
     pets: [
-        { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', type: 'Pet'},
-        { name: 'Blue kougra', img: 'assets/Blue Kougra.png', type: 'Pet'},
-        { name: 'Baby Kougra', img: 'assets/Baby kougra.png', type: 'Pet'},
+        { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', type: 'Pet', LVL: 1, Books: 0, Nickname: '' },
+        { name: 'Blue kougra', img: 'assets/Blue Kougra.png', type: 'Pet', LVL: 1, Books: 0, Nickname: ''},
+        { name: 'Baby Kougra', img: 'assets/Baby kougra.png', type: 'Pet', LVL: 1, Books: 0, Nickname: ''}
     ],
     comida: [
         { name: 'Jugo de Pera', img: 'assets/Jugo de pera.gif', type: 'comida'  },
@@ -54,7 +54,12 @@ function pullGacha() {
 
      // Si la mascota es nueva, añadirla a la lista de mascotas obtenidas
         if (!ownedPets.some(pet => pet.name === prize.name)) {
-            ownedPets.push(prize);
+            ownedPets.push({
+                ...prize,  // Incluye todas las propiedades del objeto pet
+                nickname: '',  // El apodo es vacío inicialmente
+                level: 1,
+                booksRead: 0    
+            });
             updateOwnedPets();
         }
     } else {
@@ -95,12 +100,25 @@ function updateOwnedPets() {
     ownedPets.forEach(pet => {
         const petDiv = document.createElement('div');
         petDiv.classList.add('pet-item');
+       
         petDiv.innerHTML = `
             <img src="${pet.img}" alt="${pet.name}" width="100">
             <p>${pet.name}</p>
+            <p><strong>Nivel:</strong> ${pet.level}</p>
+            <p><strong>Libros Leídos:</strong> ${pet.booksRead}</p>
+            <p><strong>Apodo:</strong> ${pet.nickname || 'Sin Apodo'}</p>
+            <button onclick="giveNickname(${ownedPets.indexOf(pet)})">Asignar Apodo</button>
         `;
         petsList.appendChild(petDiv);
     });
+}
+
+function giveNickname(petIndex) {
+    const nickname = prompt("Ingresa un apodo para tu mascota:");
+    if (nickname) {
+        ownedPets[petIndex].nickname = nickname;
+        updateOwnedPets();
+    }
 }
 
 // Asegúrate de que el DOM esté completamente cargado
