@@ -97,8 +97,8 @@ function updateOwnedPets() {
     });
 }
 
-    // Asegúrate de que el DOM esté completamente cargado
-    document.addEventListener('DOMContentLoaded', function () {
+// Asegúrate de que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function () {
         // Actualiza la visualización de las monedas, inventario y mascotas
         updateCoinsDisplay();
         updateInventory();
