@@ -3,9 +3,9 @@ let coins = 100;
 // Listado de posibles premios en el gacha
 const items = {
     pets: [
-        { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', type: 'Pet', rarity: 'común' },
-        { name: 'Blue kougra', img: 'assets/Blue Kougra.png', type: 'Pet', rarity: 'raro' },
-        { name: 'Baby Kougra', img: 'assets/Baby kougra.png', type: 'Pet', rarity: 'legendario' },
+        { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', type: 'Pet'},
+        { name: 'Blue kougra', img: 'assets/Blue Kougra.png', type: 'Pet'},
+        { name: 'Baby Kougra', img: 'assets/Baby kougra.png', type: 'Pet'},
     ],
     comida: [
         { name: 'Jugo de Pera', img: 'assets/Jugo de pera.gif', type: 'comida'  },
@@ -79,7 +79,7 @@ function updateInventory() {
         const listItem = document.createElement('li');
         listItem.innerHTML = `
             <img src="${item.img}" alt="${item.name}" width="50">
-            <p>${item.name} (${item.type})</p>
+            <p>${item.name}</p>
         `;
         inventoryList.appendChild(listItem);
     });
@@ -95,7 +95,7 @@ function updateOwnedPets() {
         petDiv.classList.add('pet-item');
         petDiv.innerHTML = `
             <img src="${pet.img}" alt="${pet.name}" width="100">
-            <p>${pet.name} (${pet.rarity})</p>
+            <p>${pet.name}</p>
         `;
         petsList.appendChild(petDiv);
     });
