@@ -97,9 +97,11 @@ function updateOwnedPets() {
     });
 }
 
-// Evento para tirar en el gacha
-document.getElementById('pull-gacha').addEventListener('click', pullGacha);
+document.addEventListener('DOMContentLoaded', function () {
+    // Tu código JavaScript aquí
+    updateCoinsDisplay();
+    updateInventory();
+    updateOwnedPets();
 
-updateCoinsDisplay();
-updateInventory();
-updateOwnedPets();
+    document.getElementById('pull-gacha').addEventListener('click', pullGacha);
+});;
