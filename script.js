@@ -9,8 +9,8 @@ const items = {
     ],
     comida: [
         { name: 'Jugo de Pera', img: 'assets/Jugo de pera.gif', rarity: 'común'  },
-        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', rarity: 'común'' },
-        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', rarity: 'común'' }
+        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', rarity: 'común' },
+        { name: 'Comida para Gato', img: 'assets/Biscuit Kougra.png', rarity: 'común' }
     ],
     libros: [
         { name: 'Libro de Entrenamiento', type: 'libro' },
@@ -55,7 +55,7 @@ function pullGacha() {
         }
     } else if (randomNum < 60.5) {  // 60% de probabilidad de obtener comida
         prize = items.comida[Math.floor(Math.random() * items.comida.length)];
-    } else if (randomNum < 20.5) {  // 20% de probabilidad de obtener un libro
+    } else if (randomNum < 80.5) {  // 20% de probabilidad de obtener un libro
         prize = items.libros[Math.floor(Math.random() * items.libros.length)];
     } else {  // 10% de probabilidad de obtener un fondo
         prize = items.fondos[Math.floor(Math.random() * items.fondos.length)];
