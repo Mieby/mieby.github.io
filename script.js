@@ -50,6 +50,7 @@ function pullGacha() {
     if (randomNum < 20.5) {  // 0.5% de probabilidad de obtener un pet
         prize = items.pets[Math.floor(Math.random() * items.pets.length)];
         document.getElementById('current-pet').src = prize.img;
+        document.getElementById('current-pet-name').textContent = prize.name;
 
      // Si la mascota es nueva, añadirla a la lista de mascotas obtenidas
         if (!ownedPets.some(pet => pet.name === prize.name)) {
@@ -60,6 +61,7 @@ function pullGacha() {
     prize = items.comida.concat(items.libros, items.fondos)[Math.floor(Math.random() * 
     items.comida.concat(items.libros, items.fondos).length)];
     document.getElementById('current-pet').src = prize.img; // Mostrar temporalmente el premio
+    document.getElementById('current-pet-name').textContent = prize.name;    
     }
 
 
