@@ -64,6 +64,8 @@ function pullGacha() {
     } else {
         document.getElementById('current-pet').src = prize.img;  // Mostrar solo imágenes de mascotas
     }
+    }
+    
 }
 
 // Actualizar el inventario visualmente
