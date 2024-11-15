@@ -33,6 +33,9 @@ function updateCoinsDisplay() {
 
 // Función para determinar el tipo de item en función de las probabilidades
 function pullGacha() {
+
+    console.log('Tirando en el gacha...')
+    
     const gachaButton = document.getElementById('pull-gacha');
     gachaButton.disabled = true;  // Deshabilita el botón temporalmente
     
