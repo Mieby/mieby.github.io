@@ -97,7 +97,6 @@ function updateOwnedPets() {
     });
 }
 
-<script>
     // Asegúrate de que el DOM esté completamente cargado
     document.addEventListener('DOMContentLoaded', function () {
         // Actualiza la visualización de las monedas, inventario y mascotas
@@ -115,4 +114,4 @@ function updateOwnedPets() {
             console.log('El botón "pull-gacha" no se encuentra.');
         }
     });
-</script>
+
