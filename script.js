@@ -62,7 +62,7 @@ function pullGacha() {
     }
 
     // Almacenar items obtenidos en el inventario
-    if (prize.type !== 'pet') {
+    if (prize && prize.type !== 'pet') {
         inventory.push(prize);
         updateInventory();
     }
