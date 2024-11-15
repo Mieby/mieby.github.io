@@ -68,9 +68,6 @@ function pullGacha() {
         inventory.push(prize);
         updateInventory();
     }
-    setTimeout(() => {
-        gachaButton.disabled = false;  // Reactiva el botón después de un pequeño retardo
-    }, 500);  // Espera 500ms para evitar clicks dobles accidentales    
 }
  
 // Actualizar el inventario visualmente
