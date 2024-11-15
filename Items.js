@@ -1,5 +1,5 @@
 // Listado de posibles premios en el gacha
-const items = {
+export const items = {
     pets: [
         { name: 'Biscuit kougra', img: 'assets/Biscuit Kougra.png', type: 'Pet', LVL: 1, Books: 0, Nickname: '' },
         { name: 'Blue kougra', img: 'assets/Blue Kougra.png', type: 'Pet', LVL: 1, Books: 0, Nickname: ''},
