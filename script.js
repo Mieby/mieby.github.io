@@ -53,23 +53,21 @@ function pullGacha() {
             ownedPets.push(prize);
             updateOwnedPets();
         }
-    }else {  // Para comida, libros y fondos
-        const allItems = items.comida.concat(items.libros, items.fondos);
-        prize = allItems[Math.floor(Math.random() * allItems.length)];
+    } else {
+    prize = items.comida.concat(items.libros, items.fondos)[Math.floor(Math.random() * 
+    items.comida.concat(items.libros, items.fondos).length)];
+    document.getElementById('current-pet').src = prize.img; // Mostrar temporalmente el premio
+    inventory.push(prize);
+    updateInventory();
+    }
+}
 
     // Almacenar items obtenidos en el inventario
     if (prize.type !== 'Pet') {
         inventory.push(prize);
         updateInventory();
-    } else {
-    prize = items.comida.concat(items.libros, items.fondos)[Math.floor(Math.random() * 
-items.comida.concat(items.libros, items.fondos).length)];
-    document.getElementById('current-pet').src = prize.img; // Mostrar temporalmente el premio
-    inventory.push(prize);
-    updateInventory();
-}
-    
-}
+ 
+
 
 // Actualizar el inventario visualmente
 function updateInventory() {
