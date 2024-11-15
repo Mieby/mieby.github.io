@@ -53,13 +53,13 @@ function pullGacha() {
             ownedPets.push(prize);
             updateOwnedPets();
         }
-    } else if (randomNum < 60.5) {  // 60% de probabilidad de obtener comida
-        prize = items.comida[Math.floor(Math.random() * items.comida.length)];
-    } else if (randomNum < 80.5) {  // 20% de probabilidad de obtener un libro
-        prize = items.libros[Math.floor(Math.random() * items.libros.length)];
-    } else {  // 10% de probabilidad de obtener un fondo
-        prize = items.fondos[Math.floor(Math.random() * items.fondos.length)];
-    }
+    } else {
+    prize = items.comida.concat(items.libros, items.fondos)[Math.floor(Math.random() * 
+items.comida.concat(items.libros, items.fondos).length)];
+    document.getElementById('current-pet').src = prize.img; // Mostrar temporalmente el premio
+    inventory.push(prize);
+    updateInventory();
+}
 
     // Almacenar items obtenidos en el inventario
     if (prize && prize.type !== 'Pet') {
