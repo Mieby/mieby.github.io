@@ -77,8 +77,8 @@ img {
 
 /* Estilo de los elementos del inventario */
 #inventory-list li img, .pet-item img {
-    width: 120px;  /* Establece un tamaño fijo */
-    height: 120px;  /* Establece un tamaño fijo */
+    width: 80px;  /* Establece un tamaño fijo */
+    height: 80px;  /* Establece un tamaño fijo */
     border-radius: 8px;
     margin: 5px;
 }
@@ -86,4 +86,11 @@ img {
 #inventory-list li p, .pet-item p {
     margin-top: 5px;
     font-size: 14px;
+}
+
+#pets-list .pet-item img {
+    width: 120px;  /* Establece un tamaño fijo para las imágenes de las mascotas */
+    height: 120px;  /* Establece un tamaño fijo para las imágenes de las mascotas */
+    border-radius: 8px;
+    margin: 5px;
 }
