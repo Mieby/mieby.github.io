@@ -33,8 +33,12 @@ function updateCoinsDisplay() {
 
 // Función para determinar el tipo de item en función de las probabilidades
 function pullGacha() {
+    const gachaButton = document.getElementById('pull-gacha');
+    gachaButton.disabled = true;  // Deshabilita el botón temporalmente
+    
     if (coins < 10) {
         alert('No tienes suficientes monedas');
+         gachaButton.disabled = false; // Reactiva el botón si no hay suficientes monedas
         return;
     }
 
@@ -67,10 +71,11 @@ function pullGacha() {
         inventory.push(prize);
         updateInventory();
     }
+    setTimeout(() => {
+        gachaButton.disabled = false;  // Reactiva el botón después de un pequeño retardo
+    }, 500);  // Espera 500ms para evitar clicks dobles accidentales    
 }
  
-
-
 // Actualizar el inventario visualmente
 function updateInventory() {
     const inventoryList = document.getElementById('inventory-list');
