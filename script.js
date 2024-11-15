@@ -48,26 +48,23 @@ function pullGacha() {
         prize = items.pets[Math.floor(Math.random() * items.pets.length)];
         document.getElementById('current-pet').src = prize.img;
 
-        // Si la mascota es nueva, añadirla a la lista de mascotas obtenidas
+     // Si la mascota es nueva, añadirla a la lista de mascotas obtenidas
         if (!ownedPets.some(pet => pet.name === prize.name)) {
             ownedPets.push(prize);
             updateOwnedPets();
         }
-    } else {
-    prize = items.comida.concat(items.libros, items.fondos)[Math.floor(Math.random() * 
-items.comida.concat(items.libros, items.fondos).length)];
-    document.getElementById('current-pet').src = prize.img; // Mostrar temporalmente el premio
-    inventory.push(prize);
-    updateInventory();
-}
+    } else if (randomNum < 60.5) {  // 60% de probabilidad de obtener comida
+        prize = items.comida[Math.floor(Math.random() * items.comida.length)];
+    } else if (randomNum < 80.5) {  // 20% de probabilidad de obtener un libro
+        prize = items.libros[Math.floor(Math.random() * items.libros.length)];
+    } else {  // 10% de probabilidad de obtener un fondo
+        prize = items.fondos[Math.floor(Math.random() * items.fondos.length)];
+    }
 
     // Almacenar items obtenidos en el inventario
-    if (prize && prize.type !== 'Pet') {
-        // Evitar duplicados en el inventario
-        if (!inventory.some(item => item.name === prize.name)) {
-            inventory.push(prize);
-            updateInventory();
-        }
+    if (prize.type !== 'Pet') {
+        inventory.push(prize);
+        updateInventory();
     }
 }
 
