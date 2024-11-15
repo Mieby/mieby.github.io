@@ -106,6 +106,19 @@ function giveNickname(petIndex) {
     }
 }
 
+function resetData() {
+    localStorage.clear();  // Borra todos los datos de LocalStorage
+    coins = 100;  // Restablecer valores iniciales
+    inventory = [];
+    ownedPets = [];
+    updateCoinsDisplay();
+    updateInventory();
+    updateOwnedPets();
+}
+
+// Adjunta el evento al botón 'Borrar Datos'
+document.getElementById('reset-data').addEventListener('click', resetData);
+
 // Asegúrate de que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function () {
     coins = localStorage.getItem('coins') ? parseInt(localStorage.getItem('coins')) : 100;
