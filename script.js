@@ -109,6 +109,7 @@ function updateOwnedPets() {
 
 // Asegúrate de que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function () {
+    console.log('Test de log');
         // Actualiza la visualización de las monedas, inventario y mascotas
         updateCoinsDisplay();
         updateInventory();
