@@ -89,8 +89,8 @@ img {
 }
 
 #pets-list .pet-item img {
-    width: 120px;  /* Establece un tamaño fijo para las imágenes de las mascotas */
-    height: 120px;  /* Establece un tamaño fijo para las imágenes de las mascotas */
+    width: 200px;  /* Establece un tamaño fijo para las imágenes de las mascotas */
+    height: 200px;  /* Establece un tamaño fijo para las imágenes de las mascotas */
     border-radius: 8px;
     margin: 5px;
 }
