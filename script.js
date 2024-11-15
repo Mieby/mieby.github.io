@@ -61,12 +61,18 @@ function pullGacha() {
     prize = combinedItems[Math.floor(Math.random() * combinedItems.length)];
 
     // Mostrar temporalmente el premio obtenido
-    document.getElementById('current-pet').src = prize.img;
+    const petArea = document.getElementById('current-pet');
+    if (petArea) {
+        petArea.src = prize.img;
+    }
 
     // Almacenar items obtenidos en el inventario
     if (prize && prize.type !== 'Pet') {
-        inventory.push(prize);
-        updateInventory();
+        // Evitar duplicados en el inventario
+        if (!inventory.some(item => item.name === prize.name)) {
+            inventory.push(prize);
+            updateInventory();
+        }
     }
 }
 
