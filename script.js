@@ -9,6 +9,7 @@ let ownedPets = [];
 // Actualizar la cantidad de monedas
 function updateCoinsDisplay() {
     document.getElementById('coins').textContent = coins;
+    localStorage.setItem('coins', coins); //guarda monedas
 }
 
 // Función para determinar el tipo de item en función de las probabilidades
@@ -70,6 +71,8 @@ function updateInventory() {
         `;
         inventoryList.appendChild(listItem);
     });
+    
+    localStorage.setItem('inventory', JSON.stringify(inventory)); // Guardar inventario
 }
 
 // Actualizar la lista de mascotas obtenidas visualmente
@@ -91,6 +94,8 @@ function updateOwnedPets() {
         `;
         petsList.appendChild(petDiv);
     });
+    
+    localStorage.setItem('ownedPets', JSON.stringify(ownedPets)); // Guardar mascotas obtenidas
 }
 
 function giveNickname(petIndex) {
@@ -103,7 +108,10 @@ function giveNickname(petIndex) {
 
 // Asegúrate de que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Test de log');
+    coins = localStorage.getItem('coins') ? parseInt(localStorage.getItem('coins')) : 100;
+    inventory = localStorage.getItem('inventory') ? JSON.parse(localStorage.getItem('inventory')) : [];
+    ownedPets = localStorage.getItem('ownedPets') ? JSON.parse(localStorage.getItem('ownedPets')) : [];
+    
         // Actualiza la visualización de las monedas, inventario y mascotas
         updateCoinsDisplay();
         updateInventory();
