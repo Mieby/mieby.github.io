@@ -97,11 +97,22 @@ function updateOwnedPets() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Tu código JavaScript aquí
-    updateCoinsDisplay();
-    updateInventory();
-    updateOwnedPets();
+<script>
+    // Asegúrate de que el DOM esté completamente cargado
+    document.addEventListener('DOMContentLoaded', function () {
+        // Actualiza la visualización de las monedas, inventario y mascotas
+        updateCoinsDisplay();
+        updateInventory();
+        updateOwnedPets();
 
-    document.getElementById('pull-gacha').addEventListener('click', pullGacha);
-});;
+        // Adjunta el evento al botón 'Tirar en el Gacha'
+        const gachaButton = document.getElementById('pull-gacha');
+        
+        // Verifica si el botón existe antes de agregar el evento
+        if (gachaButton) {
+            gachaButton.addEventListener('click', pullGacha);
+        } else {
+            console.log('El botón "pull-gacha" no se encuentra.');
+        }
+    });
+</script>
