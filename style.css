@@ -95,12 +95,20 @@ img {
     margin: 5px;
 }
 
-.random-number-container {
-    display: flex; /* Usa solo flex, no inline-flex */
+.random-word-container {
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Espacio entre el botón y el número */
-    margin-top: 20px; /* Añade el margen superior */
+    gap: 20px;
+    margin-top: 20px; /* Espacio encima de los botones de número aleatorio */
+}
+
+.random-number-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 button {
