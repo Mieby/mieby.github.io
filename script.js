@@ -108,9 +108,10 @@ function giveNickname(petIndex) {
 
 // Generar palabra aleatoria (Pet o Item)
 document.getElementById('generate-word').addEventListener('click', function() {
-    // Generar número aleatorio (0 o 1)
+    // Generar número aleatorio (0 a 1)
     const randomNum = Math.random();
-    const word = randomNum < 0.5 ? 'Pet' : 'Item';  // 50% de probabilidad para cada palabra
+    // 2% de probabilidad para "Pet" y 98% para "Item"
+    const word = randomNum < 0.02 ? 'Pet' : 'Item';  // 2% de probabilidad para "Pet"
 
     // Mostrar la palabra generada en el elemento <span> correspondiente
     const wordElement = document.getElementById('random-word');
