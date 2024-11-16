@@ -116,14 +116,7 @@ function resetData() {
     updateOwnedPets();
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('Test de log');
-    // Actualiza la visualización de las monedas, inventario y mascotas
-    updateCoinsDisplay();
-    updateInventory();
-    updateOwnedPets();
-
-    // Adjunta el evento al botón 'Tirar en el Gacha'
+// Adjunta el evento al botón 'Tirar en el Gacha'
     const gachaButton = document.getElementById('pull-gacha');
     if (gachaButton) {
         gachaButton.addEventListener('click', pullGacha);
@@ -143,6 +136,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Test de log');
+    // Actualiza la visualización de las monedas, inventario y mascotas
+    updateCoinsDisplay();
+    updateInventory();
+    updateOwnedPets();
 
 // Adjunta el evento al botón 'Borrar Datos'
 document.getElementById('reset-data').addEventListener('click', resetData);
