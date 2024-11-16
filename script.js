@@ -113,7 +113,16 @@ document.getElementById('generate-word').addEventListener('click', function() {
     const word = randomNum < 0.5 ? 'Pet' : 'Item';  // 50% de probabilidad para cada palabra
 
     // Mostrar la palabra generada en el elemento <span> correspondiente
-    document.getElementById('random-word').textContent = word;
+    const wordElement = document.getElementById('random-word');
+    wordElement.textContent = word;
+
+    // Añadir la clase para la animación
+    wordElement.classList.add('flash');
+
+    // Eliminar la clase después de que termine la animación (1 segundo)
+    setTimeout(() => {
+        wordElement.classList.remove('flash');
+    }, 1000);
 });
 
 // Generar número entre 1 y 67235
