@@ -106,6 +106,16 @@ function giveNickname(petIndex) {
     }
 }
 
+// Generar palabra aleatoria (Pet o Item)
+document.getElementById('generate-word').addEventListener('click', function() {
+    // Generar número aleatorio (0 o 1)
+    const randomNum = Math.random();
+    const word = randomNum < 0.5 ? 'Pet' : 'Item';  // 50% de probabilidad para cada palabra
+
+    // Mostrar la palabra generada en el elemento <span> correspondiente
+    document.getElementById('random-word').textContent = word;
+});
+
 // Generar número entre 1 y 67235
 document.getElementById('generate-number-67235').addEventListener('click', function() {
     const randomNumber = Math.floor(Math.random() * 67235) + 1;
