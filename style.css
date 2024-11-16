@@ -121,3 +121,19 @@ p {
     font-size: 18px;
     margin: 0;
 }
+
+@keyframes flashColor {
+    0% {
+        color: black; /* Color original */
+    }
+    50% {
+        color: #ff6347; /* Un color brillante para el destello (puedes usar otro) */
+    }
+    100% {
+        color: black; /* Vuelve al color original */
+    }
+}
+
+#random-word.flash {
+    animation: flashColor 1s ease-in-out;
+}
