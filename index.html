@@ -12,6 +12,7 @@ a ver si se muestra la imagen? 3
         <button onclick="showTab('tab1')">Gacha</button>
         <button onclick="showTab('tab2')">Inventario</button>
         <button onclick="showTab('tab3')">Your Pets</button>
+        <button onclick="showTab('tab4')">Generador item</button>
     </nav>
 
     <!-- Botón para borrar datos -->
@@ -47,12 +48,20 @@ a ver si se muestra la imagen? 3
         <div id="pets-list"></div>
     </div>
 
+    <!-- Tab 4: Generador Aleatorio -->
+    <div id="tab4" class="tab" style="display: none;">
+        <h2>Generador de Número Aleatorio</h2>
+        <p>Número generado: <span id="random-number">-</span></p> <!-- Mostrará el número generado -->
+        <button id="generate-number">Generar Número</button> <!-- Botón para generar el número -->
+    </div>
+
     <script type="module" src="script.js"></script>
     <script>
         function showTab(tab) {
             document.getElementById('tab1').style.display = 'none';
             document.getElementById('tab2').style.display = 'none';
             document.getElementById('tab3').style.display = 'none';
+            document.getElementById('tab4').style.display = 'none';
             document.getElementById(tab).style.display = 'block';
         }
     </script>
