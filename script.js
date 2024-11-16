@@ -91,7 +91,6 @@ function updateOwnedPets() {
             <p><strong>Libros Leídos:</strong> ${pet.booksRead}</p>
             <p><strong>Apodo:</strong> ${pet.nickname || 'Sin Apodo'}</p>
             <button onclick="giveNickname(${ownedPets.indexOf(pet)})">Asignar Apodo</button>
-            <button onclick="selectBookForPet(${petIndex})">Leer Libro</button>
         `;
         petsList.appendChild(petDiv);
     });
@@ -115,41 +114,6 @@ function resetData() {
     updateCoinsDisplay();
     updateInventory();
     updateOwnedPets();
-}
-
-// Leer un libro a un pet
-function readBookToPet(petIndex, bookIndex) {
-    const pet = ownedPets[petIndex];
-    const book = inventory[bookIndex];
-
-    // Verificar si el item es un libro
-    if (book.type === 'Book') {
-        // Verificar si la mascota ya ha leído este libro
-        if (pet.readBooks && pet.readBooks.includes(book.name)) {
-            alert("Ya leí este libro");
-            return;
-        }
-
-        // Aumentar el contador de libros leídos
-        pet.booksRead += 1;
-
-        // Añadir este libro a la lista de libros leídos por la mascota
-        if (!pet.readBooks) {
-            pet.readBooks = [];
-        }
-        pet.readBooks.push(book.name);
-
-        // Eliminar el libro del inventario
-        inventory.splice(bookIndex, 1);
-
-        // Actualizar visualmente el inventario y la lista de mascotas
-        updateInventory();
-        updateOwnedPets();
-
-        alert(`¡${pet.name} ha leído el libro "${book.name}"!`);
-    } else {
-        alert("Este item no es un libro");
-    }
 }
 
 
