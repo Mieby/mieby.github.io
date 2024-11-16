@@ -96,8 +96,9 @@ img {
 }
 
 .random-number-container {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 20px; /* Espacio entre el botón y el número */
 }
 
