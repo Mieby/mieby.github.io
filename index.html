@@ -51,8 +51,10 @@ a ver si se muestra la imagen? 3
     <!-- Tab 4: Generador Aleatorio -->
     <div id="tab4" class="tab" style="display: none;">
         <h2>Generador de Número Aleatorio</h2>
-        <p>Número generado: <span id="random-number">-</span></p> <!-- Mostrará el número generado -->
-        <button id="generate-number">Generar Número</button> <!-- Botón para generar el número -->
+        <div class="random-number-container"> <!-- Contenedor flexbox para alinear botón y número -->
+            <button id="generate-number">Generar Número</button>
+            <p>Número generado: <span id="random-number">-</span></p> <!-- Mostrará el número generado -->
+        </div>
     </div>
 
     <script type="module" src="script.js"></script>
