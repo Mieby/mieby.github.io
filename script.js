@@ -116,6 +116,33 @@ function resetData() {
     updateOwnedPets();
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Test de log');
+    // Actualiza la visualización de las monedas, inventario y mascotas
+    updateCoinsDisplay();
+    updateInventory();
+    updateOwnedPets();
+
+    // Adjunta el evento al botón 'Tirar en el Gacha'
+    const gachaButton = document.getElementById('pull-gacha');
+    if (gachaButton) {
+        gachaButton.addEventListener('click', pullGacha);
+    } else {
+        console.log('El botón "pull-gacha" no se encuentra.');
+    }
+
+    // Adjunta el evento al botón de generar número aleatorio
+    const generateNumberButton = document.getElementById('generate-number');
+    if (generateNumberButton) {
+        generateNumberButton.addEventListener('click', function () {
+            const randomNumber = Math.floor(Math.random() * 67235) + 1;  // Genera número entre 1 y 67235
+            document.getElementById('random-number').textContent = randomNumber;  // Actualiza la visualización
+        });
+    } else {
+        console.log('El botón "generate-number" no se encuentra.');
+    }
+});
+
 
 // Adjunta el evento al botón 'Borrar Datos'
 document.getElementById('reset-data').addEventListener('click', resetData);
