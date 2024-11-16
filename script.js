@@ -106,6 +106,19 @@ function giveNickname(petIndex) {
     }
 }
 
+// Generar número entre 1 y 67235
+document.getElementById('generate-number-67235').addEventListener('click', function() {
+    const randomNumber = Math.floor(Math.random() * 67235) + 1;
+    document.getElementById('random-number-67235').textContent = randomNumber;
+});
+
+// Generar número entre 1 y 78
+document.getElementById('generate-number-78').addEventListener('click', function() {
+    const randomNumber = Math.floor(Math.random() * 78) + 1;
+    document.getElementById('random-number-78').textContent = randomNumber;
+});
+
+
 function resetData() {
     localStorage.clear();  // Borra todos los datos de LocalStorage
     coins = 100;  // Restablecer valores iniciales
