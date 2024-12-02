@@ -24,7 +24,7 @@ const people = [
         name: "Amantias", 
         img: "assets/petbooks/Amantias.png", 
         account: "Kougritaa", 
-        books: [] 
+        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
     }
 ];
 
