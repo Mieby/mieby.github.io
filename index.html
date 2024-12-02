@@ -13,6 +13,7 @@ a ver si se muestra la imagen? 3
         <button onclick="showTab('tab2')">Inventario</button>
         <button onclick="showTab('tab3')">Your Pets</button>
         <button onclick="showTab('tab4')">Generador item</button>
+        <button onclick="showTab('tab5')">Gestión de Libros</button>
     </nav>
 
     <!-- Botón para borrar datos -->
@@ -67,6 +68,26 @@ a ver si se muestra la imagen? 3
         <p>Item: <span id="random-number-78">-</span></p>
     </div>
 </div>
+
+    <!-- Nueva Tab 5: Gestión de Libros -->
+<div id="tab5" class="tab" style="display: none;">
+    <h2>Gestión de Libros</h2>
+    <div>
+        <label for="book-search">Buscar personas sin un libro:</label>
+        <input type="text" id="book-search" placeholder="Ingresa el nombre del libro">
+        <button onclick="searchBook()">Buscar</button>
+    </div>
+    <div id="search-results">
+        <h3>Resultados</h3>
+        <ul id="results-list"></ul>
+    </div>
+    <div>
+        <h3>Lista de Personas</h3>
+        <ul id="people-list"></ul>
+    </div>
+</div>
+
+    
 
     <script type="module" src="script.js"></script>
     <script>
