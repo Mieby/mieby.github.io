@@ -92,6 +92,21 @@ function renderPeopleList() {
     });
 }
 
+// Función para ordenar las personas según la opción seleccionada
+function sortPeople() {
+    const sortOption = document.getElementById("sort-options").value;
+
+    if (sortOption === "books") {
+        // Ordenar por libros leídos de mayor a menor
+        people.sort((a, b) => b.books.length - a.books.length);
+    } else {
+        // Restaurar el orden por defecto (por nombre)
+        people.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    renderPeopleList(); // Volver a renderizar la lista con el nuevo orden
+}
+
 // Buscar personas que no tienen un libro específico
 function searchBook() {
     const searchInput = document.getElementById("book-search").value.trim();
