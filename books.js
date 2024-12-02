@@ -47,7 +47,9 @@ const people = [
         name: "Bizkuti", 
         img: "assets/petbooks/Bizkuti.png", 
         account: "Riyase", 
-        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+        books: ["Tome of Selket", "Adventures In Space", "Gruslen Pop-Up Book", "Maraquan Bed Time Stories", "Maraquan Faerie Tales", "Yurble Tales", "Mystery Island Tour Guide", "Waterlogged Book",
+               "The Old Mynci and the Sea", "Halloween Ruki Tales", "Skeith Inspired Treasure Maps", "Ogrin Survivor", "Haunted Mynci", "Island Cybunny Guide", "Tuskaninny Chef Recipes", "A History of the Lost Desert",
+               "Lost Desert Architecture", "Guide to Faerie Weapons"] 
     },
     { 
         name: "Shyeth", 
@@ -65,7 +67,7 @@ const people = [
         name: "Twpo", 
         img: "assets/petbooks/Twpo.png", 
         account: "Riyase", 
-        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+        books: ["The Secret of Treasure Island", "Pirate Small Talk" ] 
     }
 ];
 
