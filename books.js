@@ -38,8 +38,8 @@ function renderPeopleList() {
         personItem.innerHTML = `
             <img src="${person.img}" alt="${person.name}">
             <h4>${person.name}</h4>
-            <p>Cuenta: ${person.account}</p>
-            <p>Libros leídos: ${person.books.length}</p>
+            <p>${person.account}</p>
+            <p>Libros: ${person.books.length}</p>
         `;
         peopleList.appendChild(personItem);
     });
