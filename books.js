@@ -41,7 +41,9 @@ const people = [
         name: "Pumae", 
         img: "assets/petbooks/Pumae.png", 
         account: "Riyase", 
-        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+        books: ["Kreludan Recipes", "My First Babaa", "Tuskaninny Treasure", "Peopatras Petpets", "The Grundo Pirate", "Meepit vs Feepit Game Guide", "Waterlogged Book", "The Secret of Treasure Island",
+               "Skeith Inspired Treasure Maps", "Lenny Crosswords", "Pirate Small Talk", "Gallion Colouring Book", "Zombie Handbook", "Soggy Scroll", "Elusive Shenkuu Guide", "A History of the Lost Desert", "Lost Desert Architecture",
+               "Ancient Scarab Scroll"] 
     },
     { 
         name: "Bizkuti", 
@@ -55,13 +57,13 @@ const people = [
         name: "Shyeth", 
         img: "assets/petbooks/Shyeth.png", 
         account: "Riyase", 
-        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+        books: ["Mystery Of The Kougra Paw", "Pirate Small Talk", "A History of the Lost Desert" ] 
     },
     { 
         name: "Wentzylvania", 
         img: "assets/petbooks/Wentzylvania.png", 
         account: "Riyase", 
-        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+        books: [] 
     },
     { 
         name: "Twpo", 
