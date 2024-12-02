@@ -10,7 +10,7 @@ const people = [
         name: "Sthie", 
         img: "assets/petbooks/Sthie.png", 
         account: "Kougritaa", 
-        books: ["Libro 3", "Libro 2"] 
+        books: ["Light Speed Made Easy", "Libro 2"] 
     },
     { 
         name: "Spieria", 
