@@ -33,7 +33,7 @@ function renderPeopleList() {
             <img src="${person.img}" alt="${person.name}">
             <h4>${person.name}</h4>
             <p>Cuenta: ${person.account}</p>
-            <p>Libros: ${person.books.length > 0 ? person.books.join(", ") : "Ninguno"}</p>
+            <p>Libros leídos: ${person.books.length}</p>
         `;
         peopleList.appendChild(personItem);
     });
