@@ -36,6 +36,36 @@ const people = [
         img: "assets/petbooks/Amantias.png", 
         account: "Kougritaa", 
         books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+    },
+    { 
+        name: "Pumae", 
+        img: "assets/petbooks/Amantias.png", 
+        account: "Kougritaa", 
+        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+    },
+    { 
+        name: "Bizkuti", 
+        img: "assets/petbooks/Amantias.png", 
+        account: "Kougritaa", 
+        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+    },
+    { 
+        name: "Shyeth", 
+        img: "assets/petbooks/Amantias.png", 
+        account: "Kougritaa", 
+        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+    },
+    { 
+        name: "Wentzylvania", 
+        img: "assets/petbooks/Amantias.png", 
+        account: "Kougritaa", 
+        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
+    },
+    { 
+        name: "Twpo", 
+        img: "assets/petbooks/Amantias.png", 
+        account: "Kougritaa", 
+        books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
     }
 ];
 
