@@ -14,7 +14,7 @@ const people = [
                "Haunted Woods Reader", "Mystery Island Monthly", "Gallion Care", "Gallion Colouring Book", "Gallant Gallions Comic", "The Gorgeous Gallion", "Nimmo - Now and Zen", "The Plushie Coffee Table Book",
                "Book of Origami Paper", "Counting Babaas", "Bubble Sculptures", "Petpet Park", "Faerie Sticker Book", "A History of the Lost Desert", "Lost Desert Architecture", "Faerie Stencils Collection", 
                "Cooling the Fires", "We Like it Hot", "Faerie Activities Book", "Realm of the Water Faeries", "The Blue Tiki Sands of Time", "Deserted Desert Scroll", "Hurt Orange Kiko Book", "A Guide to Find the Right Cure",
-               "Breathe", "Maraquan Faerie Tales", "Birthday Best", "Tree Climbing for Beginners"] 
+               "Breathe", "Maraquan Faerie Tales", "Birthday Best", "Tree Climbing for Beginners", "Moon Dust Scroll"] 
     },
     { 
         name: "Sthie", 
