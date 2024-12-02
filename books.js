@@ -10,7 +10,9 @@ const people = [
         name: "Sthie", 
         img: "assets/petbooks/Sthie.png", 
         account: "Kougritaa", 
-        books: ["Light Speed Made Easy", "Libro 2"] 
+        books: ["Light Speed Made Easy", "Speak Tyrannian", "Legends of Maraqua", "Maraquan Faerie Tales", "Waterlogged Book", "Skeith Inspired Treasure Maps",
+               "Underwater Tour", "Zombie Handbook", "A History of the Lost Desert", "Slorg Care", "Shenkuu Lunar Festival Commemorative Guide", "Realm of the Water Faeries",
+                "Book of Strange and Incurable Diseases" ] 
     },
     { 
         name: "Spieria", 
