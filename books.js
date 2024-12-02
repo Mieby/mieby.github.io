@@ -39,32 +39,32 @@ const people = [
     },
     { 
         name: "Pumae", 
-        img: "assets/petbooks/Amantias.png", 
-        account: "Kougritaa", 
+        img: "assets/petbooks/Pumae.png", 
+        account: "Riyase", 
         books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
     },
     { 
         name: "Bizkuti", 
-        img: "assets/petbooks/Amantias.png", 
-        account: "Kougritaa", 
+        img: "assets/petbooks/Bizkuti.png", 
+        account: "Riyase", 
         books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
     },
     { 
         name: "Shyeth", 
-        img: "assets/petbooks/Amantias.png", 
-        account: "Kougritaa", 
+        img: "assets/petbooks/Shyeth.png", 
+        account: "Riyase", 
         books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
     },
     { 
         name: "Wentzylvania", 
-        img: "assets/petbooks/Amantias.png", 
-        account: "Kougritaa", 
+        img: "assets/petbooks/Wentzylvania.png", 
+        account: "Riyase", 
         books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
     },
     { 
         name: "Twpo", 
-        img: "assets/petbooks/Amantias.png", 
-        account: "Kougritaa", 
+        img: "assets/petbooks/Twpo.png", 
+        account: "Riyase", 
         books: ["Legends of Maraqua", "Skeith Inspired Treasure Maps" ] 
     }
 ];
