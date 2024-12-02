@@ -18,7 +18,8 @@ const people = [
         name: "Spieria", 
         img: "assets/petbooks/Spieria.png", 
         account: "Kougritaa", 
-        books: [] 
+        books: ["My First Babaa", "Speak Tyrannian", "The Littlest Mazzew", "Gruslen Pop-Up Book", "Legends of Maraqua", "Faellie Tales", "Grooming Your Faellie", 
+               "Meepit vs Feepit Game Guide", "Skeith Inspired Treasure Maps", "Gallion Care"] 
     },
     { 
         name: "Amantias", 
