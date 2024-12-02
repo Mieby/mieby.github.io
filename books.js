@@ -8,7 +8,12 @@ const people = [
                "Brainy Blumaroos", "Korbat Halloween", "Mystery Of Halloween", "Neopian Times Issue 3", "Cybunny Diary", "Classic Moehog Tales", "Kiko Pop-Up Book", "Dress For Success", "Turmac Snacks",
                "Day In The Life Of King Roo", "Babaa Care",  "The Luckiest Babaa", "My First Babaa", "Gruslen Pop-Up Book", "Legends of Maraqua", "Maraquan Bed Time Stories", "Mystery Of The Kougra Paw",
                "Yurble Tales", "Mystery Island Tour Guide", "Quiggle Classics", "A Kau Summer", "Faellie Tales", "Fantastic Faellies", "Faellie Handbook", "Grooming Your Faellie", "Peopatras Petpets",
-               "Cartography For Beginners", "Keeping The Peace", "Brightvale Maps", "King Hagan", "Brightvale Castle", "More Than Carrot Cake", "Toast Treats", "Spooky Korbat Stories", "The Life of a Double Crosser" ] 
+               "Cartography For Beginners", "Keeping The Peace", "Brightvale Maps", "King Hagan", "Brightvale Castle", "More Than Carrot Cake", "Toast Treats", "Spooky Korbat Stories", "The Life of a Double Crosser",
+               "Fishing For Zafaras", "Meepit vs Feepit Game Guide", "Waterlogged Book", "The Secret of Treasure Island", "Geraptiku Recipes", "Spooky Skeith Adventures", "Skeith Inspired Treasure Maps", "Underwater Tour",
+               "Scroll of Serpents", "Ogrin Survivor", "Lenny Crosswords", "Haunted Mynci", "Island Cybunny Guide", "Pirate Small Talk", "Brightvale Guide to Stained Glass Windows", "Maraqua Colouring Book",
+               "Haunted Woods Reader", "Mystery Island Monthly", "Gallion Care", "Gallion Colouring Book", "Gallant Gallions Comic", "The Gorgeous Gallion", "Nimmo - Now and Zen", "The Plushie Coffee Table Book",
+               "Book of Origami Paper", "Counting Babaas", "Bubble Sculptures", "Petpet Park", "Faerie Sticker Book", "A History of the Lost Desert", "Lost Desert Architecture", "Faerie Stencils Collection", 
+               "Cooling the Fires", "We Like it Hot", "Faerie Activities Book", "Realm of the Water Faeries", "The Blue Tiki Sands of Time", "Deserted Desert Scroll", "Hurt Orange Kiko Book", "A Guide to Find the Right Cure"] 
     },
     { 
         name: "Sthie", 
