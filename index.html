@@ -77,6 +77,13 @@ a ver si se muestra la imagen? 3
         <input type="text" id="book-search" placeholder="Ingresa el nombre del libro">
         <button onclick="searchBook()">Buscar</button>
     </div>
+    <div>
+        <label for="sort-options">Ordenar por:</label>
+        <select id="sort-options" onchange="sortPeople()">
+            <option value="default">Por defecto</option>
+            <option value="books">Número de libros leídos</option>
+        </select>
+    </div>
     <div id="search-results">
         <h3>Resultados</h3>
         <ul id="results-list"></ul>
