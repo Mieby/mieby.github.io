@@ -14,7 +14,7 @@ const people = [
                "Haunted Woods Reader", "Mystery Island Monthly", "Gallion Care", "Gallion Colouring Book", "Gallant Gallions Comic", "The Gorgeous Gallion", "Nimmo - Now and Zen", "The Plushie Coffee Table Book",
                "Book of Origami Paper", "Counting Babaas", "Bubble Sculptures", "Petpet Park", "Faerie Sticker Book", "A History of the Lost Desert", "Lost Desert Architecture", "Faerie Stencils Collection", 
                "Cooling the Fires", "We Like it Hot", "Faerie Activities Book", "Realm of the Water Faeries", "The Blue Tiki Sands of Time", "Deserted Desert Scroll", "Hurt Orange Kiko Book", "A Guide to Find the Right Cure",
-               "Breathe", "Maraquan Faerie Tales"] 
+               "Breathe", "Maraquan Faerie Tales", "Birthday Best", "Tree Climbing for Beginners"] 
     },
     { 
         name: "Sthie", 
@@ -22,7 +22,7 @@ const people = [
         account: "Kougritaa", 
         books: ["Light Speed Made Easy", "Speak Tyrannian", "Legends of Maraqua", "Maraquan Faerie Tales", "Waterlogged Book", "Skeith Inspired Treasure Maps",
                "Underwater Tour", "Zombie Handbook", "A History of the Lost Desert", "Slorg Care", "Shenkuu Lunar Festival Commemorative Guide", "Realm of the Water Faeries",
-                "Book of Strange and Incurable Diseases", ] 
+                "Book of Strange and Incurable Diseases", "Maraquan Bed Time Stories", "Nimmo - Now and Zen" ] 
     },
     { 
         name: "Spieria", 
