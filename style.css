@@ -170,6 +170,7 @@ p {
     border-radius: 8px;
     padding: 10px;
     width: 200px;
+    align-items: center;
     text-align: center;
     background-color: #ffffff;
 }
@@ -177,7 +178,7 @@ p {
 .person-item img {
     width: 200px;
     height: 200px;
-    border-radius: 10%;
+    border-radius: 30%;
 }
 
 .person-item h4 {
