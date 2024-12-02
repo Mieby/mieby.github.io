@@ -4,7 +4,11 @@ const people = [
         name: "Pogoel", 
         img: "assets/petbooks/Pogoel.png", 
         account: "Kougritaa", 
-        books: ["Libro 1", "Libro 2"] 
+        books: ["Wishing On A Star", "The Great Betrayal", "Tale of Lag", "Inside the Mind of a Lupe", "Tome of Selket", "The Big Blue Blumaroo Book", "The Cowardly Tuskaninny", "Kiko Care", 
+               "Brainy Blumaroos", "Korbat Halloween", "Mystery Of Halloween", "Neopian Times Issue 3", "Cybunny Diary", "Classic Moehog Tales", "Kiko Pop-Up Book", "Dress For Success", "Turmac Snacks",
+               "Day In The Life Of King Roo", "Babaa Care",  "The Luckiest Babaa", "My First Babaa", "Gruslen Pop-Up Book", "Legends of Maraqua", "Maraquan Bed Time Stories", "Mystery Of The Kougra Paw",
+               "Yurble Tales", "Mystery Island Tour Guide", "Quiggle Classics", "A Kau Summer", "Faellie Tales", "Fantastic Faellies", "Faellie Handbook", "Grooming Your Faellie", "Peopatras Petpets",
+               "Cartography For Beginners", "Keeping The Peace", "Brightvale Maps", "King Hagan", "Brightvale Castle", "More Than Carrot Cake", "Toast Treats", "Spooky Korbat Stories", "The Life of a Double Crosser" ] 
     },
     { 
         name: "Sthie", 
@@ -12,7 +16,7 @@ const people = [
         account: "Kougritaa", 
         books: ["Light Speed Made Easy", "Speak Tyrannian", "Legends of Maraqua", "Maraquan Faerie Tales", "Waterlogged Book", "Skeith Inspired Treasure Maps",
                "Underwater Tour", "Zombie Handbook", "A History of the Lost Desert", "Slorg Care", "Shenkuu Lunar Festival Commemorative Guide", "Realm of the Water Faeries",
-                "Book of Strange and Incurable Diseases" ] 
+                "Book of Strange and Incurable Diseases", ] 
     },
     { 
         name: "Spieria", 
