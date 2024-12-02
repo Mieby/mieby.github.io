@@ -1,21 +1,27 @@
 // Datos iniciales
 const people = [
     { 
-        name: "Alice", 
-        img: "assets/alice.png", 
-        account: "alice123", 
+        name: "Pogoel", 
+        img: "assets/petbooks/Pogoel.png", 
+        account: "Kougritaa", 
         books: ["Libro 1", "Libro 2"] 
     },
     { 
-        name: "Bob", 
-        img: "assets/bob.png", 
-        account: "bob456", 
+        name: "Sthie", 
+        img: "assets/petbooks/Sthie.png", 
+        account: "Kougritaa", 
         books: ["Libro 3", "Libro 2"] 
     },
     { 
-        name: "Charlie", 
-        img: "assets/charlie.png", 
-        account: "charlie789", 
+        name: "Spieria", 
+        img: "assets/petbooks/Spieria.png", 
+        account: "Kougritaa", 
+        books: [] 
+    },
+    { 
+        name: "Amantias", 
+        img: "assets/petbooks/Amantias.png", 
+        account: "Kougritaa", 
         books: [] 
     }
 ];
