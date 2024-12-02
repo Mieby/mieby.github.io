@@ -137,3 +137,49 @@ p {
 #random-word.flash {
     animation: flashColor 1s ease-in-out;
 }
+
+#book-search {
+    padding: 10px;
+    width: 70%;
+    margin: 10px 0;
+}
+
+#results-list {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+#results-list li {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#people-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.person-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.person-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.person-item h4 {
+    margin: 10px 0 5px;
+}
