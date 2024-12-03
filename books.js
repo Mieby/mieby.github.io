@@ -128,13 +128,13 @@ const people = [
     },
     { 
         name: "Ciota", 
-        img: "assets/petbooks/Wentzylvania.png", 
+        img: "assets/petbooks/Ciota.png", 
         account: "Nifasta", 
         books: [] 
     },
     { 
         name: "Mryden", 
-        img: "assets/petbooks/Wentzylvania.png", 
+        img: "assets/petbooks/Mryden.png", 
         account: "Nifasta", 
         books: [The Grundo Pirate] 
     }
