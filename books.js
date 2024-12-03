@@ -114,7 +114,8 @@ const people = [
         name: "Femmur", 
         img: "assets/petbooks/Femmur.png", 
         account: "1111aliar", 
-        books: [] 
+        books: ["Kiko Pop-Up Book", "Light Speed Made Easy", "Day In The Life Of King Roo", "Caring For Your Mazzew", "The Secret of Treasure Island", "Pirate Small Talk", "Maraqua Colouring Book",
+               "Grimoire of the First Order"] 
     },
     { 
         name: "Uiot", 
