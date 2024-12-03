@@ -75,7 +75,8 @@ const people = [
         name: "Boyale", 
         img: "assets/petbooks/Boyale.png", 
         account: "Codoco", 
-        books: ["Tale of Lag"] 
+        books: ["Tale of Lag", "Speak Tyrannian", "Mystery Of The Kougra Paw", "The Secret of Treasure Island", "Dark Eyes the Aisha", "Plushie Adventures", "The Hidden Temple", "Island Cybunny Guide",
+               "Defenders Stand for Justice", "Flight of the Fire Faerie", "Babaas Baba", "Bruce Blues"] 
     },
     { 
         name: "Nivesta", 
