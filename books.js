@@ -91,6 +91,36 @@ const people = [
         img: "assets/petbooks/Lojza.png", 
         account: "Codoco", 
         books: ["Victory Is Ours", "Speak Tyrannian", "Snot My Fault", "The Gorgeous Gallion", "Bruce Blues" ] 
+    },
+    { 
+        name: "Kongira", 
+        img: "assets/petbooks/Kongira.png", 
+        account: "1111aliar", 
+        books: [] 
+    },
+    { 
+        name: "Skumu", 
+        img: "assets/petbooks/Skumu.png", 
+        account: "1111aliar", 
+        books: [] 
+    },
+    { 
+        name: "Storm_Browler", 
+        img: "assets/petbooks/Storm_Brawler.png", 
+        account: "1111aliar", 
+        books: [] 
+    },
+    { 
+        name: "Femmur", 
+        img: "assets/petbooks/Femmur.png", 
+        account: "1111aliar", 
+        books: [] 
+    },
+    { 
+        name: "Uiot", 
+        img: "assets/petbooks/Uiot.png", 
+        account: "1111aliar", 
+        books: [] 
     }
 ];
 
