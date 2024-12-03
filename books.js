@@ -25,7 +25,7 @@ const people = [
                 "Book of Strange and Incurable Diseases", "Maraquan Bed Time Stories", "Nimmo - Now and Zen" ] 
     },
     { 
-        name: "Spieria", 
+        name: "spieria", 
         img: "assets/petbooks/Spieria.png", 
         account: "Kougritaa", 
         books: ["My First Babaa", "Speak Tyrannian", "The Littlest Mazzew", "Gruslen Pop-Up Book", "Legends of Maraqua", "Faellie Tales", "Grooming Your Faellie", 
