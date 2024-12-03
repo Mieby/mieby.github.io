@@ -137,6 +137,12 @@ const people = [
         img: "assets/petbooks/Mryden.png", 
         account: "Nifasta", 
         books: ["The Grundo Pirate"] 
+    },
+    { 
+        name: "Jikty", 
+        img: "assets/petbooks/Jikty.png", 
+        account: "mary876539", 
+        books: ["The Luckiest Babaa", "Speak Tyrannian"] 
     }
 ];
 
