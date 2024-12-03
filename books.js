@@ -82,7 +82,9 @@ const people = [
         name: "Nivesta", 
         img: "assets/petbooks/Nivesta.png", 
         account: "Codoco", 
-        books: ["The Secret of Treasure Island", "Pirate Small Talk" ] 
+        books: ["Speak Tyrannian", "Mynci Horror", "Mazzew Grooming", "Mystery Of The Kougra Paw", "Wings of Steel", "My Life As A Sponge", "The Secret of Treasure Island", "Snot My Fault", "Dark Eyes the Aisha",
+               "Plushie Adventures", "Glurp", "The Hidden Temple", "Defenders Stand for Justice", "Webs of Death", "The History of the Origami Warf", "Fun Tree Facts", "Secrets of the Chocofactory",
+               "The Month of Eating", "Clash of Moehogs", "Bruce Blues"] 
     },
     { 
         name: "Lojza", 
