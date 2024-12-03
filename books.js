@@ -125,6 +125,18 @@ const people = [
                "Learning To Sing Notes", "Mazzew Grooming", "Gruslen Pop-Up Book", "Maraquan Bed Time Stories", "Peopatras Petpets", "Meepit vs Feepit Game Guide", "My Life As A Sponge", "An Acara Named Whirr",
                "Dark Eyes the Aisha", "Plushie Adventures", "Glurp", "The Hidden Temple", "Pirate Small Talk", "Defenders Stand for Justice", "The Gorgeous Gallion", "Extreme Shenkuu", "Lost Desert Architecture",
                "Great Reefs of Neopia", "Arr Through Yarr - A Pirates Dictionary", "Unexplained Disappearances"] 
+    },
+    { 
+        name: "Ciota", 
+        img: "assets/petbooks/Wentzylvania.png", 
+        account: "Nifasta", 
+        books: [] 
+    },
+    { 
+        name: "Mryden", 
+        img: "assets/petbooks/Wentzylvania.png", 
+        account: "Nifasta", 
+        books: [The Grundo Pirate] 
     }
 ];
 
