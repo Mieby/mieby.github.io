@@ -108,7 +108,7 @@ const people = [
         name: "Storm_Browler", 
         img: "assets/petbooks/Storm_Brawler.png", 
         account: "1111aliar", 
-        books: [] 
+        books: ["Kiko Care", "Mystery Of The Kougra Paw", "Island Cybunny Guide", "Skull Book"] 
     },
     { 
         name: "Femmur", 
@@ -121,7 +121,10 @@ const people = [
         name: "Uiot", 
         img: "assets/petbooks/Uiot.png", 
         account: "1111aliar", 
-        books: [] 
+        books: ["Light Speed Made Easy", "The End of the Tunnel", "Tome of Selket", "Tropical Flora and Fauna", "Malkus Vile Book", "Collectable Cards", "One Scary Night", "Skies Above Tyrannia", "My First Babaa",
+               "Learning To Sing Notes", "Mazzew Grooming", "Gruslen Pop-Up Book", "Maraquan Bed Time Stories", "Peopatras Petpets", "Meepit vs Feepit Game Guide", "My Life As A Sponge", "An Acara Named Whirr",
+               "Dark Eyes the Aisha", "Plushie Adventures", "Glurp", "The Hidden Temple", "Pirate Small Talk", "Defenders Stand for Justice", "The Gorgeous Gallion", "Extreme Shenkuu", "Lost Desert Architecture",
+               "Great Reefs of Neopia", "Arr Through Yarr - A Pirates Dictionary", "Unexplained Disappearances"] 
     }
 ];
 
