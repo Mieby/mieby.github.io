@@ -136,7 +136,7 @@ const people = [
         name: "Mryden", 
         img: "assets/petbooks/Mryden.png", 
         account: "Nifasta", 
-        books: [The Grundo Pirate] 
+        books: ["The Grundo Pirate"] 
     }
 ];
 
