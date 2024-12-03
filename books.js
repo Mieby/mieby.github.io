@@ -75,7 +75,7 @@ const people = [
         name: "Boyale", 
         img: "assets/petbooks/Boyale.png", 
         account: "Codoco", 
-        books: ["The Secret of Treasure Island", "Pirate Small Talk" ] 
+        books: ["Tale of Lag"] 
     },
     { 
         name: "Nivesta", 
@@ -87,7 +87,7 @@ const people = [
         name: "Lojza", 
         img: "assets/petbooks/Lojza.png", 
         account: "Codoco", 
-        books: ["The Secret of Treasure Island", "Pirate Small Talk" ] 
+        books: ["Victory Is Ours", "Speak Tyrannian", "Snot My Fault", "The Gorgeous Gallion", "Bruce Blues" ] 
     }
 ];
 
