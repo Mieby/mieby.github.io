@@ -70,6 +70,24 @@ const people = [
         img: "assets/petbooks/Twpo.png", 
         account: "Riyase", 
         books: ["The Secret of Treasure Island", "Pirate Small Talk" ] 
+    },
+    { 
+        name: "Boyale", 
+        img: "assets/petbooks/Boyale.png", 
+        account: "Codoco", 
+        books: ["The Secret of Treasure Island", "Pirate Small Talk" ] 
+    },
+    { 
+        name: "Nivesta", 
+        img: "assets/petbooks/Nivesta.png", 
+        account: "Codoco", 
+        books: ["The Secret of Treasure Island", "Pirate Small Talk" ] 
+    },
+    { 
+        name: "Lojza", 
+        img: "assets/petbooks/Lojza.png", 
+        account: "Codoco", 
+        books: ["The Secret of Treasure Island", "Pirate Small Talk" ] 
     }
 ];
 
