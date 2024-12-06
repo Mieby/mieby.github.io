@@ -62,7 +62,7 @@ function addCharacterCard(character) {
         <div class="weapon-info">
             <img src="assets/Baby kougra.png" alt="Weapon" class="weapon-img" />
             <div>
-                <div class="weapon-name editable" contenteditable="true">Arma: Ninguna</div>
+                <div class="weapon-name editable" contenteditable="true">Ninguna</div>
                 <div class="weapon-level editable" contenteditable="true">Nivel: 0</div>
                 <div class="weapon-rank editable" contenteditable="true">Rango: 0</div>
             </div>
