@@ -11,8 +11,20 @@ const characters = [
             refinement: "R5"
         },
         img: "assets/genshin-characters/diluc.png" // Imagen del personaje
+    },
+    {
+        name: "Kaeya",
+        level: 80,
+        constellation: "C2",
+        talents: { talent1: 8, talent2: 8, talent3: 8 },
+        weapon: {
+            img: "assets/genshin-weapons/skyward-blade.png", // Imagen del arma
+            name: "Skyward Blade",
+            level: 80,
+            refinement: "R4"
+        },
+        img: "assets/genshin-characters/kaeya.png" // Imagen del personaje
     }
-    // Agrega más personajes aquí si es necesario
 ];
 
 function renderCharactersList() {
