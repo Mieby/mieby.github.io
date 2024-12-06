@@ -44,7 +44,11 @@ function addCharacterCard(character) {
         <img src="${character.img}" alt="${character.name}">
         <h4>${character.name}</h4>
         <div class="level editable" contenteditable="true">Nivel: 0</div>
-        <div class="talents editable" contenteditable="true">Talentos: 0, 0, 0</div>
+        <div class="talents">
+            <div class="talent editable" contenteditable="true">Talento 1: 0</div>
+            <div class="talent editable" contenteditable="true">Talento 2: 0</div>
+            <div class="talent editable" contenteditable="true">Talento 3: 0</div>
+        </div>
         <div class="weapon-info">
             <img src="assets/placeholder.png" alt="Weapon">
             <div>
