@@ -68,11 +68,17 @@ function addCharacterCard(character) {
             </div>
         </div>
     `;
+
+    // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
     closeCharacterModal();
+
+    // Agregar el evento para abrir el modal de armas
+    const weaponImg = charCard.querySelector(".weapon-img");
+    weaponImg.addEventListener("click", () => openWeaponModal(weaponImg));
 }
 
-// Elementos del DOM
+// Elementos del DOM para el modal de armas
 const weaponModal = document.getElementById("weapon-modal");
 const weaponList = document.getElementById("weapon-list");
 const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
@@ -100,7 +106,6 @@ function closeWeaponModal() {
 
 // Actualizar la imagen y el nombre del arma en la tarjeta
 function selectWeapon(weapon, weaponElement) {
-    // Actualizar la imagen y el nombre del arma
     const weaponImg = weaponElement.querySelector("img");
     const weaponName = weaponElement.querySelector(".weapon-name");
     
@@ -108,7 +113,6 @@ function selectWeapon(weapon, weaponElement) {
     weaponName.textContent = `Arma: ${weapon.name}`;
     closeWeaponModal();  // Cerrar el modal
 }
-
 
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
