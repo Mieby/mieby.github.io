@@ -113,3 +113,4 @@ function selectWeapon(weapon, weaponElement) {
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
 closeModalBtn.addEventListener("click", closeCharacterModal);
+closeWeaponModalBtn.addEventListener("click", closeWeaponModal);
