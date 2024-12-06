@@ -61,9 +61,9 @@
 .character-card .talent {
     background-color: #f8f8f8;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 2px;
     border-radius: 5px;
-    width: 100px; /* Ancho fijo para cada talento */
+    width: 50px; /* Ancho fijo para cada talento */
     text-align: center; /* Centra el texto dentro de cada talento */
     display: flex;
     justify-content: center;
