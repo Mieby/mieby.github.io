@@ -23,21 +23,18 @@ function renderCharactersList() {
         characterCard.classList.add("character-card");
 
         characterCard.innerHTML = `
+            <div class="constellation">C${character.constellation.substring(1)}</div>
+            <img src="${character.weapon.img}" alt="${character.name}">
             <h3>${character.name}</h3>
-            <p>Nivel: ${character.level}</p>
-            <p>Constelación: ${character.constellation}</p>
-            <p>Talentos: 
-                <ul>
-                    <li>Talento 1: Nivel ${character.talents.talent1}</li>
-                    <li>Talento 2: Nivel ${character.talents.talent2}</li>
-                    <li>Talento 3: Nivel ${character.talents.talent3}</li>
-                </ul>
-            </p>
-            <h4>Arma</h4>
-            <img src="${character.weapon.img}" alt="${character.weapon.name}" class="weapon-img">
-            <p>Nombre: ${character.weapon.name}</p>
-            <p>Nivel: ${character.weapon.level}</p>
-            <p>Rango: ${character.weapon.refinement}</p>
+            <div class="details">
+                <p><strong>Nivel:</strong> ${character.level}</p>
+                <p><strong>Talentos:</strong> ${character.talents.talent1}, ${character.talents.talent2}, ${character.talents.talent3}</p>
+                <h4>Arma</h4>
+                <img src="${character.weapon.img}" alt="${character.weapon.name}" class="weapon-img">
+                <p><strong>Nombre:</strong> ${character.weapon.name}</p>
+                <p><strong>Nivel:</strong> ${character.weapon.level}</p>
+                <p><strong>Rango:</strong> ${character.weapon.refinement}</p>
+            </div>
         `;
         charactersList.appendChild(characterCard);
     });
