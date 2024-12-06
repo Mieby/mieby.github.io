@@ -7,6 +7,14 @@ const genshinCharacters = [
     { name: "Zhongli", img: "assets/genshin/Zhongli.png" }
 ];
 
+const weaponsList = [
+    { name: "Espada de Favonius", img: "assets/weapons/favonius_sword.png" },
+    { name: "Claymore de Serpiente", img: "assets/weapons/serpent_claymore.png" },
+    { name: "Arco de Sacrificio", img: "assets/weapons/sacrificial_bow.png" },
+    { name: "Lanza de Dragonspine", img: "assets/weapons/dragonspine_lance.png" },
+    { name: "Espada del Lobo", img: "assets/weapons/wolf_sword.png" }
+];
+
 // Elementos del DOM
 const characterGrid = document.getElementById("character-grid");
 const characterModal = document.getElementById("character-modal");
