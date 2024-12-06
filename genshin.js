@@ -29,7 +29,7 @@ const characters = [
 
 function renderCharactersList() {
     const charactersList = document.getElementById("characters-list");
-    charactersList.innerHTML = "";
+    charactersList.innerHTML = ""; // Limpiar lista actual
 
     characters.forEach(character => {
         const characterCard = document.createElement("div");
@@ -37,7 +37,7 @@ function renderCharactersList() {
 
         characterCard.innerHTML = `
             <div class="constellation">C${character.constellation.substring(1)}</div>
-            <img src="${character.weapon.img}" alt="${character.name}">
+            <img src="${character.img}" alt="${character.name}"> <!-- Imagen del personaje -->
             <h3>${character.name}</h3>
             <div class="details">
                 <p><strong>Nivel:</strong> ${character.level}</p>
@@ -52,6 +52,11 @@ function renderCharactersList() {
         charactersList.appendChild(characterCard);
     });
 }
+
+// Inicialización al cargar
+document.addEventListener("DOMContentLoaded", function () {
+    renderCharactersList();
+});
 
 function addNewCharacter() {
     characters.push({
