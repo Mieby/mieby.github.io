@@ -74,8 +74,9 @@ function addCharacterCard(character) {
     closeCharacterModal();
 
     // Agregar el evento para abrir el modal de armas
-    const weaponImg = charCard.querySelector(".weapon-img");
-    weaponImg.addEventListener("click", () => openWeaponModal(weaponImg));
+    const weaponElement = charCard.querySelector(".weapon-info");  // Obtener el contenedor del arma completo
+    const weaponImg = weaponElement.querySelector(".weapon-img");  // Obtener la imagen del arma
+    weaponImg.addEventListener("click", () => openWeaponModal(weaponElement));  // Pasa el contenedor completo
 }
 
 // Elementos del DOM para el modal de armas
@@ -93,7 +94,7 @@ function openWeaponModal(weaponElement) {
             <img src="${weapon.img}" alt="${weapon.name}" width="50">
             <p>${weapon.name}</p>
         `;
-        weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));
+        weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));  // Pasar el contenedor completo
         weaponList.appendChild(weaponItem);
     });
     weaponModal.classList.remove("hidden");
@@ -106,9 +107,10 @@ function closeWeaponModal() {
 
 // Actualizar la imagen y el nombre del arma en la tarjeta
 function selectWeapon(weapon, weaponElement) {
-    const weaponImg = weaponElement.querySelector("img");
+    const weaponImg = weaponElement.querySelector(".weapon-img");
     const weaponName = weaponElement.querySelector(".weapon-name");
-    
+
+    // Actualizar la imagen y el nombre del arma
     weaponImg.src = weapon.img;
     weaponName.textContent = `Arma: ${weapon.name}`;
     closeWeaponModal();  // Cerrar el modal
