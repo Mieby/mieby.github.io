@@ -189,6 +189,8 @@ p {
     margin: 10px 0 5px;
 }
 
+/* GENSHIN*/
+
 #characters-list {
     display: flex;
     flex-wrap: wrap;
@@ -210,54 +212,66 @@ p {
 }
 
 /* Imagen del personaje */
+.character-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    max-width: 350px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
 .character-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
-/* Nombre del personaje */
-.character-card h3 {
-    margin: 10px 0;
-    font-size: 1.2em;
-    color: #333;
-}
-
-/* Constelación en la esquina superior derecha */
-.character-card .constellation {
+.constellation {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #FFD700;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
     padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.9em;
-    font-weight: bold;
-    color: #000;
+    border-radius: 5px;
 }
 
-/* Información de talentos y armas */
-.character-card .details {
-    margin-top: 10px;
+.details {
+    margin-top: 15px;
     text-align: left;
 }
 
-.character-card .details ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.character-card .details li {
+.details p, .weapon p {
     margin: 5px 0;
-    font-size: 0.9em;
+    font-size: 14px;
 }
 
-/* Imagen del arma */
-.character-card .weapon-img {
+.weapon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+}
+
+.weapon-img {
+    width: 50px; /* Limitar el tamaño de la imagen del arma */
+    height: 50px;
+    margin-right: 10px;
+}
+
+.weapon-text {
+    text-align: left;
+    font-size: 12px;
+}
+
+h3, h4 {
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
 }
