@@ -1,66 +1,63 @@
-// Lista de personajes disponibles
-const characters = [
-    { name: "Diluc", img: "assets/genshin/diluc.png" },
-    { name: "Jean", img: "assets/genshin/jean.png" },
-    { name: "Zhongli", img: "assets/genshin/zhongli.png" },
-    // Agrega más personajes aquí...
+// Lista de personajes (nombre e imagen)
+const genshinCharacters = [
+    { name: "Diluc", img: "assets/genshin/Diluc.png" },
+    { name: "Keqing", img: "assets/genshin/Keqing.png" },
+    { name: "Bennett", img: "assets/genshin/Bennett.png" },
+    { name: "Xiangling", img: "assets/genshin/Xiangling.png" },
+    { name: "Zhongli", img: "assets/genshin/Zhongli.png" }
 ];
 
-const characterList = document.getElementById("character-list");
+// Elementos del DOM
+const characterGrid = document.getElementById("character-grid");
 const characterModal = document.getElementById("character-modal");
-const characterOptions = document.getElementById("character-options");
+const characterList = document.getElementById("character-list");
+const addCharacterBtn = document.getElementById("add-character-btn");
+const closeModalBtn = document.getElementById("close-modal");
 
-// Mostrar el modal para seleccionar personajes
-document.getElementById("add-character-btn").addEventListener("click", () => {
-    characterModal.style.display = "block";
-    renderCharacterOptions();
-});
-
-// Cerrar el modal
-document.getElementById("close-modal").addEventListener("click", () => {
-    characterModal.style.display = "none";
-});
-
-// Renderizar las opciones de personajes
-function renderCharacterOptions() {
-    characterOptions.innerHTML = "";
-    characters.forEach(character => {
-        const charCard = document.createElement("div");
-        charCard.classList.add("character-option");
-        charCard.innerHTML = `
-            <img src="${character.img}" alt="${character.name}">
+// Mostrar lista de personajes en el modal
+function openCharacterModal() {
+    characterList.innerHTML = ""; // Limpia la lista de personajes
+    genshinCharacters.forEach(character => {
+        const charItem = document.createElement("div");
+        charItem.classList.add("character-item");
+        charItem.innerHTML = `
+            <img src="${character.img}" alt="${character.name}" width="100">
             <p>${character.name}</p>
         `;
-        charCard.addEventListener("click", () => addCharacter(character));
-        characterOptions.appendChild(charCard);
+        charItem.addEventListener("click", () => addCharacterCard(character));
+        characterList.appendChild(charItem);
     });
+    characterModal.classList.remove("hidden");
 }
 
-// Agregar personaje seleccionado a la lista
-function addCharacter(character) {
+// Cerrar el modal
+function closeCharacterModal() {
+    characterModal.classList.add("hidden");
+}
+
+// Agregar tarjeta de personaje
+function addCharacterCard(character) {
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
-
     charCard.innerHTML = `
-        <div class="constellation">C0</div>
+        <div class="constellation editable" contenteditable="true">C0</div>
         <img src="${character.img}" alt="${character.name}">
         <h4>${character.name}</h4>
-        <input type="number" class="level-input" value="1" min="1" max="90">
-        <div class="talents">
-            <input type="number" value="1" min="1" max="15">
-            <input type="number" value="1" min="1" max="15">
-            <input type="number" value="1" min="1" max="15">
-        </div>
-        <div class="weapon">
-            <img src="assets/genshin/weapon.png" alt="Weapon">
+        <div class="level editable" contenteditable="true">Nivel: 0</div>
+        <div class="talents editable" contenteditable="true">Talentos: 0, 0, 0</div>
+        <div class="weapon-info">
+            <img src="assets/placeholder.png" alt="Weapon">
             <div>
-                <input type="text" placeholder="Arma" value="Sin arma">
-                <input type="number" value="1" min="1" max="90">
-                <input type="number" value="1" min="1" max="5">
+                <div class="weapon-name editable" contenteditable="true">Arma: Ninguna</div>
+                <div class="weapon-level editable" contenteditable="true">Nivel: 0</div>
+                <div class="weapon-rank editable" contenteditable="true">Rango: 0</div>
             </div>
         </div>
     `;
-
-    characterList.appendChild(charCard);
-    characterModal.style.display = "none";
+    characterGrid.appendChild(charCard);
+    closeCharacterModal();
 }
+
+// Listeners para botones
+addCharacterBtn.addEventListener("click", openCharacterModal);
+closeModalBtn.addEventListener("click", closeCharacterModal);
