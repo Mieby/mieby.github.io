@@ -1,84 +1,66 @@
+// Lista de personajes disponibles
 const characters = [
-    {
-        name: "Diluc",
-        level: 90,
-        constellation: "C1",
-        talents: { talent1: 10, talent2: 10, talent3: 10 },
-        weapon: {
-            img: "assets/genshin-weapons/wolf-gravestone.png", // Imagen del arma
-            name: "Wolf's Gravestone",
-            level: 90,
-            refinement: "R5"
-        },
-        img: "assets/genshin-characters/diluc.png" // Imagen del personaje
-    },
-    {
-        name: "Kaeya",
-        level: 80,
-        constellation: "C2",
-        talents: { talent1: 8, talent2: 8, talent3: 8 },
-        weapon: {
-            img: "assets/genshin-weapons/skyward-blade.png", // Imagen del arma
-            name: "Skyward Blade",
-            level: 80,
-            refinement: "R4"
-        },
-        img: "assets/genshin-characters/kaeya.png" // Imagen del personaje
-    }
+    { name: "Diluc", img: "assets/genshin/diluc.png" },
+    { name: "Jean", img: "assets/genshin/jean.png" },
+    { name: "Zhongli", img: "assets/genshin/zhongli.png" },
+    // Agrega más personajes aquí...
 ];
 
-function renderCharactersList() {
-    const charactersList = document.getElementById("characters-list");
-    charactersList.innerHTML = ""; // Limpiar lista actual
+const characterList = document.getElementById("character-list");
+const characterModal = document.getElementById("character-modal");
+const characterOptions = document.getElementById("character-options");
 
+// Mostrar el modal para seleccionar personajes
+document.getElementById("add-character-btn").addEventListener("click", () => {
+    characterModal.style.display = "block";
+    renderCharacterOptions();
+});
+
+// Cerrar el modal
+document.getElementById("close-modal").addEventListener("click", () => {
+    characterModal.style.display = "none";
+});
+
+// Renderizar las opciones de personajes
+function renderCharacterOptions() {
+    characterOptions.innerHTML = "";
     characters.forEach(character => {
-        const characterCard = document.createElement("div");
-        characterCard.classList.add("character-card");
-
-        characterCard.innerHTML = `
-            <div class="constellation">C${character.constellation.substring(1)}</div>
-            <img src="${character.img}" alt="${character.name}"> <!-- Imagen del personaje -->
-            <h3>${character.name}</h3>
-            <div class="details">
-                <p><strong>Nivel:</strong> ${character.level}</p>
-                <p><strong>Talentos:</strong> ${character.talents.talent1}, ${character.talents.talent2}, ${character.talents.talent3}</p>
-                <h4>Arma</h4>
-                <div class="weapon-container">
-                    <img src="${character.weapon.img}" alt="${character.weapon.name}" class="weapon-img"> <!-- Imagen del arma -->
-                    <div class="weapon-text">
-                        <p><strong>Nombre:</strong> ${character.weapon.name}</p>
-                        <p><strong>Nivel:</strong> ${character.weapon.level}</p>
-                        <p><strong>Rango:</strong> ${character.weapon.refinement}</p>
-                    </div>
-                </div>
-            </div>
+        const charCard = document.createElement("div");
+        charCard.classList.add("character-option");
+        charCard.innerHTML = `
+            <img src="${character.img}" alt="${character.name}">
+            <p>${character.name}</p>
         `;
-        charactersList.appendChild(characterCard);
+        charCard.addEventListener("click", () => addCharacter(character));
+        characterOptions.appendChild(charCard);
     });
 }
 
-// Inicialización al cargar
-document.addEventListener("DOMContentLoaded", function () {
-    renderCharactersList();
-});
+// Agregar personaje seleccionado a la lista
+function addCharacter(character) {
+    const charCard = document.createElement("div");
+    charCard.classList.add("character-card");
 
-function addNewCharacter() {
-    characters.push({
-        name: "Nuevo Personaje",
-        level: 1,
-        constellation: "C0",
-        talents: { talent1: 1, talent2: 1, talent3: 1 },
-        weapon: {
-            img: "assets/genshin-weapons/default.png",
-            name: "Espada Básica",
-            level: 1,
-            refinement: "R1"
-        }
-    });
-    renderCharactersList();
+    charCard.innerHTML = `
+        <div class="constellation">C0</div>
+        <img src="${character.img}" alt="${character.name}">
+        <h4>${character.name}</h4>
+        <input type="number" class="level-input" value="1" min="1" max="90">
+        <div class="talents">
+            <input type="number" value="1" min="1" max="15">
+            <input type="number" value="1" min="1" max="15">
+            <input type="number" value="1" min="1" max="15">
+        </div>
+        <div class="weapon">
+            <img src="assets/genshin/weapon.png" alt="Weapon">
+            <div>
+                <input type="text" placeholder="Arma" value="Sin arma">
+                <input type="number" value="1" min="1" max="90">
+                <input type="number" value="1" min="1" max="5">
+            </div>
+        </div>
+    `;
+
+    characterList.appendChild(charCard);
+    characterModal.style.display = "none";
 }
-
-// Renderizar personajes al cargar
-document.addEventListener("DOMContentLoaded", function () {
-    renderCharactersList();
-});
