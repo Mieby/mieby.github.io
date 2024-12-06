@@ -51,8 +51,10 @@
     color: #555;
 }
 
-/* Talentos */
+/* Talentos en línea */
 .character-card .talents {
+    display: flex;
+    gap: 10px; /* Espacio entre los talentos */
     margin-top: 10px;
 }
 
@@ -60,15 +62,30 @@
     background-color: #f8f8f8;
     border: 1px solid #ccc;
     padding: 5px;
-    margin-bottom: 5px;
     border-radius: 5px;
+    width: 100px; /* Ancho fijo para cada talento */
+    text-align: center; /* Centra el texto dentro de cada talento */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .character-card .talent[contenteditable="true"]:empty:before {
     content: "Editar talento";
     color: #aaa;
+}
+
+/* Si se desea más separación o margen */
+.character-card .talent {
+    margin: 0;
+}
+
+/* General */
+.character-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Arma */
