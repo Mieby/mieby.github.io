@@ -5,11 +5,12 @@ const characters = [
         constellation: "C1",
         talents: { talent1: 10, talent2: 10, talent3: 10 },
         weapon: {
-            img: "assets/genshin-weapons/wolf-gravestone.png",
+            img: "assets/genshin-weapons/wolf-gravestone.png", // Imagen del arma
             name: "Wolf's Gravestone",
             level: 90,
             refinement: "R5"
-        }
+        },
+        img: "assets/genshin-characters/diluc.png" // Imagen del personaje
     }
     // Agrega más personajes aquí si es necesario
 ];
