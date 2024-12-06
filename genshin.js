@@ -43,10 +43,14 @@ function renderCharactersList() {
                 <p><strong>Nivel:</strong> ${character.level}</p>
                 <p><strong>Talentos:</strong> ${character.talents.talent1}, ${character.talents.talent2}, ${character.talents.talent3}</p>
                 <h4>Arma</h4>
-                <img src="${character.weapon.img}" alt="${character.weapon.name}" class="weapon-img">
-                <p><strong>Nombre:</strong> ${character.weapon.name}</p>
-                <p><strong>Nivel:</strong> ${character.weapon.level}</p>
-                <p><strong>Rango:</strong> ${character.weapon.refinement}</p>
+                <div class="weapon-container">
+                    <img src="${character.weapon.img}" alt="${character.weapon.name}" class="weapon-img"> <!-- Imagen del arma -->
+                    <div class="weapon-text">
+                        <p><strong>Nombre:</strong> ${character.weapon.name}</p>
+                        <p><strong>Nivel:</strong> ${character.weapon.level}</p>
+                        <p><strong>Rango:</strong> ${character.weapon.refinement}</p>
+                    </div>
+                </div>
             </div>
         `;
         charactersList.appendChild(characterCard);
