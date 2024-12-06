@@ -60,7 +60,7 @@ function addCharacterCard(character) {
             <div class="talent editable" contenteditable="true">0</div>
         </div>
         <div class="weapon-info">
-            <img src="assets/placeholder.png" alt="Weapon" class="weapon-img" />
+            <img src="assets/Baby kougra.png" alt="Weapon" class="weapon-img" />
             <div>
                 <div class="weapon-name editable" contenteditable="true">Arma: Ninguna</div>
                 <div class="weapon-level editable" contenteditable="true">Nivel: 0</div>
