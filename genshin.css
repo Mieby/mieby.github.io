@@ -1,70 +1,133 @@
-/* Estilos de la pestaña Genshin */
+/* Estilos del contenedor de personajes */
 #character-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
+    justify-content: center;
 }
 
+/* Tarjetas de personaje */
 .character-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    width: 200px;
-    background-color: #f9f9f9;
-    position: relative;
+    width: 250px;
+    background-color: #f0f4ff;
+    border: 1px solid #c2d3ff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del personaje */
 .character-card img {
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.character-card .constellation {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ffd700;
-    padding: 5px;
-    border-radius: 5px;
-    font-weight: bold;
+/* Nombre del personaje */
+.character-card h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 5px 0;
 }
 
+/* Nivel, talentos y arma */
+.character-card .level, 
+.character-card .talents, 
+.character-card .weapon-info {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Información del arma */
 .weapon-info {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    font-size: 0.9em;
+    background-color: #e6ebff;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
 .weapon-info img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
+    border-radius: 5px;
 }
 
+/* Constellation */
+.character-card .constellation {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffd700;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del modal */
 .modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .modal-content {
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 80%;
     max-width: 600px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .modal.hidden {
     display: none;
+}
+
+/* Lista de personajes dentro del modal */
+#character-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.character-item {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.character-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid #c2d3ff;
+}
+
+.character-item:hover {
+    transform: scale(1.1);
 }
