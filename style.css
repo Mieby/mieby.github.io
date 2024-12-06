@@ -188,3 +188,76 @@ p {
 .person-item h4 {
     margin: 10px 0 5px;
 }
+
+#characters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Tarjeta de personaje */
+.character-card {
+    position: relative;
+    width: 250px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Imagen del personaje */
+.character-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Nombre del personaje */
+.character-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Constelación en la esquina superior derecha */
+.character-card .constellation {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FFD700;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Información de talentos y armas */
+.character-card .details {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.character-card .details ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.character-card .details li {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Imagen del arma */
+.character-card .weapon-img {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
