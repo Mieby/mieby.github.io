@@ -14,7 +14,7 @@
     border: 1px solid #d4e1ff;
     border-radius: 15px;
     padding: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
