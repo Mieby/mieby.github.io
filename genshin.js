@@ -40,6 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (card) {
+            const imageContainer = card.querySelector(".character-img");
+            if (character.backgroundImage) {
+                imageContainer.style.backgroundImage = character.backgroundImage; // Restaurar fondo
+            }
+
+        if (card) {
             const characterBox = card.querySelector(".character-box .editable-text");
             if (characterBox) {
                 characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
@@ -186,7 +192,8 @@ function saveCharacterState() {
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
-        additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "" // Guardar el contenido del textarea
+        additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
+        backgroundImage: imageContainer.style.backgroundImage
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
