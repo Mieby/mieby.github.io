@@ -52,6 +52,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-size: 1.5em;
     border: 2px solid #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Nombre del personaje */
@@ -127,6 +128,7 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border: 2px solid #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Modal */
