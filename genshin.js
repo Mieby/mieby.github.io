@@ -100,6 +100,29 @@ function addCharacterCard(character, isLoading = false) {
     const weaponImg = weaponElement.querySelector(".weapon-img"); // Obtener la imagen del arma
     weaponImg.addEventListener("click", () => openWeaponModal(weaponElement)); // Pasa el contenedor completo
 
+     // Crear el cuadro de texto editable para cada personaje al hacer clic en la imagen del personaje
+    const characterImg = charCard.querySelector(".character-img"); // Obtener la imagen del personaje
+    characterImg.addEventListener("click", () => {
+        // Verificar si ya existe un cuadro para este personaje, si no, lo creamos
+        let existingBox = charCard.querySelector(".character-box");
+        if (!existingBox) {
+            const characterBox = document.createElement("div");
+            characterBox.classList.add("character-box");
+
+            // Crear el contenido del cuadro
+            characterBox.innerHTML = `
+                <h5>${character.name}</h5>
+                <textarea class="editable-text">${character.name || ''}</textarea>
+            `;
+
+            // Agregar el cuadro al DOM, justo debajo de la tarjeta
+            charCard.appendChild(characterBox);
+        } else {
+            // Si ya existe un cuadro, simplemente lo mostramos o lo ocultamos
+            existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
+        }
+    });
+
     // Si no estamos cargando, cierra el modal y guarda el estado
     if (!isLoading) {
         closeCharacterModal();
