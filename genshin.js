@@ -96,27 +96,34 @@ function addCharacterCard(character, isLoading = false) {
     characterGrid.appendChild(charCard);
 
     // Agregar el evento para abrir el modal de armas
-    const weaponElement = charCard.querySelector(".weapon-info");
-    const weaponImg = weaponElement.querySelector(".weapon-img");
-    weaponImg.addEventListener("click", () => openWeaponModal(weaponElement));
+    const weaponElement = charCard.querySelector(".weapon-info"); // Obtener el contenedor del arma completo
+    const weaponImg = weaponElement.querySelector(".weapon-img"); // Obtener la imagen del arma
+    weaponImg.addEventListener("click", () => openWeaponModal(weaponElement)); // Pasa el contenedor completo
 
-    // Crear el cuadro de texto editable para cada personaje al hacer clic en la imagen del personaje
-    const characterImg = charCard.querySelector(".character-img");
+    // Crear el evento de clic en la imagen para abrir el cuadro con información adicional
+    const characterImg = charCard.querySelector(".character-img"); // Obtener la imagen del personaje
     characterImg.addEventListener("click", () => {
-        let existingBox = charCard.querySelector(".character-box");
-        if (!existingBox) {
-            const characterBox = document.createElement("div");
-            characterBox.classList.add("character-box");
+        // Crear un cuadro modal para editar la información del personaje
+        const infoModal = document.createElement("div");
+        infoModal.classList.add("info-modal");
 
-            characterBox.innerHTML = `
+        // HTML del modal con nombre del personaje y campo de texto adicional
+        infoModal.innerHTML = `
+            <div class="modal-content">
                 <h5>${character.name}</h5>
-                <textarea class="editable-text">${character.name || ''}</textarea>
-            `;
+                <textarea class="additional-info" placeholder="Agregar información adicional..."></textarea>
+                <button class="close-modal-btn">Cerrar</button>
+            </div>
+        `;
 
-            charCard.appendChild(characterBox);
-        } else {
-            existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
-        }
+        // Agregar el modal a la página
+        document.body.appendChild(infoModal);
+
+        // Agregar evento para cerrar el modal
+        const closeModalBtn = infoModal.querySelector(".close-modal-btn");
+        closeModalBtn.addEventListener("click", () => {
+            document.body.removeChild(infoModal);  // Cerrar el modal
+        });
     });
 
     // Si no estamos cargando, cierra el modal y guarda el estado
