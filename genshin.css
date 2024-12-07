@@ -47,8 +47,18 @@
 
 /* Nivel */
 .character-card .level {
-    font-size: 0.9em;
-    color: #555;
+    position: absolute;
+    bottom: 10px; /* Posición en la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontalmente */
+    background-color: #ffd700;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    z-index: 2; /* Asegura que esté por encima de la imagen */
 }
 
 /* Talentos en línea */
