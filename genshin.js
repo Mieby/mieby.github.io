@@ -103,7 +103,11 @@ function addCharacterCard(character, isLoading = false) {
                 <div class="weapon-name editable" contenteditable="true">${character.weaponName || 'Ninguna'}</div>
                 <div class="weapon-level editable" contenteditable="true">${character.weaponLevel || 'Nivel: 0'}</div>
                 <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'Rango: 0'}</div>
-            </div>
+           </div>
+        </div>
+        <div class="character-box hidden">
+            <h5>${character.name}</h5>
+            <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
     `;
 
@@ -167,7 +171,8 @@ function saveCharacterState() {
         weaponImg: card.querySelector(".weapon-img").src,
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
-        weaponRank: card.querySelector(".weapon-rank").textContent
+        weaponRank: card.querySelector(".weapon-rank").textContent,
+        additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "" // Guardar el contenido del textarea
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
