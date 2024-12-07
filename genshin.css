@@ -40,9 +40,15 @@
 
 /* Nivel */
 .character-card .level {
-    font-size: 0.9em;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    background-color: #ffd700;
+    font-weight: bold;
     color: #555;
-    margin-bottom: 5px; /* Añade un margen para separar del nombre */
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Nombre del personaje */
