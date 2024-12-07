@@ -82,13 +82,6 @@ function addCharacterCard(character, isLoading = false) {
         }
     }
 
-    // Asignar fondo dinámico según las estrellas
-    if (character.stars === 5) {
-        imageContainer.style.backgroundImage = "url('assets/Baby kougra.png')"; // Fondo para 5 estrellas
-    } else if (character.stars === 4) {
-        imageContainer.style.backgroundImage = "url('assets/Baby kougra.png')"; // Fondo para 4 estrellas
-    }
-
     // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
@@ -118,8 +111,17 @@ function addCharacterCard(character, isLoading = false) {
         </div>
     `;
 
+     // Obtener el contenedor de la imagen y cambiar el fondo
+    const imageContainer = charCard.querySelector(".character-img");
+    if (character.stars === 5) {
+        imageContainer.style.backgroundImage = "url('assets/Baby kougra.png')"; // Fondo para 5 estrellas
+    } else if (character.stars === 4) {
+        imageContainer.style.backgroundImage = "url('assets/Baby kougra.png')"; // Fondo para 4 estrellas
+    }
+
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
+
 
     // Agregar el evento para abrir el modal de armas
     const weaponElement = charCard.querySelector(".weapon-info");
