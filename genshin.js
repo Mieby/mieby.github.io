@@ -56,6 +56,18 @@ function closeCharacterModal() {
 
 // Agregar tarjeta de personaje
 function addCharacterCard(character, isLoading = false) {
+    // Si isLoading es false, se realiza la verificación de duplicados
+    if (!isLoading) {
+        const existingCards = document.querySelectorAll(".character-card h4");
+        const isDuplicate = Array.from(existingCards).some(card => card.textContent === character.name);
+
+        if (isDuplicate) {
+            alert(`${character.name} ya ha sido agregado.`);
+            return;  // Si el personaje ya está, no lo agregues.
+        }
+    }
+
+    // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
 
@@ -80,8 +92,15 @@ function addCharacterCard(character, isLoading = false) {
         </div>
     `;
 
-// Agregar la tarjeta al contenedor de personajes
+    // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
+
+    // Si no estamos cargando, guardamos el estado
+    if (!isLoading) {
+        saveCharacterState();
+    }
+    closeCharacterModal();
+}
 
     // Agregar el evento para abrir el modal de armas
     const weaponElement = charCard.querySelector(".weapon-info"); // Obtener el contenedor del arma completo
