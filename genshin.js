@@ -156,10 +156,11 @@ function saveCharacterState() {
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
         characterBoxText: card.querySelector(".editable-text") ? card.querySelector(".editable-text").value : ''
-    }));
-    console.log("Saving to localStorage:", characters); // Debug
-    localStorage.setItem("genshinCharacters", JSON.stringify(characters));
-}
+    };
+    console.log("Character data being saved:", characterData); // Debug
+    return characterData;
+});
+localStorage.setItem("genshinCharacters", JSON.stringify(characters));
 
 // Info +
 function toggleCharacterInfo() {
@@ -199,7 +200,7 @@ toggleInfoBtn.addEventListener("click", toggleCharacterInfo);
 
 document.addEventListener("input", event => {
     if (event.target.closest(".editable")) {
-        console.log("Editable content changed:", event.target.textContent); // Debug
+        console.log("Loaded characters from localStorage:", savedCharacters); // Debug
         saveCharacterState();
     }
 });
