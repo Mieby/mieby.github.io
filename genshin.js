@@ -1,18 +1,18 @@
 // Lista de personajes (nombre e imagen)
 const genshinCharacters = [
-    { name: "Diluc", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/diluc/image.png?strip=all&quality=75&w=256" },
-    { name: "Keqing", img: "assets/genshin/Keqing.png" },
-    { name: "Bennett", img: "assets/genshin/Bennett.png" },
-    { name: "Xiangling", img: "assets/genshin/Xiangling.png" },
-    { name: "Zhongli", img: "assets/genshin/Zhongli.png" }
+    { name: "Diluc", element: "Pyro", stars: 5, weaponType: "claymore", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/diluc/image.png?strip=all&quality=75&w=256"},
+    { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/lynette/image.png?strip=all&quality=75&w=256"},
+    { name: "Faruzán", element: "Anemo", stars: 4, weaponType: "catalyst", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/faruzan/image.png?strip=all&quality=75&w=256"},
+    { name: "Diluc", element: "Pyro", stars: 5, weaponType: "claymore", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/diluc/image.png?strip=all&quality=75&w=256" },
+    { name: "Diluc", element: "Pyro", stars: 5, weaponType: "claymore", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/diluc/image.png?strip=all&quality=75&w=256" }
 ];
 
 const weaponsList = [
-    { name: "Espada de Favonius", img: "assets/weapons/favonius_sword.png" },
-    { name: "Claymore de Serpiente", img: "assets/weapons/serpent_claymore.png" },
-    { name: "Arco de Sacrificio", img: "assets/weapons/sacrificial_bow.png" },
-    { name: "Lanza de Dragonspine", img: "assets/weapons/dragonspine_lance.png" },
-    { name: "Espada del Lobo", img: "assets/weapons/wolf_sword.png" }
+    { name: "Espada de Favonius", weaponType: "sword", stars: 4, img: "assets/weapons/favonius_sword.png"},
+    { name: "Espada de Favonius", weaponType: "sword", stars: 4, img: "assets/weapons/favonius_sword.png"},
+    { name: "Espada de Favonius", weaponType: "sword", stars: 4, img: "assets/weapons/favonius_sword.png" },
+    { name: "Espada de Favonius", weaponType: "sword", stars: 4, img: "assets/weapons/favonius_sword.png" },
+    { name: "Espada de Favonius", weaponType: "sword", stars: 4, img: "assets/weapons/favonius_sword.png"}
 ];
 
 // Elementos del DOM
