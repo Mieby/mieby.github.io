@@ -90,6 +90,7 @@ function addCharacterCard(character) {
     const weaponElement = charCard.querySelector(".weapon-info");  // Obtener el contenedor del arma completo
     const weaponImg = weaponElement.querySelector(".weapon-img");  // Obtener la imagen del arma
     weaponImg.addEventListener("click", () => openWeaponModal(weaponElement));  // Pasa el contenedor completo
+    saveCharacterState();
 }
 
 // Mostrar el modal de armas
@@ -122,6 +123,7 @@ function selectWeapon(weapon, weaponElement) {
     weaponImg.src = weapon.img;
     weaponName.textContent = `Arma: ${weapon.name}`;
     closeWeaponModal();  // Cerrar el modal
+    saveCharacterState();
 }
 // Guardar el estado de los personajes en localStorage
 function saveCharacterState() {
@@ -146,3 +148,9 @@ function saveCharacterState() {
 addCharacterBtn.addEventListener("click", openCharacterModal);
 closeModalBtn.addEventListener("click", closeCharacterModal);
 closeWeaponModalBtn.addEventListener("click", closeWeaponModal);
+
+document.addEventListener("input", event => {
+    if (event.target.closest(".editable")) {
+        saveCharacterState();
+    }
+});
