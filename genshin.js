@@ -168,6 +168,7 @@ function saveCharacterState() {
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
 closeModalBtn.addEventListener("click", closeCharacterModal);
+closeWeaponModalBtn.addEventListener("click", closeWeaponModal);
 toggleInfoBtn.addEventListener("click", toggleCharacterInfo);
 
 document.addEventListener("input", event => {
