@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 imageContainer.style.backgroundImage = character.backgroundImage; // Restaurar fondo
             }
 
-        if (card) {
             const characterBox = card.querySelector(".character-box .editable-text");
             if (characterBox) {
                 characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
