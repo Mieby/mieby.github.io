@@ -32,12 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
     savedCharacters.forEach(character => {
         addCharacterCard(character, true);
-        // Recuperar el contenido del texto adicional
-        if (character.additionalInfo) {
-            const card = document.querySelector(`.character-card h4:contains(${character.name})`).parentElement;
+        
+        // Buscar la tarjeta correspondiente por el nombre del personaje
+        const card = Array.from(document.querySelectorAll(".character-card")).find(card => {
+            const nameElement = card.querySelector("h4");
+            return nameElement && nameElement.textContent === character.name;
+        });
+
+        if (card) {
+            // Recuperar y establecer el contenido del textarea
             const characterBox = card.querySelector(".character-box .editable-text");
             if (characterBox) {
-                characterBox.value = character.additionalInfo; // Rellenar el textarea con el contenido guardado
+                characterBox.value = character.additionalInfo; // Establecer el contenido del textarea
             }
         }
     });
