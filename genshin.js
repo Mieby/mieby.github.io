@@ -28,11 +28,20 @@ const weaponModal = document.getElementById("weapon-modal");
 const weaponList = document.getElementById("weapon-list");
 const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 
-// Cargar datos desde localStorage al iniciar
-        document.addEventListener("DOMContentLoaded", () => {
-            const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
-            savedCharacters.forEach(character => addCharacterCard(character, true));
-        });
+document.addEventListener("DOMContentLoaded", () => {
+    const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
+    savedCharacters.forEach(character => {
+        addCharacterCard(character, true);
+        // Recuperar el contenido del texto adicional
+        if (character.additionalInfo) {
+            const card = document.querySelector(`.character-card h4:contains(${character.name})`).parentElement;
+            const characterBox = card.querySelector(".character-box .editable-text");
+            if (characterBox) {
+                characterBox.value = character.additionalInfo; // Rellenar el textarea con el contenido guardado
+            }
+        }
+    });
+});
 
 // Mostrar lista de personajes en el modal
 function openCharacterModal() {
@@ -153,7 +162,8 @@ function saveCharacterState() {
         weaponImg: card.querySelector(".weapon-img").src,
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
-        weaponRank: card.querySelector(".weapon-rank").textContent
+        weaponRank: card.querySelector(".weapon-rank").textContent,
+        additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "" // Guardar el contenido del textarea
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
