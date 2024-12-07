@@ -28,11 +28,25 @@ const weaponModal = document.getElementById("weapon-modal");
 const weaponList = document.getElementById("weapon-list");
 const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 
-// Cargar datos desde localStorage al iniciar
-        document.addEventListener("DOMContentLoaded", () => {
-            const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
-            savedCharacters.forEach(character => addCharacterCard(character, true));
+document.addEventListener("DOMContentLoaded", () => {
+    const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
+    savedCharacters.forEach(character => {
+        addCharacterCard(character, true);
+
+        // Verificar si hay un cuadro de texto adicional que se debe rellenar
+        const card = Array.from(document.querySelectorAll(".character-card")).find(card => {
+            const nameElement = card.querySelector("h4");
+            return nameElement && nameElement.textContent === character.name;
         });
+
+        if (card) {
+            const characterBox = card.querySelector(".character-box .editable-text");
+            if (characterBox) {
+                characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
+            }
+        }
+    });
+});
 
 // Mostrar lista de personajes en el modal
 function openCharacterModal() {
