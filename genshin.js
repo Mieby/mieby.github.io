@@ -122,6 +122,9 @@ function addCharacterCard(character, isLoading = false) {
             existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
         }
     });
+    } else {
+    console.error("No se encontró la imagen del personaje.");
+}
 
     // Si no estamos cargando, cierra el modal y guarda el estado
     if (!isLoading) {
