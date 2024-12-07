@@ -50,6 +50,7 @@
     padding: 5px 10px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1.5em;
 }
 
 /* Nombre del personaje */
@@ -118,7 +119,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #ffd700;
+    background-color: #4f8b9c;
     color: #fff;
     font-weight: bold;
     padding: 5px 10px;
