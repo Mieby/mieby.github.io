@@ -132,13 +132,11 @@ function toggleCharacterInfo() {
             // Si no existe el cuadro de información, lo creamos
             const characterBox = document.createElement("div");
             characterBox.classList.add("character-box");
-            characterBox.style.display = "none"; // Inicialmente oculto
-
+            // Deja que el CSS controle la visibilidad inicialmente oculta
             characterBox.innerHTML = `
                 <h5>${card.querySelector("h4").textContent}</h5>
                 <textarea class="editable-text">${card.querySelector("h4").textContent || ''}</textarea>
             `;
-
             card.appendChild(characterBox);
             saveCharacterState();
         }
