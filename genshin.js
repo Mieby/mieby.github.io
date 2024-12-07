@@ -93,6 +93,18 @@ function addCharacterCard(character, isLoading = false) {
         </div>
     `;
 
+    // Asignar el valor del textarea si existe (esto es importante para que se mantengan los cambios)
+    const existingCharacter = JSON.parse(localStorage.getItem("genshinCharacters"))?.find(c => c.name === character.name);
+    if (existingCharacter && existingCharacter.additionalInfo) {
+        const characterBox = charCard.querySelector(".character-box");
+        if (characterBox) {
+            const textarea = characterBox.querySelector(".editable-text");
+            if (textarea) {
+                textarea.value = existingCharacter.additionalInfo;
+            }
+        }
+    }
+
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
 
@@ -154,6 +166,7 @@ function saveCharacterState() {
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent
+        additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : ''
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
