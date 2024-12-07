@@ -112,7 +112,6 @@ function addCharacterCard(character, isLoading = false) {
         closeCharacterModal();
         saveCharacterState();
     }
-}
 
 // Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
