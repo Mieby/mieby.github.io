@@ -84,8 +84,6 @@ function addCharacterCard(character) {
     characterGrid.appendChild(charCard);
     closeCharacterModal();
 
-    // Guardar en localStorage si es necesario
-    if (save) saveCharacterState();
 
 
     // Agregar el evento para abrir el modal de armas
