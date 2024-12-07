@@ -120,19 +120,19 @@ function addCharacterCard(character, isLoading = false) {
     }
 }
 
-// Mostrar/ocultar cuadro de texto (Info +)
+// Info +
 function toggleCharacterInfo() {
     const characterCards = document.querySelectorAll(".character-card");
     characterCards.forEach(card => {
         let existingBox = card.querySelector(".character-box");
         if (existingBox) {
-            // Alternar la visibilidad del cuadro de información
+            // Alternar la visibilidad de la información
             existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
         } else {
             // Si no existe el cuadro de información, lo creamos
             const characterBox = document.createElement("div");
             characterBox.classList.add("character-box");
-            characterBox.style.display = "block"; // Mostrar inmediatamente
+            characterBox.style.display = "none"; // Inicialmente oculto
 
             characterBox.innerHTML = `
                 <h5>${card.querySelector("h4").textContent}</h5>
@@ -140,9 +140,9 @@ function toggleCharacterInfo() {
             `;
 
             card.appendChild(characterBox);
+            saveCharacterState();
         }
     });
-    saveCharacterState();
 }
 
 // Guardar el estado de los personajes en localStorage
