@@ -1,6 +1,6 @@
 // Lista de personajes (nombre e imagen)
 const genshinCharacters = [
-    { name: "Diluc", img: "https://example.com/images/Diluc.png" },
+    { name: "Diluc", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/diluc/image.png?strip=all&quality=75&w=256" },
     { name: "Keqing", img: "assets/genshin/Keqing.png" },
     { name: "Bennett", img: "assets/genshin/Bennett.png" },
     { name: "Xiangling", img: "assets/genshin/Xiangling.png" },
