@@ -33,17 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
     savedCharacters.forEach(character => {
         addCharacterCard(character, true);
         
-        // Buscar la tarjeta correspondiente por el nombre del personaje
+        // Recuperar y establecer el contenido del textarea
         const card = Array.from(document.querySelectorAll(".character-card")).find(card => {
             const nameElement = card.querySelector("h4");
             return nameElement && nameElement.textContent === character.name;
         });
 
         if (card) {
-            // Recuperar y establecer el contenido del textarea
+            // Establecer el contenido del textarea
             const characterBox = card.querySelector(".character-box .editable-text");
             if (characterBox) {
-                characterBox.value = character.additionalInfo; // Establecer el contenido del textarea
+                characterBox.value = character.additionalInfo || ''; // Establecer el contenido del textarea
             }
         }
     });
@@ -106,16 +106,14 @@ function addCharacterCard(character, isLoading = false) {
                 <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'Rango: 0'}</div>
             </div>
         </div>
+        <div class="character-box">
+            <h5>${character.name}</h5>
+            <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
+        </div>
     `;
 
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
-
-    // Agregar el evento para abrir el modal de armas
-    const weaponElement = charCard.querySelector(".weapon-info");
-    const weaponImg = weaponElement.querySelector(".weapon-img");
-    weaponImg.addEventListener("click", () => openWeaponModal(weaponElement));
-
 
     // Si no estamos cargando, cierra el modal y guarda el estado
     if (!isLoading) {
@@ -123,38 +121,7 @@ function addCharacterCard(character, isLoading = false) {
         saveCharacterState();
     }
 }
-// Mostrar el modal de armas
-function openWeaponModal(weaponElement) {
-    weaponList.innerHTML = "";  // Limpiar la lista de armas
-    weaponsList.forEach(weapon => {
-        const weaponItem = document.createElement("div");
-        weaponItem.classList.add("weapon-item");
-        weaponItem.innerHTML = `
-            <img src="${weapon.img}" alt="${weapon.name}" width="50">
-            <p>${weapon.name}</p>
-        `;
-        weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));  // Pasar el contenedor completo
-        weaponList.appendChild(weaponItem);
-    });
-    weaponModal.classList.remove("hidden");
-}
 
-// Cerrar el modal de armas
-function closeWeaponModal() {
-    weaponModal.classList.add("hidden");
-}
-
-// Actualizar la imagen y el nombre del arma en la tarjeta
-function selectWeapon(weapon, weaponElement) {
-    const weaponImg = weaponElement.querySelector(".weapon-img");
-    const weaponName = weaponElement.querySelector(".weapon-name");
-
-    // Actualizar la imagen y el nombre del arma
-    weaponImg.src = weapon.img;
-    weaponName.textContent = `Arma: ${weapon.name}`;
-    closeWeaponModal();  // Cerrar el modal
-    saveCharacterState();
-}
 // Guardar el estado de los personajes en localStorage
 function saveCharacterState() {
     const characters = Array.from(document.querySelectorAll(".character-card")).map(card => ({
@@ -169,7 +136,7 @@ function saveCharacterState() {
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
-        additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "" // Guardar el contenido del textarea
+        additionalInfo: card.querySelector(".editable-text") ? card.querySelector(".editable-text").value : "" // Guardar el contenido del textarea
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
@@ -196,7 +163,6 @@ function toggleCharacterInfo() {
             card.appendChild(characterBox);
             saveCharacterState();
         }
-        
     });
 }
 
