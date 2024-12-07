@@ -156,7 +156,7 @@ function saveCharacterState() {
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
         characterBoxText: card.querySelector(".editable-text") ? card.querySelector(".editable-text").value : ''
-    };
+    }
     console.log("Character data being saved:", characterData); // Debug
     return characterData;
 });
