@@ -151,6 +151,7 @@ closeWeaponModalBtn.addEventListener("click", closeWeaponModal);
 
 document.addEventListener("input", event => {
     if (event.target.closest(".editable")) {
+        console.log("Editable content changed:", event.target.textContent); // Debug
         saveCharacterState();
     }
 });
