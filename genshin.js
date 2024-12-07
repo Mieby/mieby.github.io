@@ -184,12 +184,13 @@ function toggleCharacterInfo() {
     characterCards.forEach(card => {
         let existingBox = card.querySelector(".character-box");
         if (existingBox) {
-            // Alternar la visibilidad de la información
+            // Alternar la visibilidad del cuadro de información
             existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
         } else {
             // Si no existe el cuadro de información, lo creamos
             const characterBox = document.createElement("div");
             characterBox.classList.add("character-box");
+            characterBox.style.display = "block"; // Mostrar inmediatamente
 
             characterBox.innerHTML = `
                 <h5>${card.querySelector("h4").textContent}</h5>
@@ -198,8 +199,8 @@ function toggleCharacterInfo() {
 
             card.appendChild(characterBox);
         }
-        saveCharacterState();
     });
+    saveCharacterState();
 }
 
 // Listeners para botones
