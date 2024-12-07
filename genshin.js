@@ -185,12 +185,11 @@ function toggleCharacterInfo() {
         let existingBox = card.querySelector(".character-box");
         if (existingBox) {
             // Alternar la visibilidad del cuadro de información
-            existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
+            existingBox.classList.toggle("hidden");  // Alternar la clase "hidden"
         } else {
             // Si no existe el cuadro de información, lo creamos
             const characterBox = document.createElement("div");
-            characterBox.classList.add("character-box");
-            characterBox.style.display = "none"; // Mostrar inmediatamente
+            characterBox.classList.add("character-box", "hidden");  // Inicialmente oculto
 
             characterBox.innerHTML = `
                 <h5>${card.querySelector("h4").textContent}</h5>
