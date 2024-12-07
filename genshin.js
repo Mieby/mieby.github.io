@@ -23,6 +23,8 @@ const addCharacterBtn = document.getElementById("add-character-btn");
 const closeModalBtn = document.getElementById("close-modal");
 const toggleInfoBtn = document.getElementById("toggle-info-btn");
 
+
+// Cargar datos desde localStorage al iniciar
 // Elementos del DOM para el modal de armas
 const weaponModal = document.getElementById("weapon-modal");
 const weaponList = document.getElementById("weapon-list");
@@ -120,7 +122,41 @@ function addCharacterCard(character, isLoading = false) {
     }
 }
 
-// Mostrar/ocultar cuadro de texto (Info +)
+// Mostrar el modal de armas
+function openWeaponModal(weaponElement) {
+    weaponList.innerHTML = "";  // Limpiar la lista de armas
+    weaponsList.forEach(weapon => {
+        const weaponItem = document.createElement("div");
+        weaponItem.classList.add("weapon-item");
+        weaponItem.innerHTML = `
+            <img src="${weapon.img}" alt="${weapon.name}" width="50">
+            <p>${weapon.name}</p>
+        `;
+        weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));  // Pasar el contenedor completo
+        weaponList.appendChild(weaponItem);
+    });
+    weaponModal.classList.remove("hidden");
+}
+
+// Cerrar el modal de armas
+function closeWeaponModal() {
+    weaponModal.classList.add("hidden");
+}
+
+// Actualizar la imagen y el nombre del arma en la tarjeta
+function selectWeapon(weapon, weaponElement) {
+    const weaponImg = weaponElement.querySelector(".weapon-img");
+    const weaponName = weaponElement.querySelector(".weapon-name");
+
+    // Actualizar la imagen y el nombre del arma
+    weaponImg.src = weapon.img;
+    weaponName.textContent = `Arma: ${weapon.name}`;
+    closeWeaponModal();  // Cerrar el modal
+    saveCharacterState();
+}
+
+
+// Info+
 function toggleCharacterInfo() {
     const characterCards = document.querySelectorAll(".character-card");
     characterCards.forEach(card => {
