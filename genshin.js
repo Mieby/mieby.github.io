@@ -54,84 +54,83 @@ function closeCharacterModal() {
     characterModal.classList.add("hidden");
 }
 
-// Agregar tarjeta de personaje
-function addCharacterCard(character, isLoading = false) {
-    // Si isLoading es false, se realiza la verificación de duplicados
-    if (!isLoading) {
-        const existingCards = document.querySelectorAll(".character-card h4");
-        const isDuplicate = Array.from(existingCards).some(card => card.textContent === character.name);
+document.addEventListener('DOMContentLoaded', () => {
+    // Agregar tarjeta de personaje
+    function addCharacterCard(character, isLoading = false) {
+        // Si isLoading es false, se realiza la verificación de duplicados
+        if (!isLoading) {
+            const existingCards = document.querySelectorAll(".character-card h4");
+            const isDuplicate = Array.from(existingCards).some(card => card.textContent === character.name);
 
-        if (isDuplicate) {
-            alert(`${character.name} ya ha sido agregado.`);
-            return;  // Si el personaje ya está, no lo agregues.
+            if (isDuplicate) {
+                alert(`${character.name} ya ha sido agregado.`);
+                return;  // Si el personaje ya está, no lo agregues.
+            }
         }
-    }
 
-    // Crear la tarjeta de personaje
-    const charCard = document.createElement("div");
-    charCard.classList.add("character-card");
+        // Crear la tarjeta de personaje
+        const charCard = document.createElement("div");
+        charCard.classList.add("character-card");
 
-    // HTML para la tarjeta de personaje
-    charCard.innerHTML = `
-        <div class="constellation editable" contenteditable="true">${character.constellation || 'C0'}</div>
-        <img src="${character.img}" alt="${character.name}">
-        <h4>${character.name}</h4>
-        <div class="level editable" contenteditable="true">${character.level || 'Nivel: 0'}</div>
-        <div class="talents">
-            <div class="talent editable" contenteditable="true">${character.talent1 || '0'}</div>
-            <div class="talent editable" contenteditable="true">${character.talent2 || '0'}</div>
-            <div class="talent editable" contenteditable="true">${character.talent3 || '0'}</div>
-        </div>
-        <div class="weapon-info">
-            <img src="${character.weaponImg || 'assets/Baby kougra.png'}" alt="Weapon" class="weapon-img" />
-            <div>
-                <div class="weapon-name editable" contenteditable="true">${character.weaponName || 'Ninguna'}</div>
-                <div class="weapon-level editable" contenteditable="true">${character.weaponLevel || 'Nivel: 0'}</div>
-                <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'Rango: 0'}</div>
+        // HTML para la tarjeta de personaje
+        charCard.innerHTML = `
+            <div class="constellation editable" contenteditable="true">${character.constellation || 'C0'}</div>
+            <img src="${character.img}" alt="${character.name}" class="character-img">
+            <h4>${character.name}</h4>
+            <div class="level editable" contenteditable="true">${character.level || 'Nivel: 0'}</div>
+            <div class="talents">
+                <div class="talent editable" contenteditable="true">${character.talent1 || '0'}</div>
+                <div class="talent editable" contenteditable="true">${character.talent2 || '0'}</div>
+                <div class="talent editable" contenteditable="true">${character.talent3 || '0'}</div>
             </div>
-        </div>
-    `;
+            <div class="weapon-info">
+                <img src="${character.weaponImg || 'assets/Baby kougra.png'}" alt="Weapon" class="weapon-img" />
+                <div>
+                    <div class="weapon-name editable" contenteditable="true">${character.weaponName || 'Ninguna'}</div>
+                    <div class="weapon-level editable" contenteditable="true">${character.weaponLevel || 'Nivel: 0'}</div>
+                    <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'Rango: 0'}</div>
+                </div>
+            </div>
+        `;
 
-    // Agregar la tarjeta al contenedor de personajes
-    characterGrid.appendChild(charCard);
+        // Agregar la tarjeta al contenedor de personajes
+        characterGrid.appendChild(charCard);
 
-    // Agregar el evento para abrir el modal de armas
-    const weaponElement = charCard.querySelector(".weapon-info"); // Obtener el contenedor del arma completo
-    const weaponImg = weaponElement.querySelector(".weapon-img"); // Obtener la imagen del arma
-    weaponImg.addEventListener("click", () => openWeaponModal(weaponElement)); // Pasa el contenedor completo
+        // Agregar el evento para abrir el modal de armas
+        const weaponElement = charCard.querySelector(".weapon-info"); // Obtener el contenedor del arma completo
+        const weaponImg = weaponElement.querySelector(".weapon-img"); // Obtener la imagen del arma
+        weaponImg.addEventListener("click", () => openWeaponModal(weaponElement)); // Pasa el contenedor completo
 
-     // Crear el cuadro de texto editable para cada personaje al hacer clic en la imagen del personaje
-    const characterImg = charCard.querySelector(".character-img"); // Obtener la imagen del personaje
-    characterImg.addEventListener("click", () => {
-        // Verificar si ya existe un cuadro para este personaje, si no, lo creamos
-        let existingBox = charCard.querySelector(".character-box");
-        if (!existingBox) {
-            const characterBox = document.createElement("div");
-            characterBox.classList.add("character-box");
+        // Crear el cuadro de texto editable para cada personaje al hacer clic en la imagen del personaje
+        const characterImg = charCard.querySelector(".character-img"); // Obtener la imagen del personaje
+        characterImg.addEventListener("click", () => {
+            // Verificar si ya existe un cuadro para este personaje, si no, lo creamos
+            let existingBox = charCard.querySelector(".character-box");
+            if (!existingBox) {
+                const characterBox = document.createElement("div");
+                characterBox.classList.add("character-box");
 
-            // Crear el contenido del cuadro
-            characterBox.innerHTML = `
-                <h5>${character.name}</h5>
-                <textarea class="editable-text">${character.name || ''}</textarea>
-            `;
+                // Crear el contenido del cuadro
+                characterBox.innerHTML = `
+                    <h5>${character.name}</h5>
+                    <textarea class="editable-text">${character.name || ''}</textarea>
+                `;
 
-            // Agregar el cuadro al DOM, justo debajo de la tarjeta
-            charCard.appendChild(characterBox);
-        } else {
-            // Si ya existe un cuadro, simplemente lo mostramos o lo ocultamos
-            existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
+                // Agregar el cuadro al DOM, justo debajo de la tarjeta
+                charCard.appendChild(characterBox);
+            } else {
+                // Si ya existe un cuadro, simplemente lo mostramos o lo ocultamos
+                existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
+            }
+        });
+
+        // Si no estamos cargando, cierra el modal y guarda el estado
+        if (!isLoading) {
+            closeCharacterModal();
+            saveCharacterState();
         }
-    });
-    } else {
-    console.error("No se encontró la imagen del personaje.");
-}
-
-    // Si no estamos cargando, cierra el modal y guarda el estado
-    if (!isLoading) {
-        closeCharacterModal();
-        saveCharacterState();
     }
-}
+});
 
 // Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
