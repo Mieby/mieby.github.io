@@ -32,18 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
     savedCharacters.forEach(character => {
         addCharacterCard(character, true);
-        
-        // Recuperar y establecer el contenido del textarea
+
+        // Verificar si hay un cuadro de texto adicional que se debe rellenar
         const card = Array.from(document.querySelectorAll(".character-card")).find(card => {
             const nameElement = card.querySelector("h4");
             return nameElement && nameElement.textContent === character.name;
         });
 
         if (card) {
-            // Establecer el contenido del textarea
             const characterBox = card.querySelector(".character-box .editable-text");
             if (characterBox) {
-                characterBox.value = character.additionalInfo || ''; // Establecer el contenido del textarea
+                characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
             }
         }
     });
@@ -72,14 +71,13 @@ function closeCharacterModal() {
 
 // Agregar tarjeta de personaje
 function addCharacterCard(character, isLoading = false) {
-    // Si isLoading es false, se realiza la verificación de duplicados
+    // Verificar duplicados
     if (!isLoading) {
         const existingCards = document.querySelectorAll(".character-card h4");
         const isDuplicate = Array.from(existingCards).some(card => card.textContent === character.name);
-
         if (isDuplicate) {
             alert(`${character.name} ya ha sido agregado.`);
-            return;  // Si el personaje ya está, no lo agregues.
+            return;
         }
     }
 
@@ -106,7 +104,7 @@ function addCharacterCard(character, isLoading = false) {
                 <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'Rango: 0'}</div>
             </div>
         </div>
-        <div class="character-box">
+        <div class="character-box hidden">
             <h5>${character.name}</h5>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
@@ -120,6 +118,31 @@ function addCharacterCard(character, isLoading = false) {
         closeCharacterModal();
         saveCharacterState();
     }
+}
+
+// Mostrar/ocultar cuadro de texto (Info +)
+function toggleCharacterInfo() {
+    const characterCards = document.querySelectorAll(".character-card");
+    characterCards.forEach(card => {
+        let existingBox = card.querySelector(".character-box");
+        if (existingBox) {
+            // Alternar la visibilidad del cuadro de información
+            existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
+        } else {
+            // Si no existe el cuadro de información, lo creamos
+            const characterBox = document.createElement("div");
+            characterBox.classList.add("character-box");
+            characterBox.style.display = "block"; // Mostrar inmediatamente
+
+            characterBox.innerHTML = `
+                <h5>${card.querySelector("h4").textContent}</h5>
+                <textarea class="editable-text">${card.querySelector("h4").textContent || ''}</textarea>
+            `;
+
+            card.appendChild(characterBox);
+        }
+    });
+    saveCharacterState();
 }
 
 // Guardar el estado de los personajes en localStorage
@@ -136,40 +159,15 @@ function saveCharacterState() {
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
-        additionalInfo: card.querySelector(".editable-text") ? card.querySelector(".editable-text").value : "" // Guardar el contenido del textarea
+        additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "" // Guardar el contenido del textarea
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
 }
 
-// Info +
-function toggleCharacterInfo() {
-    const characterCards = document.querySelectorAll(".character-card");
-    characterCards.forEach(card => {
-        let existingBox = card.querySelector(".character-box");
-        if (existingBox) {
-            // Alternar la visibilidad de la información
-            existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
-        } else {
-            // Si no existe el cuadro de información, lo creamos
-            const characterBox = document.createElement("div");
-            characterBox.classList.add("character-box");
-
-            characterBox.innerHTML = `
-                <h5>${card.querySelector("h4").textContent}</h5>
-                <textarea class="editable-text">${card.querySelector("h4").textContent || ''}</textarea>
-            `;
-
-            card.appendChild(characterBox);
-            saveCharacterState();
-        }
-    });
-}
-
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
 closeModalBtn.addEventListener("click", closeCharacterModal);
-closeWeaponModalBtn.addEventListener("click", closeWeaponModal);
 toggleInfoBtn.addEventListener("click", toggleCharacterInfo);
 
 document.addEventListener("input", event => {
