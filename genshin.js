@@ -190,7 +190,7 @@ function toggleCharacterInfo() {
             // Si no existe el cuadro de información, lo creamos
             const characterBox = document.createElement("div");
             characterBox.classList.add("character-box");
-            characterBox.style.display = "block"; // Mostrar inmediatamente
+            characterBox.style.display = "none"; // Mostrar inmediatamente
 
             characterBox.innerHTML = `
                 <h5>${card.querySelector("h4").textContent}</h5>
