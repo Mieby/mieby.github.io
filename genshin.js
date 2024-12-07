@@ -91,7 +91,7 @@ function addCharacterCard(character, isLoading = false) {
         <div class="constellation editable" contenteditable="true">${character.constellation || 'C0'}</div>
         <img src="${character.img}" alt="${character.name}" class="character-img">
         <h4>${character.name}</h4>
-        <div class="level editable" contenteditable="true">${character.level || 'Nivel: 0'}</div>
+        <div class="level editable" contenteditable="true">${character.level || '20/40'}</div>
         <div class="talents">
             <div class="talent editable" contenteditable="true">${character.talent1 || '0'}</div>
             <div class="talent editable" contenteditable="true">${character.talent2 || '0'}</div>
