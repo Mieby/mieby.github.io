@@ -101,8 +101,8 @@ function addCharacterCard(character, isLoading = false) {
             <img src="${character.weaponImg || 'assets/Baby kougra.png'}" alt="Weapon" class="weapon-img" />
             <div>
                 <div class="weapon-name editable" contenteditable="true">${character.weaponName || 'Ninguna'}</div>
-                <div class="weapon-level editable" contenteditable="true">${character.weaponLevel || 'Nivel: 0'}</div>
-                <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'Rango: 0'}</div>
+                <div class="weapon-level editable" contenteditable="true">${character.weaponLevel || '20/40'}</div>
+                <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'R1'}</div>
            </div>
         </div>
         <div class="character-box hidden">
@@ -154,7 +154,7 @@ function selectWeapon(weapon, weaponElement) {
 
     // Actualizar la imagen y el nombre del arma
     weaponImg.src = weapon.img;
-    weaponName.textContent = `Arma: ${weapon.name}`;
+    weaponName.textContent = `${weapon.name}`;
     closeWeaponModal();  // Cerrar el modal
     saveCharacterState();
 }
