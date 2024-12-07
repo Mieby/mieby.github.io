@@ -114,12 +114,6 @@
     border-radius: 15px;
 }
 
-.weapon-item p {
-    font-size: 0.8em; /* Tamaño de texto reducido */
-    color: #555; /* Color ligeramente más suave */
-    margin: 0; /* Quita márgenes extra */
-}
-
 /* Constellation */
 .character-card .constellation {
     position: absolute;
