@@ -101,24 +101,6 @@ function addCharacterCard(character, isLoading = false) {
     const weaponImg = weaponElement.querySelector(".weapon-img");
     weaponImg.addEventListener("click", () => openWeaponModal(weaponElement));
 
-    // Crear el cuadro de texto editable para cada personaje al hacer clic en la imagen del personaje
-    const characterImg = charCard.querySelector(".character-img");
-    characterImg.addEventListener("click", () => {
-        let existingBox = charCard.querySelector(".character-box");
-        if (!existingBox) {
-            const characterBox = document.createElement("div");
-            characterBox.classList.add("character-box");
-
-            characterBox.innerHTML = `
-                <h5>${character.name}</h5>
-                <textarea class="editable-text">${character.name || ''}</textarea>
-            `;
-
-            charCard.appendChild(characterBox);
-        } else {
-            existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
-        }
-    });
 
     // Si no estamos cargando, cierra el modal y guarda el estado
     if (!isLoading) {
@@ -177,7 +159,7 @@ function saveCharacterState() {
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
 }
 
-// Función para alternar la visibilidad de los cuadros de información
+// Info +
 function toggleCharacterInfo() {
     const characterCards = document.querySelectorAll(".character-card");
     characterCards.forEach(card => {
@@ -185,6 +167,17 @@ function toggleCharacterInfo() {
         if (existingBox) {
             // Alternar la visibilidad de la información
             existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
+        } else {
+            // Si no existe el cuadro de información, lo creamos
+            const characterBox = document.createElement("div");
+            characterBox.classList.add("character-box");
+
+            characterBox.innerHTML = `
+                <h5>${card.querySelector("h4").textContent}</h5>
+                <textarea class="editable-text">${card.querySelector("h4").textContent || ''}</textarea>
+            `;
+
+            card.appendChild(characterBox);
         }
     });
 }
