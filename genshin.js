@@ -82,6 +82,13 @@ function addCharacterCard(character, isLoading = false) {
         }
     }
 
+    // Asignar fondo dinámico según las estrellas
+    if (character.stars === 5) {
+        imageContainer.style.backgroundImage = "url('assets/Baby kougra.png')"; // Fondo para 5 estrellas
+    } else if (character.stars === 4) {
+        imageContainer.style.backgroundImage = "url('assets/Baby kougra.png')"; // Fondo para 4 estrellas
+    }
+
     // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
