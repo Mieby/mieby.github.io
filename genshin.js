@@ -210,8 +210,11 @@ closeWeaponModalBtn.addEventListener("click", closeWeaponModal);
 toggleInfoBtn.addEventListener("click", toggleCharacterInfo);
 
 document.addEventListener("input", event => {
-    if (event.target.closest(".editable")) {
-        console.log("Editable content changed:", event.target.textContent); // Debug
+    const editableElement = event.target.closest(".editable");
+    const textareaElement = event.target.closest("textarea");
+
+    if (editableElement || textareaElement) {
+        console.log("Content changed:", event.target.value || event.target.textContent); // Debug
         saveCharacterState();
     }
 });
