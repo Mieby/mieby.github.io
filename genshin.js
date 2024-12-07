@@ -120,27 +120,29 @@ function addCharacterCard(character, isLoading = false) {
     }
 }
 
-// Info +
+// Mostrar/ocultar cuadro de texto (Info +)
 function toggleCharacterInfo() {
     const characterCards = document.querySelectorAll(".character-card");
     characterCards.forEach(card => {
         let existingBox = card.querySelector(".character-box");
         if (existingBox) {
-            // Alternar la visibilidad de la información
+            // Alternar la visibilidad del cuadro de información
             existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
         } else {
             // Si no existe el cuadro de información, lo creamos
             const characterBox = document.createElement("div");
             characterBox.classList.add("character-box");
-            // Deja que el CSS controle la visibilidad inicialmente oculta
+            characterBox.style.display = "block"; // Mostrar inmediatamente
+
             characterBox.innerHTML = `
                 <h5>${card.querySelector("h4").textContent}</h5>
                 <textarea class="editable-text">${card.querySelector("h4").textContent || ''}</textarea>
             `;
+
             card.appendChild(characterBox);
-            saveCharacterState();
         }
     });
+    saveCharacterState();
 }
 
 // Guardar el estado de los personajes en localStorage
