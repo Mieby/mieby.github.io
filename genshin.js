@@ -194,8 +194,9 @@ function toggleCharacterInfo() {
             `;
 
             card.appendChild(characterBox);
+            saveCharacterState();
         }
-        saveCharacterState();
+        
     });
 }
 
