@@ -49,7 +49,7 @@
 /* Nivel */
 .character-card .level {
     position: absolute;
-    bottom: 10px; /* Posición en la parte inferior */
+    bottom: 0px; /* Posición en la parte inferior */
     left: 50%;
     transform: translateX(-50%); /* Centrado horizontalmente */
     background-color: #ffd700;
