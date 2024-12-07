@@ -197,10 +197,16 @@ function toggleCharacterInfo() {
                 <textarea class="editable-text">${card.querySelector("h4").textContent || ''}</textarea>
             `;
 
+            // Añadir el evento blur para guardar cuando el usuario hace clic fuera
+            const textarea = characterBox.querySelector(".editable-text");
+            textarea.addEventListener("blur", () => {
+                saveCharacterState(); // Guardar automáticamente cuando pierde el foco
+            });
+
             card.appendChild(characterBox);
+            saveCharacterState(); // Guardar el estado después de agregar el cuadro
         }
     });
-    saveCharacterState();
 }
 
 // Listeners para botones
