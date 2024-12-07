@@ -189,3 +189,24 @@
     display: none;
 }
 
+/* FONDO */
+/* Contenedor de la imagen del personaje */
+.character-card .image-container {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10%; /* Redondear los bordes del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Aquí añadimos la imagen dentro del contenedor */
+.character-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen del personaje */
+}
+
