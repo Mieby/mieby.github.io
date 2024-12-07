@@ -114,9 +114,9 @@ function addCharacterCard(character, isLoading = false) {
      // Obtener el contenedor de la imagen y cambiar el fondo
     const imageContainer = charCard.querySelector(".character-img");
     if (character.stars === 5) {
-        imageContainer.style.backgroundImage = "url('assets/Baby kougra.png')"; // Fondo para 5 estrellas
+        imageContainer.style.backgroundImage = "url('assets/backgrounds_genshin/background_five_stars.jpg')"; // Fondo para 5 estrellas
     } else if (character.stars === 4) {
-        imageContainer.style.backgroundImage = "url('assets/Baby kougra.png')"; // Fondo para 4 estrellas
+        imageContainer.style.backgroundImage = "url('assets/backgrounds_genshin/background_four_star.jpg')"; // Fondo para 4 estrellas
     }
 
     // Agregar la tarjeta al contenedor de personajes
