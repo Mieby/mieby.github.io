@@ -40,11 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (card) {
-            const imageContainer = card.querySelector(".character-img");
-            if (character.backgroundImage) {
-                imageContainer.style.backgroundImage = character.backgroundImage; // Restaurar fondo
-            }
-
             const characterBox = card.querySelector(".character-box .editable-text");
             if (characterBox) {
                 characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
