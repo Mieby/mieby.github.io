@@ -171,3 +171,6 @@
 .character-item:hover {
     transform: scale(1.1);
 }
+character-box {
+    display: none; /* Oculta el cuadro de información por defecto */
+}
