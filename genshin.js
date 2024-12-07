@@ -187,7 +187,7 @@ function saveCharacterState() {
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
-        backgroundImage: imageContainer.style.backgroundImage 
+        background: card.querySelector(".character-img").style.backgroundImage
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
