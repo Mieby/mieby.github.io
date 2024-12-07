@@ -21,6 +21,7 @@ const characterModal = document.getElementById("character-modal");
 const characterList = document.getElementById("character-list");
 const addCharacterBtn = document.getElementById("add-character-btn");
 const closeModalBtn = document.getElementById("close-modal");
+const toggleInfoBtn = document.getElementById("toggle-info-btn");
 
 // Elementos del DOM para el modal de armas
 const weaponModal = document.getElementById("weapon-modal");
@@ -176,11 +177,23 @@ function saveCharacterState() {
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
 }
 
+// Función para alternar la visibilidad de los cuadros de información
+function toggleCharacterInfo() {
+    const characterCards = document.querySelectorAll(".character-card");
+    characterCards.forEach(card => {
+        let existingBox = card.querySelector(".character-box");
+        if (existingBox) {
+            // Alternar la visibilidad de la información
+            existingBox.style.display = existingBox.style.display === "none" ? "block" : "none";
+        }
+    });
+}
 
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
 closeModalBtn.addEventListener("click", closeCharacterModal);
 closeWeaponModalBtn.addEventListener("click", closeWeaponModal);
+toggleInfoBtn.addEventListener("click", toggleCharacterInfo);
 
 document.addEventListener("input", event => {
     if (event.target.closest(".editable")) {
