@@ -22,6 +22,17 @@ const characterList = document.getElementById("character-list");
 const addCharacterBtn = document.getElementById("add-character-btn");
 const closeModalBtn = document.getElementById("close-modal");
 
+// Elementos del DOM para el modal de armas
+const weaponModal = document.getElementById("weapon-modal");
+const weaponList = document.getElementById("weapon-list");
+const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
+
+// Cargar datos desde localStorage al iniciar
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
+            savedCharacters.forEach(character => addCharacterCard(character, false));
+        });
+
 // Mostrar lista de personajes en el modal
 function openCharacterModal() {
     characterList.innerHTML = ""; // Limpia la lista de personajes
@@ -73,16 +84,15 @@ function addCharacterCard(character) {
     characterGrid.appendChild(charCard);
     closeCharacterModal();
 
+    // Guardar en localStorage si es necesario
+    if (save) saveCharacterState();
+
+
     // Agregar el evento para abrir el modal de armas
     const weaponElement = charCard.querySelector(".weapon-info");  // Obtener el contenedor del arma completo
     const weaponImg = weaponElement.querySelector(".weapon-img");  // Obtener la imagen del arma
     weaponImg.addEventListener("click", () => openWeaponModal(weaponElement));  // Pasa el contenedor completo
 }
-
-// Elementos del DOM para el modal de armas
-const weaponModal = document.getElementById("weapon-modal");
-const weaponList = document.getElementById("weapon-list");
-const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 
 // Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
@@ -115,6 +125,24 @@ function selectWeapon(weapon, weaponElement) {
     weaponName.textContent = `Arma: ${weapon.name}`;
     closeWeaponModal();  // Cerrar el modal
 }
+// Guardar el estado de los personajes en localStorage
+function saveCharacterState() {
+    const characters = Array.from(document.querySelectorAll(".character-card")).map(card => ({
+        name: card.querySelector("h4").textContent,
+        img: card.querySelector("img").src,
+        constellation: card.querySelector(".constellation").textContent,
+        level: card.querySelector(".level").textContent,
+        talent1: card.querySelector(".talents .talent:nth-child(1)").textContent,
+        talent2: card.querySelector(".talents .talent:nth-child(2)").textContent,
+        talent3: card.querySelector(".talents .talent:nth-child(3)").textContent,
+        weaponImg: card.querySelector(".weapon-img").src,
+        weaponName: card.querySelector(".weapon-name").textContent,
+        weaponLevel: card.querySelector(".weapon-level").textContent,
+        weaponRank: card.querySelector(".weapon-rank").textContent
+    }));
+    localStorage.setItem("genshinCharacters", JSON.stringify(characters));
+}
+
 
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
