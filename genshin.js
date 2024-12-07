@@ -95,23 +95,17 @@ function addCharacterCard(character, isLoading = false) {
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
 
-    // Si no estamos cargando, guardamos el estado
-    if (!isLoading) {
-        saveCharacterState();
-    }
-    closeCharacterModal();
-}
-
     // Agregar el evento para abrir el modal de armas
     const weaponElement = charCard.querySelector(".weapon-info"); // Obtener el contenedor del arma completo
     const weaponImg = weaponElement.querySelector(".weapon-img"); // Obtener la imagen del arma
     weaponImg.addEventListener("click", () => openWeaponModal(weaponElement)); // Pasa el contenedor completo
 
-    // Si no es una carga inicial, cierra el modal y guarda el estado
+    // Si no estamos cargando, cierra el modal y guarda el estado
     if (!isLoading) {
         closeCharacterModal();
         saveCharacterState();
     }
+}
 
 // Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
