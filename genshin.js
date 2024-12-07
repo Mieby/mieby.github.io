@@ -30,7 +30,7 @@ const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 // Cargar datos desde localStorage al iniciar
         document.addEventListener("DOMContentLoaded", () => {
             const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
-            savedCharacters.forEach(character => addCharacterCard(character, false));
+            savedCharacters.forEach(character => addCharacterCard(character, true));
         });
 
 // Mostrar lista de personajes en el modal
@@ -55,30 +55,31 @@ function closeCharacterModal() {
 }
 
 // Agregar tarjeta de personaje
-function addCharacterCard(character) {
+function addCharacterCard(character, isLoading = false) {
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
 
     // HTML para la tarjeta de personaje
     charCard.innerHTML = `
-        <div class="constellation editable" contenteditable="true">C0</div>
+        <div class="constellation editable" contenteditable="true">${character.constellation || 'C0'}</div>
         <img src="${character.img}" alt="${character.name}">
         <h4>${character.name}</h4>
-        <div class="level editable" contenteditable="true">Nivel: 0</div>
+        <div class="level editable" contenteditable="true">${character.level || 'Nivel: 0'}</div>
         <div class="talents">
-            <div class="talent editable" contenteditable="true">0</div>
-            <div class="talent editable" contenteditable="true">0</div>
-            <div class="talent editable" contenteditable="true">0</div>
+            <div class="talent editable" contenteditable="true">${character.talent1 || '0'}</div>
+            <div class="talent editable" contenteditable="true">${character.talent2 || '0'}</div>
+            <div class="talent editable" contenteditable="true">${character.talent3 || '0'}</div>
         </div>
         <div class="weapon-info">
-            <img src="assets/Baby kougra.png" alt="Weapon" class="weapon-img" />
+            <img src="${character.weaponImg || 'assets/Baby kougra.png'}" alt="Weapon" class="weapon-img" />
             <div>
-                <div class="weapon-name editable" contenteditable="true">Ninguna</div>
-                <div class="weapon-level editable" contenteditable="true">Nivel: 0</div>
-                <div class="weapon-rank editable" contenteditable="true">Rango: 0</div>
+                <div class="weapon-name editable" contenteditable="true">${character.weaponName || 'Ninguna'}</div>
+                <div class="weapon-level editable" contenteditable="true">${character.weaponLevel || 'Nivel: 0'}</div>
+                <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'Rango: 0'}</div>
             </div>
         </div>
     `;
+
 
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
