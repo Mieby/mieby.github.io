@@ -179,20 +179,14 @@ function toggleCharacterInfo() {
             `;
 
             card.appendChild(characterBox);
-        }
-        saveCharacterState();
-        
-    // Escuchar los cambios dentro de los cuadros de texto
-        const textarea = card.querySelector(".editable-text");
-        if (textarea) {
+
+            // Agregar un listener para guardar los cambios
+            const textarea = characterBox.querySelector(".editable-text");
             textarea.addEventListener("input", () => {
-                // Guardar los cambios en localStorage
                 saveCharacterState();
             });
         }
-
-        // Guardar el estado
-        saveCharacterState();
+        saveCharacterState(); // Guardar el estado siempre
     });
 }
 
