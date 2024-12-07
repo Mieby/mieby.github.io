@@ -4,8 +4,7 @@ const genshinCharacters = [
     { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/lynette/image.png?strip=all&quality=75&w=256"},
     { name: "Faruzán", element: "Anemo", stars: 4, weaponType: "catalyst", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/faruzan/image.png?strip=all&quality=75&w=256"},
     { name: "Heizou", element: "Anemo", stars: 4, weaponType: "catalyst", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/shikanoin_heizou/image.png?strip=all&quality=75&w=256" },
-    { name: "Sacarosa", element: "Anemo", stars: 4, weaponType: "catalyst", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/sucrose/image.png?strip=all&quality=75&w=256" },
-    { name: "Sayu", element: "Anemo", stars: 4, weaponType: "catalyst", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/sucrose/image.png?strip=all&quality=75&w=256" }
+    { name: "Sacarosa", element: "Anemo", stars: 4, weaponType: "catalyst", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/sucrose/image.png?strip=all&quality=75&w=256" }
 ];
 
 const weaponsList = [
@@ -154,13 +153,11 @@ function saveCharacterState() {
         weaponImg: card.querySelector(".weapon-img").src,
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
-        weaponRank: card.querySelector(".weapon-rank").textContent,
-        characterBoxText: card.querySelector(".editable-text") ? card.querySelector(".editable-text").value : ''
-    }
-    console.log("Character data being saved:", characterData); // Debug
-    return characterData;
-});
-localStorage.setItem("genshinCharacters", JSON.stringify(characters));
+        weaponRank: card.querySelector(".weapon-rank").textContent
+    }));
+    console.log("Saving to localStorage:", characters); // Debug
+    localStorage.setItem("genshinCharacters", JSON.stringify(characters));
+}
 
 // Info +
 function toggleCharacterInfo() {
@@ -181,14 +178,8 @@ function toggleCharacterInfo() {
             `;
 
             card.appendChild(characterBox);
-
-            // Agregar un listener para guardar los cambios
-            const textarea = characterBox.querySelector(".editable-text");
-            textarea.addEventListener("input", () => {
-                saveCharacterState();
-            });
         }
-        saveCharacterState(); // Guardar el estado siempre
+        saveCharacterState();
     });
 }
 
@@ -200,7 +191,7 @@ toggleInfoBtn.addEventListener("click", toggleCharacterInfo);
 
 document.addEventListener("input", event => {
     if (event.target.closest(".editable")) {
-        console.log("Loaded characters from localStorage:", savedCharacters); // Debug
+        console.log("Editable content changed:", event.target.textContent); // Debug
         saveCharacterState();
     }
 });
