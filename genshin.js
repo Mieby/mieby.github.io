@@ -119,6 +119,11 @@ function addCharacterCard(character, isLoading = false) {
         imageContainer.style.backgroundImage = "url('assets/backgrounds_genshin/background_four_star.jpg')"; // Fondo para 4 estrellas
     }
 
+    // Asegurarse de que la imagen se ajuste al tamaño del contenedor
+imageContainer.style.backgroundSize = "contain";  // Ajusta la imagen para que quepa completamente en el contenedor
+imageContainer.style.backgroundPosition = "center";  // Centra la imagen en el contenedor
+imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se repita si es más pequeña que el contenedor
+
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
 
