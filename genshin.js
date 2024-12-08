@@ -119,6 +119,15 @@ function addCharacterCard(character, isLoading = false) {
         </div>
         <div class="character-box hidden">
         <h5>${character.name}</h5>
+        <!-- Agregar los objetos aquí dentro del hidden -->
+        <div class="character-items">
+            ${character.items.map(item => `
+                <div class="item">
+                    <img src="${item.img}" alt="${item.name}" class="item-img">
+                    <p>${item.name}</p>
+                </div>
+            `).join('')}
+        </div>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
     `;
@@ -222,21 +231,17 @@ function toggleCharacterInfo() {
             characterBox.classList.add("character-box", "hidden");  // Inicialmente oculto
 
             // Crear la lista de objetos del personaje
-            const characterName = card.querySelector("h4").textContent;
-            const characterData = genshinCharacters.find(item => item.name === characterName);
-            
-            let itemsHTML = '';
-            if (characterData && characterData.items) {
-                // Crear los elementos de los objetos de este personaje
-                characterData.items.forEach(item => {
-                    itemsHTML += `
+            const characterItems = card.querySelector(".character-items"); // Asumiendo que los objetos ya están en el card
+            const itemsHTML = characterItems ? `
+                <div class="character-items">
+                    ${Array.from(characterItems.children).map(item => `
                         <div class="item">
-                            <img src="${item.img}" alt="${item.name}" width="50">
-                            <p>${item.name}</p>
+                            <img src="${item.querySelector("img").src}" alt="${item.querySelector("p").textContent}" class="item-img">
+                            <p>${item.querySelector("p").textContent}</p>
                         </div>
-                    `;
-                });
-            }
+                    `).join('')}
+                </div>
+            ` : '';
             
             // textarea
             characterBox.innerHTML = `
