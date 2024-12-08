@@ -210,12 +210,13 @@
     object-fit: cover; /* Mantiene la proporción de la imagen del personaje */
 }
 
-./* Estilos para la caja de objetos */
+/* Estilos para la caja de objetos */
 .character-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Crea un grid que se ajuste automáticamente */
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Crea un grid ajustado, con imágenes más pequeñas */
     gap: 10px; /* Espacio entre los elementos */
     margin-top: 10px;
+    justify-items: center; /* Centra los elementos dentro de cada celda */
 }
 
 /* Estilos para cada objeto */
@@ -223,8 +224,16 @@
     text-align: center;
 }
 
+/* Estilos para las imágenes */
 .character-items .item img {
-    width: 40px; /* Tamaño pequeño para las imágenes */
-    height: 40px; /* Asegura que las imágenes sean cuadradas */
+    width: 50px; /* Tamaño pequeño para las imágenes */
+    height: 50px; /* Asegura que las imágenes sean cuadradas */
     object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+}
+
+/* Estilos para el texto del nombre */
+.character-items .item .item-name {
+    font-size: 10px; /* Texto mucho más pequeño */
+    margin-top: 5px; /* Espacio entre la imagen y el texto */
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste al tamaño del contenedor */
 }
