@@ -1,8 +1,8 @@
 // Lista de personajes (nombre e imagen)
 const genshinCharacters = [
     { name: "Diluc", element: "Pyro", stars: 5, weaponType: "claymore", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/diluc/image.png?strip=all&quality=75&w=256", items: [
-        { name: "Semilla de fuego eterno", img: "ruta/a/imagen/semilla.png" },
-        { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
+        { name: "1", img: "ruta/a/imagen/semilla.png" },
+        { name: "2", img: "ruta/a/imagen/lucetta.png" }
     ]},
     { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/lynette/image.png?strip=all&quality=75&w=256", items: [
         { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" },
