@@ -43,9 +43,14 @@ const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 document.addEventListener("DOMContentLoaded", () => {
     const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
     savedCharacters.forEach(character => {
-        addCharacterCard(character, true);
+        // Verificar si el personaje tiene objetos, si no asignarlos por defecto
+        const characterWithDefaultItems = {
+            ...character,
+            items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name)
+        };
+        addCharacterCard(characterWithDefaultItems, true);
 
-        // Verificar si hay un cuadro de texto adicional que se debe rellenar
+        // Rellenar el cuadro de texto adicional si existe
         const card = Array.from(document.querySelectorAll(".character-card")).find(card => {
             const nameElement = card.querySelector("h4");
             return nameElement && nameElement.textContent === character.name;
@@ -211,7 +216,11 @@ function saveCharacterState() {
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
-        background: card.querySelector(".character-img").style.backgroundImage || ''
+        background: card.querySelector(".character-img").style.backgroundImage || '',
+        items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
+            name: item.querySelector("p").textContent,
+            img: item.querySelector("img").src
+        })) : [] // Guardar los objetos del personaje
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
