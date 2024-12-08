@@ -231,9 +231,8 @@
     object-fit: contain; /* Ajusta la imagen sin distorsionarla */
 }
 
-/* Estilos para el texto del nombre */
-.character-items .item .item-name {
-    font-size: 8px !important; /* Aplica el tamaño de fuente de manera forzada */
+.character-items .item p {
+    font-size: 8px; /* Tamaño más pequeño */
     margin-top: 3px;
     word-wrap: break-word;
     line-height: 1.2;
