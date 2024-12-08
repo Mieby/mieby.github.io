@@ -40,6 +40,12 @@ const weaponModal = document.getElementById("weapon-modal");
 const weaponList = document.getElementById("weapon-list");
 const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 
+// Función para obtener los objetos predeterminados por personaje
+function getDefaultItemsForCharacter(characterName) {
+    const character = genshinCharacters.find(char => char.name === characterName);
+    return character ? character.items : [];
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
     savedCharacters.forEach(character => {
