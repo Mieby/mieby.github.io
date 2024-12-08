@@ -210,3 +210,14 @@
     object-fit: cover; /* Mantiene la proporción de la imagen del personaje */
 }
 
+.items-container {
+    display: flex;
+    gap: 10px;  /* Espacio entre los objetos */
+    overflow-x: auto;  /* Permite desplazar los objetos horizontalmente si es necesario */
+    margin-bottom: 10px;  /* Espacio antes del textarea */
+}
+
+.item img {
+    border-radius: 5px; /* Opcional: para darle un borde redondeado a las imágenes */
+}
+
