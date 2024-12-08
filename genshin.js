@@ -1,4 +1,4 @@
-<script src="mieby.github.io/genshinCharacters.js"></script>
+<script src="genshinCharacters.js"></script>
 <script>
 // Ahora puedes usar la variable genshinCharacters directamente
 console.log(genshinCharacters);
