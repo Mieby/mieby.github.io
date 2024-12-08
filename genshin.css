@@ -210,14 +210,21 @@
     object-fit: cover; /* Mantiene la proporción de la imagen del personaje */
 }
 
-.items-container {
-    display: flex;
-    gap: 10px;  /* Espacio entre los objetos */
-    overflow-x: auto;  /* Permite desplazar los objetos horizontalmente si es necesario */
-    margin-bottom: 10px;  /* Espacio antes del textarea */
+./* Estilos para la caja de objetos */
+.character-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Crea un grid que se ajuste automáticamente */
+    gap: 10px; /* Espacio entre los elementos */
+    margin-top: 10px;
 }
 
-.item img {
-    border-radius: 5px; /* Opcional: para darle un borde redondeado a las imágenes */
+/* Estilos para cada objeto */
+.character-items .item {
+    text-align: center;
 }
 
+.character-items .item img {
+    width: 40px; /* Tamaño pequeño para las imágenes */
+    height: 40px; /* Asegura que las imágenes sean cuadradas */
+    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+}
