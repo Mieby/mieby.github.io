@@ -233,7 +233,9 @@
 
 /* Estilos para el texto del nombre */
 .character-items .item .item-name {
-    font-size: 10px; /* Texto mucho más pequeño */
-    margin-top: 5px; /* Espacio entre la imagen y el texto */
-    word-wrap: break-word; /* Asegura que el texto largo se ajuste al tamaño del contenedor */
+    font-size: 8px !important; /* Aplica el tamaño de fuente de manera forzada */
+    margin-top: 3px;
+    word-wrap: break-word;
+    line-height: 1.2;
+    padding: 0 2px;
 }
