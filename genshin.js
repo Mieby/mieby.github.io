@@ -118,6 +118,15 @@ function addCharacterCard(character, isLoading = false) {
            </div>
         </div>
         <div class="character-box hidden">
+        <div class="character-items">
+        ${Array.isArray(character.items) && character.items.length > 0 ? 
+        character.items.map(item => `
+            <div class="item">
+                <img src="${item.img}" alt="${item.name}" class="item-img">
+                <p>${item.name}</p>
+            </div>
+        `).join('') : '<p>No hay objetos disponibles</p>'}
+</div>
         <h5>${character.name}</h5>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
