@@ -119,15 +119,6 @@ function addCharacterCard(character, isLoading = false) {
         </div>
         <div class="character-box hidden">
         <h5>${character.name}</h5>
-        <!-- Agregar los objetos aquí dentro del hidden -->
-        <div class="character-items">
-            ${character.items.map(item => `
-                <div class="item">
-                    <img src="${item.img}" alt="${item.name}" class="item-img">
-                    <p>${item.name}</p>
-                </div>
-            `).join('')}
-        </div>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
     `;
