@@ -224,7 +224,7 @@ function saveCharacterState() {
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
             img: item.querySelector("img").src
-        })) : [] // Guardar los objetos del personaje
+        })) : [], // Guardar los objetos del personaje
         weapons: card.querySelector(".character-weapons") ? Array.from(card.querySelectorAll(".character-weapons .item")).map(weapon => ({
             name: weapon.querySelector("p").textContent,
             img: weapon.querySelector("img").src
