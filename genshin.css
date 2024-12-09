@@ -268,14 +268,23 @@
 }
 
 .character-card[draggable="true"] {
-    cursor: move; /* Cambia el cursor al arrastrar */
+    cursor: grab; /* Cambia el cursor al arrastrar */
 }
 
-.character-card.dragging {
-    opacity: 0.5;
+/* Cambiar el estilo cuando se está arrastrando */
+.character-card[draggable="true"]:active {
+    cursor: grabbing;
+    opacity: 0.7; /* Hacer que la tarjeta se vea un poco más transparente mientras se arrastra */
 }
 
-.character-card:hover {
-    background-color: #f0f0f0;
-    border: 2px dashed #ccc;
+/* Estilo para cuando se arrastra sobre otro elemento */
+.character-card.drag-over {
+    border: 2px dashed #888;
+    background-color: #f4f4f4;
+}
+
+/* Estilo cuando se está solando un elemento */
+.character-card.drop-target {
+    border: 2px dashed #00f;
+    background-color: #e0f7fa;
 }
