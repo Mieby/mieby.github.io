@@ -273,8 +273,7 @@
 
 /* Cambiar el estilo cuando se está arrastrando */
 .character-card[draggable="true"]:active {
-    cursor: grabbing;
-    opacity: 0.7; /* Hacer que la tarjeta se vea un poco más transparente mientras se arrastra */
+    cursor: grabbing; 
 }
 
 /* Estilo para cuando se arrastra sobre otro elemento */
