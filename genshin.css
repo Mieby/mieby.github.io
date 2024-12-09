@@ -239,8 +239,8 @@
 
 /* Estilos para los textos */
 .character-items .item p,
-.character-weapons .weapon p,
-.character-artifacts .artifact p {
+.character-weapons .item p,
+.character-artifacts .item p {
     font-size: 8px; /* Tamaño pequeño */
     margin-top: 3px;
     word-wrap: break-word;
