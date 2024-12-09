@@ -81,6 +81,7 @@ function addCharacterCard(character, isLoading = false) {
     // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
+    charCard.setAttribute('draggable', 'true');
 
     // HTML para la tarjeta de personaje
     charCard.innerHTML = `
@@ -171,6 +172,38 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
     if (!isLoading) {
         closeCharacterModal();
         saveCharacterState();
+    }
+
+    // Código para arrastrar
+    charCard.addEventListener("dragstart", dragStart);
+    charCard.addEventListener("dragover", dragOver);
+    charCard.addEventListener("drop", drop);
+
+    // Agregar la tarjeta al contenedor de personajes
+    characterGrid.appendChild(charCard);
+}
+
+// Función que se llama cuando se inicia el arrastre
+function dragStart(event) {
+    event.dataTransfer.setData('text', event.target.id); // Identifica el elemento que se está arrastrando
+    event.target.style.opacity = '0.5'; // Cambia la opacidad para dar feedback visual
+}
+
+// Función para permitir que se pueda soltar el elemento
+function dragOver(event) {
+    event.preventDefault(); // Impide el comportamiento por defecto, necesario para permitir el drop
+}
+
+// Función para soltar el elemento y cambiar su posición
+function drop(event) {
+    event.preventDefault();
+    const draggedElement = document.querySelector(`[draggable="true"]:hover`); // Identifica el elemento arrastrado
+    const targetElement = event.target.closest('.character-card');
+    
+    if (draggedElement && targetElement && draggedElement !== targetElement) {
+        const parent = targetElement.parentElement;
+        const targetIndex = Array.from(parent.children).indexOf(targetElement);
+        parent.insertBefore(draggedElement, parent.children[targetIndex + (event.offsetY > targetElement.offsetHeight / 2 ? 1 : 0)]);
     }
 }
 // Mostrar el modal de armas
