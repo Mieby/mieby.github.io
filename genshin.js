@@ -288,6 +288,7 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
     // Agregar el evento para abrir el modal de armas
     const weaponElement = charCard.querySelector(".weapon-info");
     const weaponImg = weaponElement.querySelector(".weapon-img");
+    weaponImg.style.backgroundImage = character.weaponBackground;
     weaponImg.addEventListener("click", () => openWeaponModal(weaponElement));
 
 
