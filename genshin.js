@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Verificar si el personaje tiene objetos, si no asignarlos por defecto
         const characterWithDefaultItems = {
             ...character,
-            items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name)
+            items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
+            weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
+            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name)
         };
         addCharacterCard(characterWithDefaultItems, true);
 
@@ -223,6 +225,14 @@ function saveCharacterState() {
             name: item.querySelector("p").textContent,
             img: item.querySelector("img").src
         })) : [] // Guardar los objetos del personaje
+        weapons: card.querySelector(".character-weapons") ? Array.from(card.querySelectorAll(".character-weapons .item")).map(weapon => ({
+            name: weapon.querySelector("p").textContent,
+            img: weapon.querySelector("img").src
+        })) : [], // Guardar las armas del personaje
+        artifacts: card.querySelector(".character-artifacts") ? Array.from(card.querySelectorAll(".character-artifacts .item")).map(artifact => ({
+            name: artifact.querySelector("p").textContent,
+            img: artifact.querySelector("img").src
+        })) : [] // Guardar los artefactos del personaje
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
