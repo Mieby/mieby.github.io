@@ -253,6 +253,32 @@ function toggleCharacterInfo() {
                     `).join('')}
                 </div>
             ` : '';
+
+            // Crear la lista de armas del personaje
+        const characterWeapons = card.querySelector(".character-weapons");
+        const weaponsHTML = characterWeapons ? `
+            <div class="character-weapons">
+                ${Array.from(characterWeapons.children).map(weapon => `
+                    <div class="item">
+                      <img src="${weapon.querySelector("img").src}" alt="${weapon.querySelector("p").textContent}" class="item-img">
+                        <p>${weapon.querySelector("p").textContent}</p>
+                    </div>
+                `).join('')}
+            </div>
+        ` : '';
+
+        // Crear la lista de artefactos del personaje
+        const characterArtifacts = card.querySelector(".character-artifacts");
+        const artifactsHTML = characterArtifacts ? `
+            <div class="character-artifacts">
+                ${Array.from(characterArtifacts.children).map(artifact => `
+                    <div class="item">
+                        <img src="${artifact.querySelector("img").src}" alt="${artifact.querySelector("p").textContent}" class="item-img">
+                        <p>${artifact.querySelector("p").textContent}</p>
+                    </div>
+                `).join('')}
+            </div>
+        ` : '';
             
             // textarea
             characterBox.innerHTML = `
