@@ -12,7 +12,7 @@ const weaponList = document.getElementById("weapon-list");
 const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 
 // Elementos del DOM para el modal de click
-const characterModal = document.getElementById("character-modal");
+const clickCharacterModal = document.getElementById("click-character-modal");
 const deleteCharacterBtn = document.getElementById("delete-character-btn");
 const closeCharacterModalBtn = document.getElementById("close-character-modal");
 
@@ -437,7 +437,7 @@ function openCharacterModalForEdit(characterElement) {
     deleteButton.onclick = () => deleteCharacter(characterCard);
 
     // Mostrar el modal
-    characterModal.classList.remove("hidden");
+    clickCharacterModal.classList.remove("hidden");
 }
 
 // Función para eliminar un personaje
@@ -456,7 +456,7 @@ function deleteCharacter(characterCard) {
 // Cerrar el modal
 function closeCharacterModal() {
     const characterModal = document.getElementById("character-modal");
-    characterModal.classList.add("hidden");
+    clickCharacterModal.classList.add("hidden");
 }
 
 // Asignar evento a las imágenes de personajes
