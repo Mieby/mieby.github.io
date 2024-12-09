@@ -134,7 +134,15 @@ function drop(event) {
     if (draggedElement && targetElement && draggedElement !== targetElement) {
         const parent = targetElement.parentElement;
         const targetIndex = Array.from(parent.children).indexOf(targetElement);
-        parent.insertBefore(draggedElement, parent.children[targetIndex + (event.offsetY > targetElement.offsetHeight / 2 ? 1 : 0)]);
+
+        // Calculamos la dirección basada en el eje X
+        const horizontalDistance = event.clientX - targetElement.getBoundingClientRect().left;
+
+        // Si el arrastre está más cerca de la mitad de la tarjeta objetivo, movemos el arrastrado a la siguiente posición
+        const insertAtEnd = horizontalDistance > targetElement.offsetWidth / 2;
+
+        // Insertamos el elemento en la posición adecuada
+        parent.insertBefore(draggedElement, parent.children[targetIndex + (insertAtEnd ? 1 : 0)]);
     }
 
     // Limpia las clases de arrastre
