@@ -13,10 +13,10 @@ const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 
 // Elementos del DOM para el modal de click
 const deleteModal = document.getElementById("delete-modal");
-const deleteCharacterBtn = document.getElementById("delete-character-btn");
-const cancelDeleteBtn = document.getElementById("cancel-delete-btn");
 const characterNameElement = document.getElementById("character-name");
-let currentCharacterToDelete = null;
+const deleteCharacterBtn = document.getElementById("delete-character-btn");
+const cancelDeleteBtn = document.getElementById("cancel-delete-btn"
+
 
 // Función para obtener los objetos predeterminados por personaje
 function getDefaultItemsForCharacter(characterName) {
@@ -425,46 +425,43 @@ function toggleCharacterInfo() {
     saveCharacterState();
 }
 
-// Función para manejar el clic en la tarjeta del personaje
-function showDeleteModal(event) {
-    // Obtener el nombre del personaje desde la tarjeta
-    const characterName = event.target.closest('.character-card').querySelector('h4').textContent;
+// Modal de click
+let characterToDelete = null; // Variable para guardar la tarjeta a eliminar
 
-    // Mostrar el nombre del personaje en el modal
-    characterNameElement.textContent = characterName;
+// Función para abrir el modal de eliminación
+function openDeleteModal(characterCard) {
+    characterToDelete = characterCard; // Guardar la tarjeta seleccionada
+    const characterName = characterCard.querySelector("h4").textContent; // Obtener el nombre del personaje
+    characterNameElement.textContent = characterName; // Mostrar el nombre en el modal
+    deleteModal.classList.remove("hidden"); // Mostrar el modal
+}
 
-    // Mostrar el modal
-    deleteModal.style.display = "flex";
-
-    // Guardar el personaje a eliminar
-    currentCharacterToDelete = event.target.closest('.character-card');
+// Función para cerrar el modal de eliminación
+function closeDeleteModal() {
+    deleteModal.classList.add("hidden"); // Ocultar el modal
+    characterToDelete = null; // Limpiar la tarjeta seleccionada
 }
 
 // Función para eliminar el personaje
-deleteCharacterBtn.addEventListener("click", () => {
-    if (currentCharacterToDelete) {
-        // Eliminar la tarjeta del personaje
-        currentCharacterToDelete.remove();
-        // Cerrar el modal
-        deleteModal.style.display = "none";
+function deleteCharacter() {
+    if (characterToDelete) {
+        characterToDelete.remove(); // Eliminar la tarjeta del DOM
+        saveCharacterState(); // Actualizar el estado (si estás guardando en localStorage)
+        closeDeleteModal(); // Cerrar el modal
     }
-});
-
-// Función para cerrar el modal sin eliminar
-cancelDeleteBtn.addEventListener("click", () => {
-    deleteModal.style.display = "none";
-});
-
-// Agregar evento a las tarjetas de personajes para mostrar el modal
-function addDeleteEventToCharacterCards() {
-    const characterCards = document.querySelectorAll(".character-card");
-    characterCards.forEach(card => {
-        card.addEventListener("click", showDeleteModal);
-    });
 }
 
-// Llamar a la función para agregar los eventos de eliminación
-addDeleteEventToCharacterCards();
+// Asignar eventos al modal
+cancelDeleteBtn.addEventListener("click", closeDeleteModal); // Cancelar eliminación
+deleteCharacterBtn.addEventListener("click", deleteCharacter); // Confirmar eliminación
+
+// Asignar evento de click a las imágenes de los personajes
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("character-img")) {
+        const characterCard = event.target.closest(".character-card"); // Obtener la tarjeta correspondiente
+        openDeleteModal(characterCard); // Abrir el modal con la tarjeta seleccionada
+    }
+});
 
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
