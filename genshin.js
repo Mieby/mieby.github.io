@@ -326,15 +326,13 @@ function selectWeapon(weapon, weaponElement) {
     weaponImg.src = weapon.img;
     weaponName.textContent = `${weapon.name}`;
 
-    // Obtener el contenedor de la imagen y cambiar el fondo
-    const imageContainer = weaponElement.querySelector(".weapon-img");
-    if (weapon.background) {
-        // Aplicar el fondo guardado en el localStorage
-        weaponImg.style.backgroundImage = weapon.background;
-    } else if (weapon.stars === 5) {
-        weaponImg.style.backgroundImage = "url('assets/backgrounds_genshin/background_five_stars.jpg')"; // Fondo para 5 estrellas
-    } else if (weaponImg.stars === 4) {
-        weaponImg.style.backgroundImage = "url('assets/backgrounds_genshin/background_four_star.jpg')"; // Fondo para 4 estrellas
+    // Aplicar el fondo según la rareza del arma
+    if (weapon.stars === 5) {
+        weaponImg.style.backgroundImage = "url('assets/backgrounds_genshin/background_five_stars.jpg')";
+    } else if (weapon.stars === 4) {
+        weaponImg.style.backgroundImage = "url('assets/backgrounds_genshin/background_four_star.jpg')";
+    } else {
+        weaponImg.style.backgroundImage = ""; // Sin fondo especial
     }
 
     weaponImg.style.backgroundSize = "contain";
