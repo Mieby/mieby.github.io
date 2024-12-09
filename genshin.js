@@ -175,42 +175,62 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
     }
 
     // Eventos de drag and drop
+document.querySelectorAll('.character-card').forEach(charCard => {
+    // Hacer las tarjetas arrastrables
+    charCard.setAttribute('draggable', 'true');  // Asegúrate de que la tarjeta sea arrastrable
+
+    // Evento al comenzar el arrastre
     charCard.addEventListener('dragstart', (event) => {
-        event.dataTransfer.setData('text/plain', character.name);  // Establecer el nombre del personaje al comenzar el arrastre
-        event.target.classList.add('dragging');  // Añadir una clase para poder modificar el estilo del elemento mientras se arrastra
+        event.dataTransfer.setData('text/plain', charCard.querySelector('h4').textContent);  // Guardar el nombre del personaje arrastrado
+        event.target.classList.add('dragging');  // Añadir clase para estilo mientras se arrastra
     });
 
+    // Evento al finalizar el arrastre
     charCard.addEventListener('dragend', (event) => {
-        event.target.classList.remove('dragging');  // Eliminar la clase cuando el arrastre termine
+        event.target.classList.remove('dragging');  // Eliminar la clase de "arrastrando"
     });
+});
 
-    // Permitir que las tarjetas se puedan soltar en el área de destino
-    characterGrid.addEventListener('dragover', (event) => {
-        event.preventDefault();  // Prevenir el comportamiento por defecto para permitir el drop
-    });
+// Permitir que las tarjetas se puedan soltar en el contenedor
+const characterGrid = document.querySelector('.character-grid');
+characterGrid.addEventListener('dragover', (event) => {
+    event.preventDefault();  // Necesario para permitir el drop
+});
 
-    characterGrid.addEventListener('drop', (event) => {
-        event.preventDefault();  // Prevenir el comportamiento por defecto
-        const draggedName = event.dataTransfer.getData('text/plain');  // Obtener el nombre del personaje arrastrado
-        const draggedCard = Array.from(document.querySelectorAll(".character-card h4"))
-    .find(h4 => h4.textContent === draggedName)?.parentElement;
+// Manejar el evento de "drop"
+characterGrid.addEventListener('drop', (event) => {
+    event.preventDefault();  // Prevenir el comportamiento por defecto
 
-        const allCards = Array.from(characterGrid.children);
-        const targetCard = event.target.closest('.character-card');  // Obtener la tarjeta en la que se soltó
+    // Obtener el nombre del personaje arrastrado
+    const draggedName = event.dataTransfer.getData('text/plain');
 
-        if (targetCard && draggedCard !== targetCard) {
-            const draggedIndex = allCards.indexOf(draggedCard);
-            const targetIndex = allCards.indexOf(targetCard);
+    // Buscar la tarjeta que se está arrastrando
+    const draggedCard = Array.from(document.querySelectorAll('.character-card h4'))
+        .find(h4 => h4.textContent === draggedName)?.parentElement;
 
-            if (draggedIndex < targetIndex) {
-                characterGrid.insertBefore(draggedCard, targetCard.nextSibling);
-            } else {
-                characterGrid.insertBefore(draggedCard, targetCard);
-            }
+    if (!draggedCard) return;  // Si no se encuentra la tarjeta, no hacer nada
+
+    // Obtener todas las tarjetas en el contenedor
+    const allCards = Array.from(characterGrid.children);
+
+    // Encontrar la tarjeta sobre la que se ha soltado
+    const targetCard = event.target.closest('.character-card');
+
+    if (targetCard && draggedCard !== targetCard) {
+        const draggedIndex = allCards.indexOf(draggedCard);
+        const targetIndex = allCards.indexOf(targetCard);
+
+        // Reorganizar las tarjetas
+        if (draggedIndex < targetIndex) {
+            characterGrid.insertBefore(draggedCard, targetCard.nextSibling);  // Insertar después de la tarjeta de destino
+        } else {
+            characterGrid.insertBefore(draggedCard, targetCard);  // Insertar antes de la tarjeta de destino
         }
+    }
 
-        saveCharacterState();  // Guardar el estado después de mover la tarjeta
-    });
+    // Guardar el nuevo estado de las tarjetas en localStorage
+    saveCharacterState();
+});
 }
 // Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
