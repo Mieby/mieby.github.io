@@ -99,7 +99,9 @@ function addCharacterCard(character, isLoading = false) {
                 <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'R1'}</div>
            </div>
         </div>
+        
         <div class="character-box hidden">
+<!-- Sección de Items -->
         <div class="character-items">
         ${Array.isArray(character.items) && character.items.length > 0 ? 
         character.items.map(item => `
@@ -108,7 +110,30 @@ function addCharacterCard(character, isLoading = false) {
                 <p>${item.name}</p>
             </div>
         `).join('') : '<p>No hay objetos disponibles</p>'}
-</div>
+        </div>
+        
+<!-- Sección de Weapons -->
+        <div class="character-weapons">
+        ${Array.isArray(character.weapons) && character.weapons.length > 0 ? 
+        character.weapons.map(weapon => `
+            <div class="item">
+                <img src="${weapon.img}" alt="${weapon.name}" class="item-img">
+                <p>${weapon.name}</p>
+            </div>
+        `).join('') : '<p>No hay armas disponibles</p>'}
+        </div>
+
+<!-- Sección de Artifacts -->
+        <div class="character-artifacts">
+        ${Array.isArray(character.artifacts) && character.artifacts.length > 0 ? 
+        character.artifacts.map(artifact => `
+            <div class="item">
+                <img src="${artifact.img}" alt="${artifact.name}" class="item-img">
+                <p>${artifact.name}</p>
+            </div>
+        `).join('') : '<p>No hay artefactos disponibles</p>'}
+        </div>
+        
         <h5>${character.name}</h5>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
