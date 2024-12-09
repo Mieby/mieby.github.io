@@ -271,23 +271,6 @@ imageContainer.style.backgroundSize = "contain";  // Ajusta la imagen para que q
 imageContainer.style.backgroundPosition = "center";  // Centra la imagen en el contenedor
 imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se repita si es más pequeña que el contenedor
 
-    // Configurar el fondo para el arma
-    const weaponImageContainer = charCard.querySelector(".weapon-img");
-    if (character.weaponBackground) {
-        // Aplicar el fondo guardado en el localStorage
-        weaponImageContainer.style.backgroundImage = character.weaponBackground;
-    } else if (character.weaponStars === 5) {
-        weaponImageContainer.style.backgroundImage = "url('assets/backgrounds_genshin/weapon_five_stars.jpg')"; // Fondo para armas de 5 estrellas
-    } else if (character.weaponStars === 4) {
-        weaponImageContainer.style.backgroundImage = "url('assets/backgrounds_genshin/weapon_four_stars.jpg')"; // Fondo para armas de 4 estrellas
-    } else {
-        weaponImageContainer.style.backgroundImage = "none"; // Sin fondo si no hay información
-    }
-
-    // Asegurar que el fondo del arma se ajuste correctamente
-    weaponImageContainer.style.backgroundSize = "contain";
-    weaponImageContainer.style.backgroundPosition = "center";
-    weaponImageContainer.style.backgroundRepeat = "no-repeat";
 
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
@@ -342,6 +325,20 @@ function selectWeapon(weapon, weaponElement) {
     // Actualizar la imagen y el nombre del arma
     weaponImg.src = weapon.img;
     weaponName.textContent = `${weapon.name}`;
+
+    // Aplicar el fondo según la rareza del arma
+    if (weapon.stars === 5) {
+        weaponImg.style.backgroundImage = "url('assets/backgrounds_genshin/background_five_stars.jpg')";
+    } else if (weapon.stars === 4) {
+        weaponImg.style.backgroundImage = "url('assets/backgrounds_genshin/background_four_star.jpg')";
+    } else {
+        weaponImg.style.backgroundImage = ""; // Sin fondo especial
+    }
+
+    weaponImg.style.backgroundSize = "contain";
+    weaponImg.style.backgroundPosition = "center";
+    weaponImg.style.backgroundRepeat = "no-repeat";
+    
     closeWeaponModal();  // Cerrar el modal
     saveCharacterState();
 }
@@ -361,7 +358,7 @@ function saveCharacterState() {
         weaponRank: card.querySelector(".weapon-rank").textContent,
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
         background: card.querySelector(".character-img").style.backgroundImage || '',
-        weaponBackground: card.querySelector(".weapon-img").style.backgroundImage || '',
+        weaponBackground: card.querySelector(".weapon-img").style.backgroundImage || "",
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
             img: item.querySelector("img").src
