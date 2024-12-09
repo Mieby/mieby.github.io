@@ -15,7 +15,7 @@ const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 const deleteModal = document.getElementById("delete-modal");
 const characterNameElement = document.getElementById("character-name");
 const deleteCharacterBtn = document.getElementById("delete-character-btn");
-const cancelDeleteBtn = document.getElementById("cancel-delete-btn"
+const cancelDeleteBtn = document.getElementById("cancel-delete-btn");
 
 
 // Función para obtener los objetos predeterminados por personaje
