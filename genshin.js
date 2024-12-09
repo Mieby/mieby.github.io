@@ -11,6 +11,13 @@ const weaponModal = document.getElementById("weapon-modal");
 const weaponList = document.getElementById("weapon-list");
 const closeWeaponModalBtn = document.getElementById("close-weapon-modal");
 
+// Elementos del DOM para el modal de click
+const deleteModal = document.getElementById("delete-modal");
+const deleteCharacterBtn = document.getElementById("delete-character-btn");
+const cancelDeleteBtn = document.getElementById("cancel-delete-btn");
+const characterNameElement = document.getElementById("character-name");
+let currentCharacterToDelete = null;
+
 // Función para obtener los objetos predeterminados por personaje
 function getDefaultItemsForCharacter(characterName) {
     const character = genshinCharacters.find(char => char.name === characterName);
@@ -417,6 +424,47 @@ function toggleCharacterInfo() {
     });
     saveCharacterState();
 }
+
+// Función para manejar el clic en la tarjeta del personaje
+function showDeleteModal(event) {
+    // Obtener el nombre del personaje desde la tarjeta
+    const characterName = event.target.closest('.character-card').querySelector('h4').textContent;
+
+    // Mostrar el nombre del personaje en el modal
+    characterNameElement.textContent = characterName;
+
+    // Mostrar el modal
+    deleteModal.style.display = "flex";
+
+    // Guardar el personaje a eliminar
+    currentCharacterToDelete = event.target.closest('.character-card');
+}
+
+// Función para eliminar el personaje
+deleteCharacterBtn.addEventListener("click", () => {
+    if (currentCharacterToDelete) {
+        // Eliminar la tarjeta del personaje
+        currentCharacterToDelete.remove();
+        // Cerrar el modal
+        deleteModal.style.display = "none";
+    }
+});
+
+// Función para cerrar el modal sin eliminar
+cancelDeleteBtn.addEventListener("click", () => {
+    deleteModal.style.display = "none";
+});
+
+// Agregar evento a las tarjetas de personajes para mostrar el modal
+function addDeleteEventToCharacterCards() {
+    const characterCards = document.querySelectorAll(".character-card");
+    characterCards.forEach(card => {
+        card.addEventListener("click", showDeleteModal);
+    });
+}
+
+// Llamar a la función para agregar los eventos de eliminación
+addDeleteEventToCharacterCards();
 
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
