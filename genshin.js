@@ -65,6 +65,67 @@ function closeCharacterModal() {
     characterModal.classList.add("hidden");
 }
 
+// Variable para controlar el estado de arrastre
+let dragEnabled = false;
+
+// Obtener el botón para habilitar el arrastre
+const enableDragBtn = document.getElementById("enable-drag-btn");
+
+// Función para habilitar o deshabilitar el arrastre
+enableDragBtn.addEventListener("click", () => {
+    dragEnabled = !dragEnabled; // Cambiar el estado
+    enableDragBtn.textContent = dragEnabled ? "Deshabilitar Mover Personajes" : "Habilitar Mover Personajes";
+    const characterCards = document.querySelectorAll(".character-card");
+    characterCards.forEach(card => {
+        if (dragEnabled) {
+            enableDrag(card);
+        } else {
+            disableDrag(card);
+        }
+    });
+});
+
+// Habilitar el arrastre en una tarjeta de personaje
+function enableDrag(card) {
+    card.setAttribute("draggable", "true");
+
+    card.addEventListener("dragstart", dragStart);
+    card.addEventListener("dragover", dragOver);
+    card.addEventListener("drop", drop);
+}
+
+// Deshabilitar el arrastre en una tarjeta de personaje
+function disableDrag(card) {
+    card.setAttribute("draggable", "false");
+    card.removeEventListener("dragstart", dragStart);
+    card.removeEventListener("dragover", dragOver);
+    card.removeEventListener("drop", drop);
+}
+
+// Función que se llama cuando se inicia el arrastre
+function dragStart(event) {
+    event.dataTransfer.setData('text', event.target.id); // Identifica el elemento que se está arrastrando
+    event.target.style.opacity = '0.5'; // Cambia la opacidad para dar feedback visual
+}
+
+// Función para permitir que se pueda soltar el elemento
+function dragOver(event) {
+    event.preventDefault(); // Impide el comportamiento por defecto, necesario para permitir el drop
+}
+
+// Función para soltar el elemento y cambiar su posición
+function drop(event) {
+    event.preventDefault();
+    const draggedElement = document.querySelector(`[draggable="true"]:hover`); // Identifica el elemento arrastrado
+    const targetElement = event.target.closest('.character-card');
+    
+    if (draggedElement && targetElement && draggedElement !== targetElement) {
+        const parent = targetElement.parentElement;
+        const targetIndex = Array.from(parent.children).indexOf(targetElement);
+        parent.insertBefore(draggedElement, parent.children[targetIndex + (event.offsetY > targetElement.offsetHeight / 2 ? 1 : 0)]);
+    }
+}
+
 // Agregar tarjeta de personaje
 function addCharacterCard(character, isLoading = false) {
     // Si isLoading es false, se realiza la verificación de duplicados
@@ -81,7 +142,7 @@ function addCharacterCard(character, isLoading = false) {
     // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
-    charCard.setAttribute('draggable', 'true');
+    charCard.setAttribute('id', `card-${character.name}`);
 
     // HTML para la tarjeta de personaje
     charCard.innerHTML = `
@@ -174,38 +235,14 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
         saveCharacterState();
     }
 
-    // Código para arrastrar
-    charCard.addEventListener("dragstart", dragStart);
-    charCard.addEventListener("dragover", dragOver);
-    charCard.addEventListener("drop", drop);
-
-    // Agregar la tarjeta al contenedor de personajes
-    characterGrid.appendChild(charCard);
-}
-
-// Función que se llama cuando se inicia el arrastre
-function dragStart(event) {
-    event.dataTransfer.setData('text', event.target.id); // Identifica el elemento que se está arrastrando
-    event.target.style.opacity = '0.5'; // Cambia la opacidad para dar feedback visual
-}
-
-// Función para permitir que se pueda soltar el elemento
-function dragOver(event) {
-    event.preventDefault(); // Impide el comportamiento por defecto, necesario para permitir el drop
-}
-
-// Función para soltar el elemento y cambiar su posición
-function drop(event) {
-    event.preventDefault();
-    const draggedElement = document.querySelector(`[draggable="true"]:hover`); // Identifica el elemento arrastrado
-    const targetElement = event.target.closest('.character-card');
-    
-    if (draggedElement && targetElement && draggedElement !== targetElement) {
-        const parent = targetElement.parentElement;
-        const targetIndex = Array.from(parent.children).indexOf(targetElement);
-        parent.insertBefore(draggedElement, parent.children[targetIndex + (event.offsetY > targetElement.offsetHeight / 2 ? 1 : 0)]);
+    // Habilitar o deshabilitar el arrastre según el estado
+    if (dragEnabled) {
+        enableDrag(charCard);
+    } else {
+        disableDrag(charCard);
     }
 }
+    
 // Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
     weaponList.innerHTML = "";  // Limpiar la lista de armas
