@@ -302,14 +302,6 @@ function openWeaponModal(weaponElement) {
         const weaponItem = document.createElement("div");
         weaponItem.classList.add("weapon-item");
 
-         // Establecer el fondo de la imagen del arma en el modal
-        let backgroundStyle = '';
-        if (weapon.stars === 4) {
-            backgroundStyle = 'rgba(0, 128, 0, 0.3)';  // Fondo verde para 4 estrellas
-        } else if (weapon.stars === 5) {
-            backgroundStyle = 'rgba(255, 215, 0, 0.3)';  // Fondo dorado para 5 estrellas
-        }
-
         
         weaponItem.innerHTML = `
             <img src="${weapon.img}" alt="${weapon.name}" width="50">
