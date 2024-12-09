@@ -223,15 +223,15 @@
 
 /* Estilos para los items */
 .character-items .item,
-.character-weapons .weapon,
-.character-artifacts .artifact {
+.character-weapons .item,
+.character-artifacts .item {
     text-align: center;
 }
 
 /* Estilos para las imágenes */
-.character-weapons .weapon img,
+.character-weapons .item img,
 .character-items .item img,
-.character-artifacts .artifact img {
+.character-artifacts .item img {
     width: 50px; /* Tamaño uniforme para las imágenes */
     height: 50px; /* Cuadrado */
     object-fit: contain; /* Sin distorsión */
