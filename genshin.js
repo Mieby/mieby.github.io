@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (characterBox) {
                 characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
             }
+        }
     });
 });
 
