@@ -327,7 +327,7 @@ function selectWeapon(weapon, weaponElement) {
     weaponName.textContent = `${weapon.name}`;
 
     // Obtener el contenedor de la imagen y cambiar el fondo
-    const imageContainer = charCard.querySelector(".character-img");
+    const imageContainer = weaponElement.querySelector(".weapon-img");
     if (weapon.background) {
         // Aplicar el fondo guardado en el localStorage
         weaponImg.style.backgroundImage = weapon.background;
