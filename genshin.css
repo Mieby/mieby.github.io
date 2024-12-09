@@ -229,8 +229,8 @@
 }
 
 /* Estilos para las imágenes */
-.character-items .item img,
 .character-weapons .weapon img,
+.character-items .item img,
 .character-artifacts .artifact img {
     width: 50px; /* Tamaño uniforme para las imágenes */
     height: 50px; /* Cuadrado */
