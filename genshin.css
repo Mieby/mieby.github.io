@@ -210,31 +210,59 @@
     object-fit: cover; /* Mantiene la proporción de la imagen del personaje */
 }
 
-/* Estilos para la caja de objetos */
-.character-items {
+/* Estilos generales para las cajas */
+.character-items,
+.character-weapons,
+.character-artifacts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Crea un grid ajustado, con imágenes más pequeñas */
-    gap: 10px; /* Espacio entre los elementos */
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Grid ajustado */
+    gap: 10px; /* Espacio entre elementos */
     margin-top: 10px;
     justify-items: center; /* Centra los elementos dentro de cada celda */
 }
 
-/* Estilos para cada objeto */
-.character-items .item {
+/* Estilos para los items */
+.character-items .item,
+.character-weapons .weapon,
+.character-artifacts .artifact {
     text-align: center;
 }
 
 /* Estilos para las imágenes */
-.character-items .item img {
-    width: 50px; /* Tamaño pequeño para las imágenes */
-    height: 50px; /* Asegura que las imágenes sean cuadradas */
-    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+.character-items .item img,
+.character-weapons .weapon img,
+.character-artifacts .artifact img {
+    width: 50px; /* Tamaño uniforme para las imágenes */
+    height: 50px; /* Cuadrado */
+    object-fit: contain; /* Sin distorsión */
 }
 
-.character-items .item p {
-    font-size: 8px; /* Tamaño más pequeño */
+/* Estilos para los textos */
+.character-items .item p,
+.character-weapons .weapon p,
+.character-artifacts .artifact p {
+    font-size: 8px; /* Tamaño pequeño */
     margin-top: 3px;
     word-wrap: break-word;
     line-height: 1.2;
     padding: 0 2px;
+}
+
+/* Opcional: diferenciar visualmente cada categoría */
+.character-items {
+    border: 1px solid #d4d4d4; /* Borde para distinguir */
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+.character-weapons {
+    border: 1px solid #d4d4d4;
+    padding: 5px;
+    background-color: #eaf4ff;
+}
+
+.character-artifacts {
+    border: 1px solid #d4d4d4;
+    padding: 5px;
+    background-color: #fff4ea;
 }
