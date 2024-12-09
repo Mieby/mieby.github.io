@@ -155,6 +155,7 @@ function drop(event) {
     
     // Limpia las clases de arrastre
     clearDragClasses();
+    }
 }
 
 // Función para limpiar las clases de arrastre
