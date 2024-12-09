@@ -46,6 +46,15 @@ document.addEventListener("DOMContentLoaded", () => {
             if (characterBox) {
                 characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
             }
+
+            // Aquí es donde se actualiza la imagen del arma
+            const weaponElements = card.querySelectorAll(".weapon-img");
+            characterWithDefaultItems.weapons.forEach((weapon, index) => {
+                if (weaponElements[index]) {
+                    weaponElements[index].src = weapon.img; // Cambia la imagen
+                    weaponElements[index].alt = weapon.name; // Opcional: agregar texto alternativo
+                }
+            });
         }
     });
 });
