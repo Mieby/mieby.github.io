@@ -450,6 +450,7 @@ function deleteCharacter(characterCard) {
 
         // Actualizar la base de datos (simulación)
         saveCharacterState(); // Reemplaza esta función con tu lógica de actualización real
+        closeClickCharacterModal();
     }
 }
 
