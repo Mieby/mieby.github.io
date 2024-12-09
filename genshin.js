@@ -427,7 +427,7 @@ function toggleCharacterInfo() {
 // Character-Modal 
 // Abrir el modal del personaje al hacer clic en su imagen
 function openCharacterModalForEdit(characterElement) {
-    const characterModal = document.getElementById("character-modal");
+    const characterModal = document.getElementById("click-character-modal");
     const deleteButton = characterModal.querySelector("#delete-character-btn");
 
     // Guardar el personaje actual en una variable
