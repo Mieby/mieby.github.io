@@ -42,14 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (card) {
-            const weaponImg = card.querySelector(".weapon-img");
-            if (weaponImg && character.weapons.length > 0) {
-                const weapon = character.weapons[0];  // Suponiendo que tienes solo un arma por personaje
-                weaponImg.src = weapon.img;
-                weaponImg.style.backgroundColor = weapon.weaponBackground || '';  // Restaurar el fondo
-            }
-
-            // Rellenar el cuadro de texto adicional si existe
             const characterBox = card.querySelector(".character-box .editable-text");
             if (characterBox) {
                 characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
@@ -309,8 +301,6 @@ function openWeaponModal(weaponElement) {
     weaponsList.forEach(weapon => {
         const weaponItem = document.createElement("div");
         weaponItem.classList.add("weapon-item");
-
-        
         weaponItem.innerHTML = `
             <img src="${weapon.img}" alt="${weapon.name}" width="50">
             <p>${weapon.name}</p>
@@ -334,16 +324,6 @@ function selectWeapon(weapon, weaponElement) {
     // Actualizar la imagen y el nombre del arma
     weaponImg.src = weapon.img;
     weaponName.textContent = `${weapon.name}`;
-
-    // Establecer el fondo según el número de estrellas
-    if (weapon.stars === 4) {
-        weaponImg.style.backgroundColor = 'rgba(0, 128, 0, 0.3)';  // Fondo verde para 4 estrellas
-    } else if (weapon.stars === 5) {
-        weaponImg.style.backgroundColor = 'rgba(255, 215, 0, 0.3)';  // Fondo dorado para 5 estrellas
-    } else {
-        weaponImg.style.backgroundColor = '';  // Sin fondo para otras estrellas (o puedes definir más casos)
-    }
-    
     closeWeaponModal();  // Cerrar el modal
     saveCharacterState();
 }
@@ -363,7 +343,6 @@ function saveCharacterState() {
         weaponRank: card.querySelector(".weapon-rank").textContent,
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
         background: card.querySelector(".character-img").style.backgroundImage || '',
-        weaponBackground: card.querySelector(".weapon-img") ? card.querySelector(".weapon-img").style.backgroundColor : '',
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
             img: item.querySelector("img").src
