@@ -288,8 +288,14 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
     // Agregar el evento para abrir el modal de armas
     const weaponElement = charCard.querySelector(".weapon-info");
     const weaponImg = weaponElement.querySelector(".weapon-img");
-    weaponImg.style.backgroundImage = character.weaponBackground;
+    if (weapon.weaponBackground) {
+        // Aplicar el fondo guardado en el localStorage
+        weaponImg.style.backgroundImage = character.weaponBackground;
     weaponImg.addEventListener("click", () => openWeaponModal(weaponElement));
+    
+    if (weapon.weaponBackground) {
+        // Aplicar el fondo guardado en el localStorage
+        weaponImg.style.backgroundImage = character.weaponBackground;
 
 
     // Si no estamos cargando, cierra el modal y guarda el estado
