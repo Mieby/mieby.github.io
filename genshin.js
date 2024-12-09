@@ -143,12 +143,15 @@ function drop(event) {
         const horizontalDistance = event.clientX - targetRect.left; // Distancia horizontal
         const verticalDistance = event.clientY - targetRect.top;   // Distancia vertical
 
-        // Determinar si el movimiento es más cercano a la mitad (en X y Y) de la tarjeta
-        const insertAtEnd = (horizontalDistance > targetRect.width / 2) && (verticalDistance > targetRect.height / 2);
+        // Determinar si el movimiento es más cercano a la mitad (en X) de la tarjeta objetivo
+        const insertAtEnd = horizontalDistance > targetRect.width / 2;
 
-        // Insertamos el elemento en la posición adecuada
-        parent.insertBefore(draggedElement, parent.children[targetIndex + (insertAtEnd ? 1 : 0)]);
-    }
+        // Si el movimiento es horizontal, asegurarse de que se inserte correctamente entre las tarjetas
+        if (insertAtEnd) {
+            parent.insertBefore(draggedElement, parent.children[targetIndex + 1]); // Insertar después de la tarjeta objetivo
+        } else {
+            parent.insertBefore(draggedElement, targetElement); // Insertar antes de la tarjeta objetivo
+        }
     
     // Limpia las clases de arrastre
     clearDragClasses();
