@@ -46,15 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (characterBox) {
                 characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
             }
-
-            // Aquí es donde se actualiza la imagen del arma
-            const weaponElements = card.querySelectorAll(".weapon-img");
-            characterWithDefaultItems.weapons.forEach((weapon, index) => {
-                if (weaponElements[index]) {
-                    weaponElements[index].src = weapon.img; // Cambia la imagen
-                    weaponElements[index].alt = weapon.name; // Opcional: agregar texto alternativo
-                }
-            });
         }
     });
 });
@@ -280,7 +271,6 @@ imageContainer.style.backgroundSize = "contain";  // Ajusta la imagen para que q
 imageContainer.style.backgroundPosition = "center";  // Centra la imagen en el contenedor
 imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se repita si es más pequeña que el contenedor
 
-
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
 
@@ -289,11 +279,6 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
     const weaponElement = charCard.querySelector(".weapon-info");
     const weaponImg = weaponElement.querySelector(".weapon-img");
     weaponImg.addEventListener("click", () => openWeaponModal(weaponElement));
-    
-    if (weapon.weaponBackground) {
-        // Aplicar el fondo guardado en el localStorage
-        weaponImg.style.backgroundImage = character.weaponBackground;
-    }
 
 
     // Si no estamos cargando, cierra el modal y guarda el estado
@@ -339,20 +324,6 @@ function selectWeapon(weapon, weaponElement) {
     // Actualizar la imagen y el nombre del arma
     weaponImg.src = weapon.img;
     weaponName.textContent = `${weapon.name}`;
-
-    // Aplicar el fondo según la rareza del arma
-    if (weapon.stars === 5) {
-        weaponImg.style.backgroundImage = "url('assets/backgrounds_genshin/background_five_stars.jpg')";
-    } else if (weapon.stars === 4) {
-        weaponImg.style.backgroundImage = "url('assets/backgrounds_genshin/background_four_star.jpg')";
-    } else {
-        weaponImg.style.backgroundImage = ""; // Sin fondo especial
-    }
-
-    weaponImg.style.backgroundSize = "contain";
-    weaponImg.style.backgroundPosition = "center";
-    weaponImg.style.backgroundRepeat = "no-repeat";
-    
     closeWeaponModal();  // Cerrar el modal
     saveCharacterState();
 }
@@ -372,7 +343,6 @@ function saveCharacterState() {
         weaponRank: card.querySelector(".weapon-rank").textContent,
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
         background: card.querySelector(".character-img").style.backgroundImage || '',
-        weaponBackground: card.querySelector(".weapon-img").style.backgroundImage || "",
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
             img: item.querySelector("img").src
@@ -454,7 +424,7 @@ function toggleCharacterInfo() {
     saveCharacterState();
 }
 
-// Click-Character-Modal 
+// Character-Modal 
 // Abrir el modal del personaje al hacer clic en su imagen
 function openCharacterModalForEdit(characterElement) {
     const characterModal = document.getElementById("click-character-modal");
