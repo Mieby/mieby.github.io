@@ -113,7 +113,6 @@ function dragStart(event) {
     const card = event.target.closest(".character-card");
     event.dataTransfer.setData('text', card.id); // Identifica el elemento que se está arrastrando
     card.classList.add("dragging"); // Agrega la clase de arrastre
-    card.style.opacity = '0.7'; // Cambia la opacidad para dar feedback visual
 }
 
 
