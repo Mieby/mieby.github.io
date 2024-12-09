@@ -81,7 +81,7 @@ function addCharacterCard(character, isLoading = false) {
     // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
-    harCard.setAttribute("draggable", "true");
+    charCard.setAttribute("draggable", "true");
 
     // HTML para la tarjeta de personaje
     charCard.innerHTML = `
