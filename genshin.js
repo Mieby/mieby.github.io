@@ -128,23 +128,28 @@ function dragOver(event) {
 // Función para soltar el elemento y cambiar su posición
 function drop(event) {
     event.preventDefault();
-    const draggedElement = document.querySelector(".dragging"); // Identifica el elemento arrastrado
-    const targetElement = event.target.closest('.character-card');
+    
+    const draggedElement = document.querySelector(".dragging"); // Elemento que se está arrastrando
+    const targetElement = event.target.closest('.character-card'); // Tarjeta sobre la que estamos soltando
 
     if (draggedElement && targetElement && draggedElement !== targetElement) {
-        const parent = targetElement.parentElement;
-        const targetIndex = Array.from(parent.children).indexOf(targetElement);
+        const parent = targetElement.parentElement; // Contenedor de las tarjetas
+        const targetIndex = Array.from(parent.children).indexOf(targetElement); // Índice de la tarjeta objetivo
 
-        // Calculamos la dirección basada en el eje X
-        const horizontalDistance = event.clientX - targetElement.getBoundingClientRect().left;
+        // Obtener las coordenadas de la tarjeta objetivo
+        const targetRect = targetElement.getBoundingClientRect();
 
-        // Si el arrastre está más cerca de la mitad de la tarjeta objetivo, movemos el arrastrado a la siguiente posición
-        const insertAtEnd = horizontalDistance > targetElement.offsetWidth / 2;
+        // Cálculo de la distancia en X e Y entre el ratón y la tarjeta objetivo
+        const horizontalDistance = event.clientX - targetRect.left; // Distancia horizontal
+        const verticalDistance = event.clientY - targetRect.top;   // Distancia vertical
+
+        // Determinar si el movimiento es más cercano a la mitad (en X y Y) de la tarjeta
+        const insertAtEnd = (horizontalDistance > targetRect.width / 2) && (verticalDistance > targetRect.height / 2);
 
         // Insertamos el elemento en la posición adecuada
         parent.insertBefore(draggedElement, parent.children[targetIndex + (insertAtEnd ? 1 : 0)]);
     }
-
+    
     // Limpia las clases de arrastre
     clearDragClasses();
 }
