@@ -454,7 +454,7 @@ function deleteCharacter(characterCard) {
 }
 
 // Cerrar el modal
-function closeCharacterModal() {
+function closeClickCharacterModal() {
     const characterModal = document.getElementById("click-character-modal");
     characterModal.classList.add("hidden");
 }
@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Configurar el botón de cerrar modal
     const closeModalButton = document.getElementById("close-character-modal");
-    closeModalButton.addEventListener("click", closeCharacterModal);
+    closeModalButton.addEventListener("click", closeClickCharacterModal);
 });
 
 // Listeners para botones
