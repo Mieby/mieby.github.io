@@ -192,7 +192,8 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
     characterGrid.addEventListener('drop', (event) => {
         event.preventDefault();  // Prevenir el comportamiento por defecto
         const draggedName = event.dataTransfer.getData('text/plain');  // Obtener el nombre del personaje arrastrado
-        const draggedCard = document.querySelector(`.character-card h4:contains('${draggedName}')`).parentElement;  // Buscar la tarjeta arrastrada
+        const draggedCard = Array.from(document.querySelectorAll(".character-card h4"))
+    .find(h4 => h4.textContent === draggedName)?.parentElement;
 
         const allCards = Array.from(characterGrid.children);
         const targetCard = event.target.closest('.character-card');  // Obtener la tarjeta en la que se soltó
