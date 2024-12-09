@@ -437,7 +437,7 @@ function openCharacterModalForEdit(characterElement) {
     deleteButton.onclick = () => deleteCharacter(characterCard);
 
     // Mostrar el modal
-    clickCharacterModal.classList.remove("hidden");
+    characterModal.classList.remove("hidden");
 }
 
 // Función para eliminar un personaje
@@ -455,13 +455,19 @@ function deleteCharacter(characterCard) {
 
 // Cerrar el modal
 function closeCharacterModal() {
-    const characterModal = document.getElementById("character-modal");
-    clickCharacterModal.classList.add("hidden");
+    const characterModal = document.getElementById("click-character-modal");
+    characterModal.classList.add("hidden");
 }
 
 // Asignar evento a las imágenes de personajes
-document.querySelectorAll(".character-img").forEach(img => {
-    img.addEventListener("click", () => openCharacterModalForEdit(img));
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".character-img").forEach(img => {
+        img.addEventListener("click", () => openCharacterModalForEdit(img));
+    });
+
+    // Configurar el botón de cerrar modal
+    const closeModalButton = document.getElementById("close-character-modal");
+    closeModalButton.addEventListener("click", closeCharacterModal);
 });
 
 // Listeners para botones
