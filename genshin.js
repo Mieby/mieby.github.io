@@ -73,7 +73,7 @@ function addCharacterCard(character, isLoading = false) {
         const isDuplicate = Array.from(existingCards).some(card => card.textContent === character.name);
 
         if (isDuplicate) {
-            alert(`${character.name} ya ha sido agregado.`);
+            alert(`${character.name} ya ha sido agregado!`);
             return;  // Si el personaje ya está, no lo agregues.
         }
     }
