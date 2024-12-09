@@ -363,7 +363,7 @@ function saveCharacterState() {
         weaponRank: card.querySelector(".weapon-rank").textContent,
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
         background: card.querySelector(".character-img").style.backgroundImage || '',
-        weaponBackground: weapon.querySelector("img").style.backgroundColor || '',
+        weaponBackground: card.querySelector(".weapon-img") ? card.querySelector(".weapon-img").style.backgroundColor : '',
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
             img: item.querySelector("img").src
