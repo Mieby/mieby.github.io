@@ -109,10 +109,13 @@ function disableDrag(card) {
 
 // Función que se llama cuando se inicia el arrastre
 function dragStart(event) {
-    event.dataTransfer.setData('text', event.target.id); // Identifica el elemento que se está arrastrando
-    event.target.classList.add("dragging"); // Agrega la clase de arrastre
-    event.target.style.opacity = '0.5'; // Cambia la opacidad para dar feedback visual
+    // Utilizamos event.target.closest() para asegurarnos de que arrastremos toda la tarjeta
+    const card = event.target.closest(".character-card");
+    event.dataTransfer.setData('text', card.id); // Identifica el elemento que se está arrastrando
+    card.classList.add("dragging"); // Agrega la clase de arrastre
+    card.style.opacity = '0.7'; // Cambia la opacidad para dar feedback visual
 }
+
 
 // Función para permitir que se pueda soltar el elemento
 function dragOver(event) {
