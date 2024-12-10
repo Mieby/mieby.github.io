@@ -255,22 +255,6 @@ function addCharacterCard(character, isLoading = false) {
         </div>
     `;
 
-     // Obtener el contenedor de la imagen y cambiar el fondo
-    const imageContainer = charCard.querySelector(".character-img");
-    if (character.background) {
-        // Aplicar el fondo guardado en el localStorage
-        imageContainer.style.backgroundImage = character.background;
-    } else if (character.stars === 5) {
-        imageContainer.style.backgroundImage = "url('assets/backgrounds_genshin/background_five_stars.jpg')"; // Fondo para 5 estrellas
-    } else if (character.stars === 4) {
-        imageContainer.style.backgroundImage = "url('assets/backgrounds_genshin/background_four_star.jpg')"; // Fondo para 4 estrellas
-    }
-
-    // Asegurarse de que la imagen se ajuste al tamaño del contenedor
-imageContainer.style.backgroundSize = "contain";  // Ajusta la imagen para que quepa completamente en el contenedor
-imageContainer.style.backgroundPosition = "center";  // Centra la imagen en el contenedor
-imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se repita si es más pequeña que el contenedor
-
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
 
@@ -417,7 +401,6 @@ function saveCharacterState() {
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
-        background: card.querySelector(".character-img").style.backgroundImage || '',
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
             img: item.querySelector("img").src
