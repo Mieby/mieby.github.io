@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
             ...character,
             items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
             weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
-            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name)
+            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
+            stats: character.stats && character.stats.length > 0 ? character.stats : getDefaultStatsForCharacter(character.name)
         };
         addCharacterCard(characterWithDefaultItems, true);
 
