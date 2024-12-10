@@ -1,4 +1,11 @@
 /* Estilos del contenedor de personajes */
+
+#weapon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 #character-grid {
     display: flex;
     flex-wrap: wrap;
