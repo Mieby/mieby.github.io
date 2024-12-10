@@ -27,6 +27,8 @@
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    justify-content: center;      /* Centra los botones horizontalmente */
+    align-items: center;          /* Centra los botones verticalmente */
 }
 
 .filter-btn {
