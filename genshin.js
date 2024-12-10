@@ -342,11 +342,11 @@ let activeFilters = {
     stars: null // Cantidad de estrellas seleccionada (4, 5, etc.)
 };
 
-document.getElementById("sword-filter").addEventListener("click", () => applyFilter("type", "Espada"));
-document.getElementById("claymore-filter").addEventListener("click", () => applyFilter("type", "Caca"));
-document.getElementById("catalist-filter").addEventListener("click", () => applyFilter("type", "Catalizador"));
-document.getElementById("lanza-filter").addEventListener("click", () => applyFilter("type", "Lanza"));
-document.getElementById("bow-filter").addEventListener("click", () => applyFilter("type", "Arco"));
+document.getElementById("sword-filter").addEventListener("click", () => applyFilter("type", "sword"));
+document.getElementById("claymore-filter").addEventListener("click", () => applyFilter("type", "claymore"));
+document.getElementById("catalist-filter").addEventListener("click", () => applyFilter("type", "catalist"));
+document.getElementById("lanza-filter").addEventListener("click", () => applyFilter("type", "lance"));
+document.getElementById("bow-filter").addEventListener("click", () => applyFilter("type", "bow"));
 document.getElementById("stars-filter-4").addEventListener("click", () => applyFilter("stars", 4));
 document.getElementById("stars-filter-5").addEventListener("click", () => applyFilter("stars", 5));
 
