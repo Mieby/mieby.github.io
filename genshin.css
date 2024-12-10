@@ -126,7 +126,7 @@
 .character-card .talents {
     display: flex;
     gap: 10px; /* Espacio entre los talentos */
-    margin-top: 5px;
+    margin-top: 2px;
 }
 
 .character-card .talent {
@@ -207,7 +207,7 @@
 
 .modal-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 5px;
     border-radius: 15px;
     width: 80%;
     max-width: 600px;
@@ -276,8 +276,8 @@
 .character-artifacts {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Grid ajustado */
-    gap: 10px; /* Espacio entre elementos */
-    margin-top: 10px;
+    gap: 5px; /* Espacio entre elementos */
+    margin-top: 3px;
     justify-items: center; /* Centra los elementos dentro de cada celda */
 }
 
@@ -292,8 +292,8 @@
 .character-weapons .item img,
 .character-items .item img,
 .character-artifacts .item img {
-    width: 50px; /* Tamaño uniforme para las imágenes */
-    height: 50px; /* Cuadrado */
+    width: 40px; /* Tamaño uniforme para las imágenes */
+    height: 40px; /* Cuadrado */
     object-fit: contain; /* Sin distorsión */
 }
 
