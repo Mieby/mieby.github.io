@@ -7,6 +7,7 @@
 }
 
 #weapon-list .weapon-item {
+    margin-top: 10px,
     cursor: pointer;
     width: 100px; /* Limita el ancho para que los nombres no se desborden */
     text-align: center; /* Centra el texto */
