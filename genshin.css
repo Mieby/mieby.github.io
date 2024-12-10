@@ -186,7 +186,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Arma */
+                                                                                                                                                        /* Arma */
 .weapon-info {
     display: flex;
     align-items: center;
@@ -201,6 +201,32 @@
     width: 50px;
     height: 50px;
     border-radius: 15px;
+}
+
+/* Estilo para los textos (nombre, nivel, rango) del arma */
+.weapon-info div {
+    margin-left: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilo para el nombre del arma */
+.weapon-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Color oscuro para el texto */
+    margin-bottom: 5px; /* Espacio debajo del nombre */
+}
+
+/* Estilo para el nivel del arma */
+.weapon-level {
+    font-size: 14px;
+    color: #555; /* Color gris oscuro */
+    margin-bottom: 5px; /* Espacio debajo del nivel */
+}
+
+/* Estilo para el rango del arma */
+.weapon-rank {
+    font-size: 14px;
+    color: #777; /* Color gris claro */
 }
 
 /* Constellation */
