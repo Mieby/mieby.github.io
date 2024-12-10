@@ -62,6 +62,7 @@
 
 /* Estilos para el botón de cerrar */
 #close-weapon-modal {
+    margin-top:10px;
     padding: 10px 20px;                /* Ajusta el tamaño del botón */
     background-color: #f44336;          /* Color de fondo rojo (puedes cambiarlo) */
     color: white;                       /* Texto blanco */
