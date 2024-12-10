@@ -510,6 +510,14 @@ document.getElementById("bow-filter").addEventListener("click", () => {
     selectedType = selectedType === "Arco" ? null : "Arco";  // Toggle
     displayWeapons();
 });
+document.getElementById("lanza-filter").addEventListener("click", () => {
+    selectedType = selectedType === "Arco" ? null : "Arco";  // Toggle
+    displayWeapons();
+});
+document.getElementById("catalist-filter").addEventListener("click", () => {
+    selectedType = selectedType === "Arco" ? null : "Arco";  // Toggle
+    displayWeapons();
+});
 
 // Filtros de estrellas
 document.getElementById("stars-filter-4").addEventListener("click", () => {
