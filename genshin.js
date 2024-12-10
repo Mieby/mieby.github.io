@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ...character,
             items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
             weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
-            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
+            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name)
         };
         addCharacterCard(characterWithDefaultItems, true);
 
@@ -178,7 +178,6 @@ function dragEnd(event) {
     clearDragClasses(); // Limpia las clases de arrastre cuando termina
 }
 
-                                                                                                                                                    //add character
 // Agregar tarjeta de personaje
 function addCharacterCard(character, isLoading = false) {
     // Si isLoading es false, se realiza la verificación de duplicados
@@ -251,7 +250,7 @@ function addCharacterCard(character, isLoading = false) {
         `).join('') : '<p>No hay artefactos disponibles</p>'}
         </div>
         
-        <h5>Reloj: ${character.stats.reloj}, Caliz: ${character.stats.caliz}, Corona: ${character.stats.corona}</h5>
+        <h5>${character.name}</h5>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
     `;
@@ -424,18 +423,7 @@ function saveCharacterState() {
         artifacts: card.querySelector(".character-artifacts") ? Array.from(card.querySelectorAll(".character-artifacts .item")).map(artifact => ({
             name: artifact.querySelector("p").textContent,
             img: artifact.querySelector("img").src
-        })) : [], // Guardar los artefactos del personaje
-        stats: { // Guardar los stats
-            reloj: card.querySelector(".stats .reloj") 
-                ? card.querySelector(".stats .reloj").textContent 
-                : "N/A",
-            caliz: card.querySelector(".stats .caliz") 
-                ? card.querySelector(".stats .caliz").textContent 
-                : "N/A",
-            corona: card.querySelector(".stats .corona") 
-                ? card.querySelector(".stats .corona").textContent 
-                : "N/A"
-        }
+        })) : [] // Guardar los artefactos del personaje
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
