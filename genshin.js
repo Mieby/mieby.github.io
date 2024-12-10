@@ -180,7 +180,7 @@ function clearDragClasses() {
 function dragEnd(event) {
     clearDragClasses(); // Limpia las clases de arrastre cuando termina
 }
-
+                                                                                                                                                    //Add character
 // Agregar tarjeta de personaje
 function addCharacterCard(character, isLoading = false) {
     // Si isLoading es false, se realiza la verificación de duplicados
@@ -258,8 +258,6 @@ function addCharacterCard(character, isLoading = false) {
                 <div><strong>Caliz:</strong> ${character.caliz}</div>
                 <div><strong>Corona:</strong> ${character.corona}</div>
             </div>
-        
-        <h5>${character.name}</h5>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
     `;
