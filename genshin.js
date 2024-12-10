@@ -341,25 +341,34 @@ document.getElementById("bow-filter").addEventListener("click", () => applyFilte
 document.getElementById("stars-filter-4").addEventListener("click", () => applyFilter("stars", 4));
 document.getElementById("stars-filter-5").addEventListener("click", () => applyFilter("stars", 5));
 
+// Aplicar filtros
 function applyFilter(filterType, value) {
-    // Alternar el filtro (desactivarlo si ya estaba activado)
-    if (activeFilters[filterType] === value) {
-        activeFilters[filterType] = null;
-    } else {
-        activeFilters[filterType] = value;
-    }
-    renderWeaponList(); // Actualizar la lista de armas
+    // Alternar el filtro activo (activar o desactivar)
+    const isActive = activeFilters[filterType] === value;
+    activeFilters[filterType] = isActive ? null : value;
+
+    // Actualizar el botón del filtro
+    const buttonId = filterType === "type" ? `${value.toLowerCase()}-filter` : `stars-filter-${value}`;
+    toggleFilterButton(buttonId, !isActive);
+
+    // Renderizar la lista de armas filtradas
+    renderWeaponList();
 }
 
+// Mostrar armas filtradas
 function renderWeaponList() {
+    // Asegúrate de tener la referencia de `weaponList` correcta
+    const weaponList = document.getElementById("weapon-list");
     weaponList.innerHTML = ""; // Limpiar la lista actual
 
+    // Filtrar las armas
     const filteredWeapons = weaponsList.filter(weapon => {
         const matchesType = activeFilters.type ? weapon.type === activeFilters.type : true;
         const matchesStars = activeFilters.stars ? weapon.stars === activeFilters.stars : true;
         return matchesType && matchesStars;
     });
 
+    // Renderizar las armas filtradas
     filteredWeapons.forEach(weapon => {
         const weaponItem = document.createElement("div");
         weaponItem.classList.add("weapon-item");
@@ -367,27 +376,25 @@ function renderWeaponList() {
             <img src="${weapon.img}" alt="${weapon.name}" width="50">
             <p>${weapon.name}</p>
         `;
+        // Asegúrate de que `weaponElement` esté definido correctamente
         weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));
         weaponList.appendChild(weaponItem);
     });
 }
 
+// Alternar clases de botón activo
 function toggleFilterButton(buttonId, isActive) {
     const button = document.getElementById(buttonId);
+    if (!button) {
+        console.error(`Botón con id '${buttonId}' no encontrado.`);
+        return;
+    }
     if (isActive) {
         button.classList.add("active");
     } else {
         button.classList.remove("active");
     }
 }
-
-// Llama a esta función en `applyFilter`
-applyFilter = (filterType, value) => {
-    const isActive = activeFilters[filterType] === value;
-    toggleFilterButton(`filter-btn-${filterType}-${value}`, !isActive);
-    activeFilters[filterType] = isActive ? null : value;
-    renderWeaponList();
-};
 
 
                                                                                                                                     // Guardado en Localstorage
