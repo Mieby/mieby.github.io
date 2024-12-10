@@ -31,7 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
             ...character,
             items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
             weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
-            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name)
+            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
+            reloj: character.reloj || 'atk',  // Asegurarse de que tenga el valor por defecto
+            caliz: character.caliz || 'atk',  // Asegurarse de que tenga el valor por defecto
+            corona: character.corona || 'atk',
         };
         addCharacterCard(characterWithDefaultItems, true);
 
@@ -249,6 +252,12 @@ function addCharacterCard(character, isLoading = false) {
             </div>
         `).join('') : '<p>No hay artefactos disponibles</p>'}
         </div>
+
+        <div class="character-objects">
+                <div><strong>Reloj:</strong> ${character.reloj}</div>
+                <div><strong>Caliz:</strong> ${character.caliz}</div>
+                <div><strong>Corona:</strong> ${character.corona}</div>
+            </div>
         
         <h5>${character.name}</h5>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
@@ -411,6 +420,9 @@ function saveCharacterState() {
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
+        reloj: card.querySelector(".reloj").textContent,  // Captura el valor de reloj
+        caliz: card.querySelector(".caliz").textContent,  // Captura el valor de caliz
+        corona: card.querySelector(".corona").textContent, // Captura el valor de corona
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
