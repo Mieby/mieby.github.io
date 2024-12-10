@@ -295,15 +295,11 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
     }
 }
     
-// Función modificada de openWeaponModal (solo en la parte del filtro de armas)
+// Función para abrir el modal de armas (sin tocar su lógica original)
 function openWeaponModal(weaponElement) {
-    weaponList.innerHTML = "";  // Limpiar la lista de armas
+    const filteredWeapons = filterWeapons(); // Filtra las armas
 
-    const filteredWeapons = weaponsList.filter(weapon => {
-        const matchesType = !filterType || weapon.type === filterType;
-        const matchesStars = !filterStars || weapon.stars === filterStars;
-        return matchesType && matchesStars;
-    });
+    weaponList.innerHTML = "";  // Limpiar la lista de armas
 
     filteredWeapons.forEach(weapon => {
         const weaponItem = document.createElement("div");
