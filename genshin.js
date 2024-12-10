@@ -327,6 +327,70 @@ function selectWeapon(weapon, weaponElement) {
     closeWeaponModal();  // Cerrar el modal
     saveCharacterState();
 }
+                                                                                                                                            //Filtrado de armas
+let activeFilters = {
+    type: null, // Tipo de arma seleccionado (Espada, Mandoble, etc.)
+    stars: null // Cantidad de estrellas seleccionada (4, 5, etc.)
+};
+
+document.getElementById("sword-filter").addEventListener("click", () => applyFilter("type", "Espada"));
+document.getElementById("claymore-filter").addEventListener("click", () => applyFilter("type", "Mandoble"));
+document.getElementById("catalist-filter").addEventListener("click", () => applyFilter("type", "Catalizador"));
+document.getElementById("lanza-filter").addEventListener("click", () => applyFilter("type", "Lanza"));
+document.getElementById("bow-filter").addEventListener("click", () => applyFilter("type", "Arco"));
+document.getElementById("stars-filter-4").addEventListener("click", () => applyFilter("stars", 4));
+document.getElementById("stars-filter-5").addEventListener("click", () => applyFilter("stars", 5));
+
+function applyFilter(filterType, value) {
+    // Alternar el filtro (desactivarlo si ya estaba activado)
+    if (activeFilters[filterType] === value) {
+        activeFilters[filterType] = null;
+    } else {
+        activeFilters[filterType] = value;
+    }
+    renderWeaponList(); // Actualizar la lista de armas
+}
+
+function renderWeaponList() {
+    weaponList.innerHTML = ""; // Limpiar la lista actual
+
+    const filteredWeapons = weaponsList.filter(weapon => {
+        const matchesType = activeFilters.type ? weapon.type === activeFilters.type : true;
+        const matchesStars = activeFilters.stars ? weapon.stars === activeFilters.stars : true;
+        return matchesType && matchesStars;
+    });
+
+    filteredWeapons.forEach(weapon => {
+        const weaponItem = document.createElement("div");
+        weaponItem.classList.add("weapon-item");
+        weaponItem.innerHTML = `
+            <img src="${weapon.img}" alt="${weapon.name}" width="50">
+            <p>${weapon.name}</p>
+        `;
+        weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));
+        weaponList.appendChild(weaponItem);
+    });
+}
+
+function toggleFilterButton(buttonId, isActive) {
+    const button = document.getElementById(buttonId);
+    if (isActive) {
+        button.classList.add("active");
+    } else {
+        button.classList.remove("active");
+    }
+}
+
+// Llama a esta función en `applyFilter`
+applyFilter = (filterType, value) => {
+    const isActive = activeFilters[filterType] === value;
+    toggleFilterButton(`filter-btn-${filterType}-${value}`, !isActive);
+    activeFilters[filterType] = isActive ? null : value;
+    renderWeaponList();
+};
+
+
+                                                                                                                                    // Guardado en Localstorage
 // Guardar el estado de los personajes en localStorage
 function saveCharacterState() {
     const characters = Array.from(document.querySelectorAll(".character-card")).map(card => ({
