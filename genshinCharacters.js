@@ -47,7 +47,6 @@ const genshinCharacters = [
         artifacts: [
             { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" }
         ],
-     ],
      stats: [
          {reloj: "reloj: atk"},
          {caliz: "reloj: atk"}, 
