@@ -471,69 +471,6 @@ document.addEventListener("DOMContentLoaded", () => {
     closeModalButton.addEventListener("click", closeClickCharacterModal);
 });
 
-//FILTRO
-
-// Filtros seleccionados
-let selectedType = null;
-let selectedStars = null;
-
-// Función para mostrar las armas filtradas
-function displayWeapons() {
-    weaponList.innerHTML = "";  // Limpiar la lista de armas
-
-    const filteredWeapons = weaponsList.filter(weapon => {
-        const typeMatch = selectedType ? weapon.type === selectedType : true;
-        const starsMatch = selectedStars ? weapon.stars === selectedStars : true;
-        return typeMatch && starsMatch;
-    });
-
-    // Crear los elementos de armas
-    filteredWeapons.forEach(weapon => {
-        const weaponItem = document.createElement("div");
-        weaponItem.classList.add("weapon-item");
-        weaponItem.setAttribute("data-type", weapon.type);
-        weaponItem.setAttribute("data-stars", weapon.stars);  // Establecer estrellas para los filtros
-
-        weaponItem.innerHTML = `
-            <img src="${weapon.img}" alt="${weapon.name}" width="50">
-            <p>${weapon.name}</p>
-        `;
-
-        // Aquí mantenemos el weaponElement en la creación del item
-        weaponItem.addEventListener("click", () => {
-            // Aquí pasamos tanto el weapon como el weaponElement
-            selectWeapon(weapon, weaponElement);  // Ahora usamos weaponElement de la tarjeta de personaje
-        });
-
-        weaponList.appendChild(weaponItem);
-    });
-}
-
-// Filtros de tipo de arma
-document.getElementById("sword-filter").addEventListener("click", () => {
-    selectedType = selectedType === "Espada" ? null : "Espada";  // Toggle
-    displayWeapons();
-});
-document.getElementById("claymore-filter").addEventListener("click", () => {
-    selectedType = selectedType === "Mandoble" ? null : "Mandoble";  // Toggle
-    displayWeapons();
-});
-document.getElementById("bow-filter").addEventListener("click", () => {
-    selectedType = selectedType === "Arco" ? null : "Arco";  // Toggle
-    displayWeapons();
-});
-
-// Filtros de estrellas
-document.getElementById("stars-filter-4").addEventListener("click", () => {
-    selectedStars = selectedStars === 4 ? null : 4;  // Toggle
-    displayWeapons();
-});
-document.getElementById("stars-filter-5").addEventListener("click", () => {
-    selectedStars = selectedStars === 5 ? null : 5;  // Toggle
-    displayWeapons();
-});
-
-
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
 closeModalBtn.addEventListener("click", closeCharacterModal);
