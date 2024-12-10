@@ -343,7 +343,7 @@ let activeFilters = {
 };
 
 document.getElementById("sword-filter").addEventListener("click", () => applyFilter("type", "Espada"));
-document.getElementById("claymore-filter").addEventListener("click", () => applyFilter("type", "Mandoble"));
+document.getElementById("claymore-filter").addEventListener("click", () => applyFilter("type", "Caca"));
 document.getElementById("catalist-filter").addEventListener("click", () => applyFilter("type", "Catalizador"));
 document.getElementById("lanza-filter").addEventListener("click", () => applyFilter("type", "Lanza"));
 document.getElementById("bow-filter").addEventListener("click", () => applyFilter("type", "Arco"));
