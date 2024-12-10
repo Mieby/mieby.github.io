@@ -59,6 +59,29 @@
     background-color: #1E3A5F; /* Azul más oscuro cuando está activo */
 }
 
+/* Estilos para el botón de cerrar */
+#close-weapon-modal {
+    padding: 10px 20px;                /* Ajusta el tamaño del botón */
+    background-color: #f44336;          /* Color de fondo rojo (puedes cambiarlo) */
+    color: white;                       /* Texto blanco */
+    border: none;                       /* Sin borde */
+    border-radius: 5px;                 /* Bordes redondeados */
+    font-size: 16px;                    /* Tamaño de fuente */
+    cursor: pointer;                    /* Apunta a mano */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+/* Efecto de hover */
+#close-weapon-modal:hover {
+    background-color: #d32f2f;          /* Color más oscuro cuando pasas el ratón */
+}
+
+/* Efecto de foco (cuando se hace clic) */
+#close-weapon-modal:focus {
+    outline: none;                      /* Elimina el borde por defecto al hacer clic */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Añade una sombra suave */
+}
+
                                                                                                                         /* Estilos del contenedor de personajes */
 
 #character-grid {
