@@ -294,9 +294,12 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
         disableDrag(charCard);
     }
 }
-    
+
+
+                                                                                                                                             //open Weapon Modal    
 // Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
+    currentWeaponElement = weaponElement;
     weaponList.innerHTML = "";  // Limpiar la lista de armas
     weaponsList.forEach(weapon => {
         const weaponItem = document.createElement("div");
@@ -317,15 +320,21 @@ function closeWeaponModal() {
 }
 
 // Actualizar la imagen y el nombre del arma en la tarjeta
-function selectWeapon(weapon, weaponElement) {
-    const weaponImg = weaponElement.querySelector(".weapon-img");
-    const weaponName = weaponElement.querySelector(".weapon-name");
+function selectWeapon(weapon) {
+    if (!currentWeaponElement) {
+        console.error("No se encontró el elemento actual de arma.");
+        return;
+    }
+
+    const weaponImg = currentWeaponElement.querySelector(".weapon-img");
+    const weaponName = currentWeaponElement.querySelector(".weapon-name");
 
     // Actualizar la imagen y el nombre del arma
     weaponImg.src = weapon.img;
     weaponName.textContent = `${weapon.name}`;
-    closeWeaponModal();  // Cerrar el modal
-    saveCharacterState();
+
+    closeWeaponModal(); // Cerrar el modal
+    saveCharacterState(); // Guardar el estado del personaje
 }
                                                                                                                                             //Filtrado de armas
 let activeFilters = {
@@ -357,18 +366,14 @@ function applyFilter(filterType, value) {
 
 // Mostrar armas filtradas
 function renderWeaponList() {
-    // Asegúrate de tener la referencia de `weaponList` correcta
-    const weaponList = document.getElementById("weapon-list");
-    weaponList.innerHTML = ""; // Limpiar la lista actual
+    weaponList.innerHTML = ""; // Limpiar la lista
 
-    // Filtrar las armas
     const filteredWeapons = weaponsList.filter(weapon => {
         const matchesType = activeFilters.type ? weapon.type === activeFilters.type : true;
         const matchesStars = activeFilters.stars ? weapon.stars === activeFilters.stars : true;
         return matchesType && matchesStars;
     });
 
-    // Renderizar las armas filtradas
     filteredWeapons.forEach(weapon => {
         const weaponItem = document.createElement("div");
         weaponItem.classList.add("weapon-item");
@@ -376,8 +381,7 @@ function renderWeaponList() {
             <img src="${weapon.img}" alt="${weapon.name}" width="50">
             <p>${weapon.name}</p>
         `;
-        // Asegúrate de que `weaponElement` esté definido correctamente
-        weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));
+        weaponItem.addEventListener("click", () => selectWeapon(weapon));
         weaponList.appendChild(weaponItem);
     });
 }
