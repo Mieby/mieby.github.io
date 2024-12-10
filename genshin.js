@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
             items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
             weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
             artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
-            stats: character.stats && character.stats.length > 0 ? character.stats : getDefaultStatsForCharacter(character.name)
         };
         addCharacterCard(characterWithDefaultItems, true);
 
@@ -179,6 +178,7 @@ function dragEnd(event) {
     clearDragClasses(); // Limpia las clases de arrastre cuando termina
 }
 
+                                                                                                                                                    //add character
 // Agregar tarjeta de personaje
 function addCharacterCard(character, isLoading = false) {
     // Si isLoading es false, se realiza la verificación de duplicados
@@ -251,13 +251,7 @@ function addCharacterCard(character, isLoading = false) {
         `).join('') : '<p>No hay artefactos disponibles</p>'}
         </div>
         
-        <div class="character-stats">
-                ${Array.isArray(character.stats) && character.stats.length > 0 ? 
-                    character.stats.map(stat => `
-                        <p>${Object.values(stat)[0]}</p>
-                    `).join('') : '<p>No hay estadísticas disponibles</p>'
-                }
-            </div>
+        <h5>Reloj: ${character.stats.reloj}, Caliz: ${character.stats.caliz}, Corona: ${character.stats.corona}</h5>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
     `;
@@ -419,10 +413,6 @@ function saveCharacterState() {
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
-        stats: Array.from(card.querySelectorAll(".character-stats .stat")).map(stat => ({
-            name: stat.querySelector("p").textContent,
-            value: stat.querySelector(".value").textContent
-        })) || [],
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
             img: item.querySelector("img").src
