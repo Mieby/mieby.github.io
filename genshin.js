@@ -336,16 +336,27 @@ document.getElementById("stars-filter-5").addEventListener("click", () => applyF
 
 // Aplicar filtros
 function applyFilter(filterType, value) {
-    // Alternar el filtro activo (activar o desactivar)
+    // Desactivar otros filtros del mismo tipo
+    if (filterType === "type") {
+        // Desactivar todos los filtros de tipo
+        const typeButtons = document.querySelectorAll('.weapon-filters button');
+        typeButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+    } else if (filterType === "stars") {
+        // Desactivar todos los filtros de estrellas
+        const starsButtons = document.querySelectorAll('.weapon-filters button[id^="stars-filter"]');
+        starsButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+    }
+
+    // Activar o desactivar el filtro seleccionado
     const isActive = activeFilters[filterType] === value;
+    toggleFilterButton(`${filterType}-filter-${value}`, !isActive);
     activeFilters[filterType] = isActive ? null : value;
 
-    // Actualizar el botón del filtro
-    const buttonId = filterType === "type" ? `${value.toLowerCase()}-filter` : `stars-filter-${value}`;
-    toggleFilterButton(buttonId, !isActive);
-
-    // Renderizar la lista de armas filtradas
-    renderWeaponList();
+    renderWeaponList(); // Actualizar la lista de armas
 }
 
 // Mostrar armas filtradas
