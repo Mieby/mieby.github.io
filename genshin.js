@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (card) {
             const characterBox = card.querySelector(".character-box .editable-text");
             if (characterBox) {
-                characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textare
+                characterBox.value = character.additionalInfo || ""; // Establecer el contenido del textarea
             }
         }
     });
