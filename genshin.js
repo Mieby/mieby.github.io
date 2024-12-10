@@ -75,7 +75,7 @@ function closeCharacterModal() {
 }
 
 
-//ARRASTRE
+                                                                                                                                                        //ARRASTRE
 
 // Variable para controlar el estado de arrastre
 let dragEnabled = false;
@@ -254,10 +254,10 @@ function addCharacterCard(character, isLoading = false) {
         </div>
 
         <div class="character-objects">
-                <div><strong>Reloj:</strong> ${character.reloj}</div>
-                <div><strong>Caliz:</strong> ${character.caliz}</div>
-                <div><strong>Corona:</strong> ${character.corona}</div>
-            </div>
+    <div class="reloj"><strong>Reloj:</strong> ${character.reloj}</div>
+    <div class="caliz"><strong>Caliz:</strong> ${character.caliz}</div>
+    <div class="corona"><strong>Corona:</strong> ${character.corona}</div>
+        </div>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
     `;
@@ -418,9 +418,9 @@ function saveCharacterState() {
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
-        reloj: card.querySelector(".reloj").textContent,  // Captura el valor de reloj
-        caliz: card.querySelector(".caliz").textContent,  // Captura el valor de caliz
-        corona: card.querySelector(".corona").textContent, // Captura el valor de corona
+        reloj: card.querySelector(".reloj strong").nextSibling.textContent.trim(),
+        caliz: card.querySelector(".caliz strong").nextSibling.textContent.trim(),
+        corona: card.querySelector(".corona strong").nextSibling.textContent.trim(),
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
