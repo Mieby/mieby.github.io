@@ -324,6 +324,7 @@ function selectWeapon(weapon, weaponElement) {
     // Actualizar la imagen y el nombre del arma
     weaponImg.src = weapon.img;
     weaponName.textContent = `${weapon.name}`;
+    weaponImg.style.backgroundColor = weapon.backgroundColor;
     closeWeaponModal();  // Cerrar el modal
     saveCharacterState();
 }
