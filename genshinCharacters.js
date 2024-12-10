@@ -13,11 +13,11 @@ const genshinCharacters = [
             { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" },
             { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
         ],
-     stats: [
-         {reloj: "reloj: atk"},
-         {caliz: "reloj: atk"}, 
-         {corona: "reloj: atk"}
-        ]
+     stats: { // Nuevo campo para los stats
+        reloj: "atk",
+        caliz: "atk",
+        corona: "atk"
+    }
     },
     { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "assets/characters/Lynette.png", 
         items: [
@@ -31,11 +31,11 @@ const genshinCharacters = [
             { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" },
             { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
         ],
-     stats: [
-         {reloj: "reloj: atk"},
-         {caliz: "reloj: atk"}, 
-         {corona: "reloj: atk"}
-        ]
+     stats: { // Nuevo campo para los stats
+        reloj: "atk",
+        caliz: "atk",
+        corona: "atk"
+    }
     },
     { name: "Faruzán", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Faruzan-new.png", 
         items: [
@@ -47,11 +47,11 @@ const genshinCharacters = [
         artifacts: [
             { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" }
         ],
-     stats: [
-         {reloj: "reloj: atk"},
-         {caliz: "reloj: atk"}, 
-         {corona: "reloj: atk"}
-        ]
+     stats: { // Nuevo campo para los stats
+        reloj: "atk",
+        caliz: "atk",
+        corona: "atk"
+    }
     },
     { name: "Heizou", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Heizou-new.png", 
         items: [
@@ -63,11 +63,11 @@ const genshinCharacters = [
         artifacts: [
             { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" }
         ],
-     stats: [
-         {reloj: "reloj: atk"},
-         {caliz: "reloj: atk"}, 
-         {corona: "reloj: atk"}
-        ]
+     stats: { // Nuevo campo para los stats
+        reloj: "atk",
+        caliz: "atk",
+        corona: "atk"
+    }
     },
     { name: "Sacarosa", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png", 
         items: [
@@ -79,11 +79,11 @@ const genshinCharacters = [
         artifacts: [
             { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" }
         ],
-     stats: [
-         {reloj: "reloj: atk"},
-         {caliz: "reloj: atk"}, 
-         {corona: "reloj: atk"}
-        ]
+     stats: { // Nuevo campo para los stats
+        reloj: "atk",
+        caliz: "atk",
+        corona: "atk"
+    }
     }
 ];
 
