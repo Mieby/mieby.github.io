@@ -324,7 +324,6 @@ function selectWeapon(weapon, weaponElement) {
     // Actualizar la imagen y el nombre del arma
     weaponImg.src = weapon.img;
     weaponName.textContent = `${weapon.name}`;
-    weaponImg.style.backgroundColor = weapon.backgroundColor || "";
     closeWeaponModal();  // Cerrar el modal
     saveCharacterState();
 }
@@ -339,7 +338,6 @@ function saveCharacterState() {
         talent2: card.querySelector(".talents .talent:nth-child(2)").textContent,
         talent3: card.querySelector(".talents .talent:nth-child(3)").textContent,
         weaponImg: card.querySelector(".weapon-img").src,
-        weaponBackground: card.querySelector(".weapon-img").style.backgroundColor || "",
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
