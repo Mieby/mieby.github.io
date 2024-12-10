@@ -1,7 +1,7 @@
 // Lista de personajes (nombre e imagen)
 const genshinCharacters = [
     { name: "Sayu", element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png",
-        reloj: "atk", caliz: "atk", corona: "atk", subs: "hp",
+        reloj: "atk", caliz: "caca", corona: "atk", subs: "hp",
         items: [
             { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
             { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
