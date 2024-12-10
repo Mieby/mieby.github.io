@@ -295,13 +295,10 @@ imageContainer.style.backgroundRepeat = "no-repeat";  // Evita que la imagen se 
     }
 }
     
-// Función para abrir el modal de armas (sin tocar su lógica original)
+// Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
-    const filteredWeapons = filterWeapons(); // Filtra las armas
-
     weaponList.innerHTML = "";  // Limpiar la lista de armas
-
-    filteredWeapons.forEach(weapon => {
+    weaponsList.forEach(weapon => {
         const weaponItem = document.createElement("div");
         weaponItem.classList.add("weapon-item");
         weaponItem.innerHTML = `
@@ -311,7 +308,6 @@ function openWeaponModal(weaponElement) {
         weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));  // Pasar el contenedor completo
         weaponList.appendChild(weaponItem);
     });
-
     weaponModal.classList.remove("hidden");
 }
 
@@ -475,28 +471,56 @@ document.addEventListener("DOMContentLoaded", () => {
     closeModalButton.addEventListener("click", closeClickCharacterModal);
 });
 
+//FILTRO
+
+// Filtros seleccionados
+let selectedType = null;
+let selectedStars = null;
+
+// Función para mostrar las armas filtradas
+function displayWeapons() {
+    weaponList.innerHTML = "";
+    const filteredWeapons = weaponsList.filter(weapon => {
+        const typeMatch = selectedType ? weapon.type === selectedType : true;
+        const starsMatch = selectedStars ? weapon.stars === selectedStars : true;
+        return typeMatch && starsMatch;
+    });
+
+    filteredWeapons.forEach(weapon => {
+        const weaponItem = document.createElement("div");
+        weaponItem.classList.add("weapon-item");
+        weaponItem.innerHTML = `
+            <img src="${weapon.img}" alt="${weapon.name}" width="50">
+            <p>${weapon.name}</p>
+        `;
+        weaponItem.addEventListener("click", () => selectWeapon(weapon));
+        weaponList.appendChild(weaponItem);
+    });
+}
 // Filtros de tipo de arma
-document.getElementById("sword-filter").addEventListener("click", () => toggleFilter("Espada"));
-document.getElementById("claymore-filter").addEventListener("click", () => toggleFilter("Mandoble"));
-document.getElementById("catalist-filter").addEventListener("click", () => toggleFilter("Catalizador"));
-document.getElementById("lanza-filter").addEventListener("click", () => toggleFilter("Lanza"));
-document.getElementById("bow-filter").addEventListener("click", () => toggleFilter("Arco"));
+document.getElementById("sword-filter").addEventListener("click", () => {
+    selectedType = selectedType === "Espada" ? null : "Espada";  // Toggle
+    displayWeapons();
+});
+document.getElementById("claymore-filter").addEventListener("click", () => {
+    selectedType = selectedType === "Mandoble" ? null : "Mandoble";  // Toggle
+    displayWeapons();
+});
+document.getElementById("bow-filter").addEventListener("click", () => {
+    selectedType = selectedType === "Arco" ? null : "Arco";  // Toggle
+    displayWeapons();
+});
 
 // Filtros de estrellas
-document.getElementById("stars-filter-4").addEventListener("click", () => toggleFilterByStars(4));
-document.getElementById("stars-filter-5").addEventListener("click", () => toggleFilterByStars(5));
+document.getElementById("stars-filter-4").addEventListener("click", () => {
+    selectedStars = selectedStars === 4 ? null : 4;  // Toggle
+    displayWeapons();
+});
+document.getElementById("stars-filter-5").addEventListener("click", () => {
+    selectedStars = selectedStars === 5 ? null : 5;  // Toggle
+    displayWeapons();
+});
 
-// Función para alternar filtros de tipo
-function toggleFilter(type) {
-    filterType = (filterType === type) ? null : type;  // Alterna entre aplicar o quitar el filtro
-    openWeaponModal(weaponElement); // Llama a la función openWeaponModal sin modificarla
-}
-
-// Función para alternar filtros de estrellas
-function toggleFilterByStars(stars) {
-    filterStars = (filterStars === stars) ? null : stars;  // Alterna entre aplicar o quitar el filtro
-    openWeaponModal(weaponElement); // Llama a la función openWeaponModal sin modificarla
-}
 
 // Listeners para botones
 addCharacterBtn.addEventListener("click", openCharacterModal);
