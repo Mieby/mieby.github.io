@@ -350,10 +350,11 @@
 
                                                                                                                                                       /* stats */
 .character-objects {
-    margin-top: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     font-size: 12px;  /* Tamaño más pequeño */
     border: 1px solid #ccc;  /* Borde gris claro */
-    padding: 5px;
+    padding: 0px;
     border-radius: 5px;  /* Bordes redondeados */
     background-color: #f9f9f9;  /* Fondo claro */
     max-width: 200px;  /* Limitar el ancho */
