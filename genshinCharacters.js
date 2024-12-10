@@ -1,6 +1,7 @@
 // Lista de personajes (nombre e imagen)
 const genshinCharacters = [
-    { name: "Sayu", element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png", 
+    { name: "Sayu", element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png",
+            reloj: "atk", caliz: "atk", corona: "atk",
         items: [
             { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
             { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
@@ -14,7 +15,8 @@ const genshinCharacters = [
             { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "assets/characters/Lynette.png", 
+    { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "assets/characters/Lynette.png",
+             reloj: "atk", caliz: "atk", corona: "atk",
         items: [
             { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" },
             { name: "Objeto 2", img: "ruta/a/imagen/objeto2.png" }
@@ -27,7 +29,8 @@ const genshinCharacters = [
             { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: "Faruzán", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Faruzan-new.png", 
+    { name: "Faruzán", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Faruzan-new.png",
+              reloj: "atk", caliz: "atk", corona: "atk",
         items: [
             { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" }
         ],
@@ -38,7 +41,8 @@ const genshinCharacters = [
             { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" }
         ]
     },
-    { name: "Heizou", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Heizou-new.png", 
+    { name: "Heizou", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Heizou-new.png",
+              reloj: "atk", caliz: "atk", corona: "atk",
         items: [
             { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" }
         ],
@@ -49,7 +53,8 @@ const genshinCharacters = [
             { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" }
         ]
     },
-    { name: "Sacarosa", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png", 
+    { name: "Sacarosa", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png",
+              reloj: "atk", caliz: "atk", corona: "atk",
         items: [
             { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" }
         ],
