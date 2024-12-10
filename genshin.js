@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             reloj: character.reloj || 'atk',  // Asegurarse de que tenga el valor por defecto
             caliz: character.caliz || 'atk',  // Asegurarse de que tenga el valor por defecto
             corona: character.corona || 'atk',
+            subs: character.subs || 'atk',
         };
         addCharacterCard(characterWithDefaultItems, true);
 
@@ -257,6 +258,7 @@ function addCharacterCard(character, isLoading = false) {
     <div class="reloj"><strong>Reloj:</strong> ${character.reloj}</div>
     <div class="caliz"><strong>Caliz:</strong> ${character.caliz}</div>
     <div class="corona"><strong>Corona:</strong> ${character.corona}</div>
+    <div class="subs"><strong>Subs:</strong> ${character.subs}</div>
         </div>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
