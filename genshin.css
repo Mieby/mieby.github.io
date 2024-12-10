@@ -8,6 +8,19 @@
 
 #weapon-list .weapon-item {
     cursor: pointer;
+    width: 100px; /* Limita el ancho para que los nombres no se desborden */
+    text-align: center; /* Centra el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#weapon-list .weapon-item p {
+    font-size: 10px; /* Reduce el tamaño del texto */
+    word-wrap: break-word; /* Permite que el texto largo se divida en varias líneas */
+    white-space: normal; /* Asegura que el texto se divida si es necesario */
+    margin-top: 5px; /* Un pequeño espacio entre la imagen y el nombre */
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo (opcional) */
 }
 
 .weapon-filters {
