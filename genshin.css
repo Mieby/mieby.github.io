@@ -311,20 +311,23 @@
 /* Opcional: diferenciar visualmente cada categoría */
 .character-items {
     border: 1px solid #d4d4d4; /* Borde para distinguir */
-    padding: 5px;
+    padding: 2px;
     background-color: #f9f9f9;
+    border-radius: 5px;
 }
 
 .character-weapons {
     border: 1px solid #d4d4d4;
-    padding: 5px;
+    padding: 2px;
     background-color: #eaf4ff;
+    border-radius: 5px;
 }
 
 .character-artifacts {
     border: 1px solid #d4d4d4;
-    padding: 5px;
+    padding: 2px;
     background-color: #fff4ea;
+    border-radius: 5px;
 }
 
 .character-card[draggable="true"] {
@@ -352,7 +355,7 @@
 .character-objects {
     margin-top: 4px;
     margin-bottom: 4px;
-    font-size: 12px;  /* Tamaño más pequeño */
+    font-size: 11px;  /* Tamaño más pequeño */
     border: 1px solid #ccc;  /* Borde gris claro */
     padding: 0px;
     border-radius: 5px;  /* Bordes redondeados */
