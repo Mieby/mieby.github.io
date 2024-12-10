@@ -424,7 +424,18 @@ function saveCharacterState() {
         artifacts: card.querySelector(".character-artifacts") ? Array.from(card.querySelectorAll(".character-artifacts .item")).map(artifact => ({
             name: artifact.querySelector("p").textContent,
             img: artifact.querySelector("img").src
-        })) : [] // Guardar los artefactos del personaje
+        })) : [], // Guardar los artefactos del personaje
+        stats: { // Guardar los stats
+            reloj: card.querySelector(".stats .reloj") 
+                ? card.querySelector(".stats .reloj").textContent 
+                : "N/A",
+            caliz: card.querySelector(".stats .caliz") 
+                ? card.querySelector(".stats .caliz").textContent 
+                : "N/A",
+            corona: card.querySelector(".stats .corona") 
+                ? card.querySelector(".stats .corona").textContent 
+                : "N/A"
+        }
     }));
     console.log("Saving to localStorage:", characters); // Debug
     localStorage.setItem("genshinCharacters", JSON.stringify(characters));
