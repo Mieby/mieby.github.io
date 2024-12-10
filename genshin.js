@@ -418,6 +418,10 @@ function saveCharacterState() {
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
+        stats: Array.from(card.querySelectorAll(".character-stats .stat")).map(stat => ({
+            name: stat.querySelector("p").textContent,
+            value: stat.querySelector(".value").textContent
+        })) || [],
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
             img: item.querySelector("img").src
