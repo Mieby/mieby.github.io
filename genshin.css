@@ -347,3 +347,26 @@
     border: 2px dashed #00f;
     background-color: #e0f7fa;
 }
+
+                                                                                                                                                      // stats
+.character-objects {
+    margin-top: 10px;
+    font-size: 12px;  /* Tamaño más pequeño */
+    border: 1px solid #ccc;  /* Borde gris claro */
+    padding: 5px;
+    border-radius: 5px;  /* Bordes redondeados */
+    background-color: #f9f9f9;  /* Fondo claro */
+    max-width: 200px;  /* Limitar el ancho */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.character-objects div {
+    margin: 5px 0;  /* Espaciado entre cada línea */
+}
+
+.character-objects strong {
+    font-weight: bold;  /* Resaltar las etiquetas como "Reloj", "Caliz", "Corona" */
+    color: #333;  /* Color del texto */
+}
