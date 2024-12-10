@@ -508,7 +508,7 @@ function displayWeapons() {
         weaponList.appendChild(weaponItem);
     });
 }
-}
+
 // Filtros de tipo de arma
 document.getElementById("sword-filter").addEventListener("click", () => {
     selectedType = selectedType === "Espada" ? null : "Espada";  // Toggle
