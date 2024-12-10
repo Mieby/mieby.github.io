@@ -250,7 +250,13 @@ function addCharacterCard(character, isLoading = false) {
         `).join('') : '<p>No hay artefactos disponibles</p>'}
         </div>
         
-        <h5>${character.name}</h5>
+        <div class="character-stats">
+                ${Array.isArray(character.stats) && character.stats.length > 0 ? 
+                    character.stats.map(stat => `
+                        <p>${Object.values(stat)[0]}</p>
+                    `).join('') : '<p>No hay estadísticas disponibles</p>'
+                }
+            </div>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
         </div>
     `;
