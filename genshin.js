@@ -1,4 +1,4 @@
-d// Elementos del DOM
+// Elementos del DOM
 const characterGrid = document.getElementById("character-grid");
 const characterModal = document.getElementById("character-modal");
 const characterList = document.getElementById("character-list");
