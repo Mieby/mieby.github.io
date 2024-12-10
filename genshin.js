@@ -1,4 +1,4 @@
-// Elementos del DOM
+d// Elementos del DOM
 const characterGrid = document.getElementById("character-grid");
 const characterModal = document.getElementById("character-modal");
 const characterList = document.getElementById("character-list");
@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
             items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
             weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
             artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
-            reloj: character.reloj || 'atk',  // Asegurarse de que tenga el valor por defecto
-            caliz: character.caliz || 'atk',  // Asegurarse de que tenga el valor por defecto
-            corona: character.corona || 'atk',
-            subs: character.subs || 'atk',
+            reloj: character.reloj || 'undefined', 
+            caliz: character.caliz || 'undefined',  
+            corona: character.corona || 'undefined',
+            subs: character.subs || 'undefined',
         };
         addCharacterCard(characterWithDefaultItems, true);
 
@@ -420,9 +420,10 @@ function saveCharacterState() {
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
-        reloj: card.querySelector(".reloj").textContent.trim(),
-        caliz: card.querySelector(".caliz").textContent.trim(),
-        corona: card.querySelector(".corona").textContent.trim(),
+        reloj: card.querySelector(".reloj").textContent.replace("Reloj: ", "").trim(),
+        caliz: card.querySelector(".caliz").textContent.replace("Caliz: ", "").trim(),
+        corona: card.querySelector(".corona").textContent.replace("Corona: ", "").trim(),
+        subs: card.querySelector(".subs").textContent.replace("Subs: ", "").trim(),
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
             name: item.querySelector("p").textContent,
