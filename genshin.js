@@ -502,11 +502,12 @@ function displayWeapons() {
         // Aquí mantenemos el weaponElement en la creación del item
         weaponItem.addEventListener("click", () => {
             // Aquí pasamos tanto el weapon como el weaponElement
-            selectWeapon(weapon, weaponItem);
+            selectWeapon(weapon, weaponElement);  // Ahora usamos weaponElement de la tarjeta de personaje
         });
 
         weaponList.appendChild(weaponItem);
     });
+}
 }
 // Filtros de tipo de arma
 document.getElementById("sword-filter").addEventListener("click", () => {
