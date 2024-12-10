@@ -6,6 +6,22 @@
     gap: 10px;
 }
 
+#weapon-list .weapon-item {
+    cursor: pointer;
+}
+
+.weapon-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn img {
+    width: 30px;  /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    cursor: pointer;
+}
+
 #character-grid {
     display: flex;
     flex-wrap: wrap;
