@@ -1,5 +1,5 @@
-/* Estilos del contenedor de personajes */
 
+                                                                                                                            /* Estilos del contenedor de armas */
 #weapon-list {
     display: flex;
     flex-wrap: wrap;
@@ -22,18 +22,42 @@
     margin-top: 5px; /* Un pequeño espacio entre la imagen y el nombre */
     text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo (opcional) */
 }
-
+                                                                                                                                        /* Filtro de armas */
 .weapon-filters {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
 }
 
-.filter-btn img {
-    width: 30px;  /* Ajusta el tamaño según tus necesidades */
-    height: auto;
+.filter-btn {
+    padding: 5px 10px; /* Reduce el padding para hacerlo más compacto */
+    background-color: #003366; /* Azul oscuro */
+    border: none; /* Quita cualquier borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados para un estilo más suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
 }
+
+.filter-btn img {
+    width: 30px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    pointer-events: none; /* Evita que se pueda hacer clic en la imagen, solo en el botón */
+}
+
+/* Efecto al pasar el ratón */
+.filter-btn:hover {
+    background-color: #005599; /* Azul un poco más claro al pasar el ratón */
+}
+
+/* Botón activo */
+.filter-btn.active {
+    background-color: #1E3A5F; /* Azul más oscuro cuando está activo */
+}
+
+                                                                                                                        /* Estilos del contenedor de personajes */
 
 #character-grid {
     display: flex;
