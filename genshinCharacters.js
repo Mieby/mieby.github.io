@@ -16,7 +16,7 @@ const genshinCharacters = [
         ]
     },
     { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "assets/characters/Lynette.png",
-             reloj: "atk", caliz: "atk", corona: "atk",
+             reloj: "pepito", caliz: "caramelo", corona: "oso",
         items: [
             { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" },
             { name: "Objeto 2", img: "ruta/a/imagen/objeto2.png" }
