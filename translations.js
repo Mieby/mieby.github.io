@@ -27,9 +27,9 @@ function updateUI() {
     document.getElementById('reset-data').innerText = translations[currentLang].byeData;
 
     // Traducción dinámica para nombres de armas
-    weaponsList.forEach(weapon => {
-        document.getElementById(weapon.type + '-filter').title = weapon.name[currentLang];
-    });
+//    weaponsList.forEach(weapon => {
+//        document.getElementById(weapon.type + '-filter').title = weapon.name[currentLang];
+//    });
 }
 
 // Inicializa con el idioma por defecto
