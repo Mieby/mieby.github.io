@@ -18,7 +18,6 @@ function setLanguage(lang) {
     updateUI();
 }
 
-import './genshinWeapons.js';
 
 function updateUI() {
     const currentLang = 'es'; // Ejemplo de idioma actual
