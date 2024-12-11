@@ -4,15 +4,15 @@ function resetData() {
 // Adjunta el evento al botón 'Borrar Datos'
 document.getElementById('reset-data').addEventListener('click', resetData);
 
-// Importación dinámica de traducciones
 function importTranslations() {
     return import('./translations.js')
-        .then(module => module.default)  // Importar exportación por defecto
+        .then(module => module.default)
         .catch(err => console.error('Error al importar traducciones:', err));
 }
 
 // Cargar traducciones
 importTranslations().then(translations => {
+
     function getTranslatedCharacters(lang) {
         return genshinCharacters.map(character => ({
             ...character,
@@ -48,19 +48,7 @@ importTranslations().then(translations => {
 
     function renderCharacters(lang) {
         const translatedCharacters = getTranslatedCharacters(lang);
-        const characterGrid = document.getElementById('character-grid');
-        characterGrid.innerHTML = '';  // Limpiar contenido anterior
-
-        translatedCharacters.forEach(character => {
-            const characterElement = document.createElement('div');
-            characterElement.classList.add('character');
-            characterElement.innerHTML = `
-                <h2 data-i18n="characterName">${character.name}</h2>
-                <img src="${character.img}" alt="${character.name}">
-                <!-- Otros detalles -->
-            `;
-            characterGrid.appendChild(characterElement);
-        });
+        // Aquí se renderiza `translatedCharacters` en la UI
     }
 
     document.addEventListener("DOMContentLoaded", () => {
