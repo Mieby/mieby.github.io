@@ -67,7 +67,7 @@ const genshinCharacters = [
         ]
     },
                                                                                                                                                         // Anemo 5
-    { name: "Xiao", element: "Anemo", stars: 5, weaponType: "lance", img: "assets/characters/Sayu.png",
+    { name: "Xiao", element: "Anemo", stars: 5, weaponType: "lance", img: "assets/characters/Anemo5/Xiao.png",
         reloj: "none", caliz: "none", corona: "none", subs: "none",
         items: [
             { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
@@ -82,7 +82,7 @@ const genshinCharacters = [
             { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: "Custom", element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png",
+    { name: "Jean", element: "Anemo", stars: 5, weaponType: "sword", img: "assets/characters/Anemo5/Jean.png",
         reloj: "none", caliz: "none", corona: "none", subs: "none",
         items: [
             { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
@@ -97,4 +97,80 @@ const genshinCharacters = [
             { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
+    { name: "Kazuha", element: "Anemo", stars: 5, weaponType: "sword", img: "assets/characters/Anemo5/Kazuha.png",
+        reloj: "none", caliz: "none", corona: "none", subs: "none",
+        items: [
+            { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
+            { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
+        ],
+        weapons: [
+            { name: "Espada de fuego", img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: "Espada legendaria", img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" },
+            { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Venti", element: "Anemo", stars: 5, weaponType: "bow", img: "assets/characters/Anemo5/Venti.png",
+        reloj: "none", caliz: "none", corona: "none", subs: "none",
+        items: [
+            { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
+            { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
+        ],
+        weapons: [
+            { name: "Espada de fuego", img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: "Espada legendaria", img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" },
+            { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Chasca", element: "Anemo", stars: 5, weaponType: "bow", img: "assets/characters/Anemo5/Chasca.png",
+        reloj: "none", caliz: "none", corona: "none", subs: "none",
+        items: [
+            { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
+            { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
+        ],
+        weapons: [
+            { name: "Espada de fuego", img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: "Espada legendaria", img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" },
+            { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Scaramuccia", element: "Anemo", stars: 5, weaponType: "catalist", img: "assets/characters/Anemo5/Scara.png",
+        reloj: "none", caliz: "none", corona: "none", subs: "none",
+        items: [
+            { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
+            { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
+        ],
+        weapons: [
+            { name: "Espada de fuego", img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: "Espada legendaria", img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" },
+            { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Xianyun", element: "Anemo", stars: 5, weaponType: "catalist", img: "assets/characters/Anemo5/Xianyun.png",
+        reloj: "none", caliz: "none", corona: "none", subs: "none",
+        items: [
+            { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
+            { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
+        ],
+        weapons: [
+            { name: "Espada de fuego", img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: "Espada legendaria", img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" },
+            { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+   
 ];
