@@ -1,5 +1,5 @@
 // Lista de personajes (nombre e imagen)
-export const genshinCharacters = [
+const genshinCharacters = [
                                                                                                                                                         //Anemo 4
     { name: "Sayu", element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
