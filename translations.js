@@ -2,10 +2,12 @@ const translations = {
     en: {
         addCharacter: "Add Character",
         moveCharacters: "Move Characters"
+        byeData: "Reset All Data"
     },
     es: {
         addCharacter: "Agregar Personaje",
         moveCharacters: "Mover Personajes"
+        byeData: "Borrar Todos los Datos"
     }
 };
 
@@ -19,6 +21,7 @@ function setLanguage(lang) {
 function updateUI() {
     document.getElementById('add-character-btn').innerText = translations[currentLang].addCharacter;
     document.getElementById('toggle-info-btn').innerText = translations[currentLang].moveCharacters;
+    document.getElementById('reset-data').innerText = translations[currentLang].resetData;
     // Agrega más elementos según sea necesario
 }
 
