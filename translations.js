@@ -1,13 +1,11 @@
 const translations = {
     en: {
         addCharacter: "Add Character",
-        moveCharacters: "Move Characters",
-        byeData: "Reset All Data"
+        moveCharacters: "Move Characters"
     },
     es: {
         addCharacter: "Agregar Personaje",
-        moveCharacters: "Mover Personajes",
-        byeData: "Borrar Todos los Datos"
+        moveCharacters: "Mover Personajes"
     }
 };
 
@@ -20,16 +18,9 @@ function setLanguage(lang) {
 
 
 function updateUI() {
-    const currentLang = 'es'; // Ejemplo de idioma actual
-
     document.getElementById('add-character-btn').innerText = translations[currentLang].addCharacter;
-    document.getElementById('enable-drag-btn').innerText = translations[currentLang].moveCharacters;
-    document.getElementById('reset-data').innerText = translations[currentLang].byeData;
-
-    // Traducción dinámica para nombres de armas
-//    weaponsList.forEach(weapon => {
-//        document.getElementById(weapon.type + '-filter').title = weapon.name[currentLang];
-//    });
+    document.getElementById('toggle-info-btn').innerText = translations[currentLang].moveCharacters;
+    // Agrega más elementos según sea necesario
 }
 
 // Inicializa con el idioma por defecto
