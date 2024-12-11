@@ -57,13 +57,16 @@ const genshinCharacters = [
     { name: "Sacarosa", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png",
               reloj: "none", caliz: "none", corona: "none", subs: "none",
         items: [
-            { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" }
+            { name: "Margarita Voladora", img: "assets/Items/recolleccion/Margatita voladora.png" },
+            { name: "Néctar energético", img: "assets/Items/monstruitos/Nectar energetico.png" },
+            { name: "Semilla de Huracán", img: "assets/Items/minor boss/Semilla de huracan.png" }
         ],
         weapons: [
-            { name: "Cáliz de viento", img: "ruta/a/imagen/caliz_de_viento.png" }
+            { name: "Filosofía de la Libertad", img: "assets/Items/Libritos/filosofia de la libertad.png" },
+            { name: "Alma de Boreas", img: "assets/Items/weekly boss/Alma de Boreas.png" },
         ],
         artifacts: [
-            { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" }
+            { name: " Coming soon", img: "ruta/a/imagen/artefacto1.png" }
         ]
     },
                                                                                                                                                         // Anemo 5
