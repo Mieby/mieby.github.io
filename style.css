@@ -28,19 +28,6 @@ nav button:hover {
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-button {
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
