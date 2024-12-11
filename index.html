@@ -9,7 +9,6 @@ a ver si se muestra la imagen? 3
 </head>
 <body>
     <nav>
-        <button onclick="showTab('tab1')">Gacha</button>
         <button onclick="showTab('tab2')">Inventario</button>
         <button onclick="showTab('tab3')">Your Pets</button>
         <button onclick="showTab('tab4')">Generador item</button>
@@ -22,21 +21,6 @@ a ver si se muestra la imagen? 3
             <button id="reset-data">Borrar Todos los Datos</button>
         </div>
     </div>
-
-    <!-- Tab 1: Gacha -->
-    <div id="tab1" class="tab">
-        <h1>Gacha de Mascotas</h1>
-        <div id="pet-area">
-            <h2>Mascota Actual</h2>
-            <img id="current-pet" src="assets/no-pet.png" alt="No pet" width="200">
-            <p id="current-pet-name"></p>
-        </div>
-        <div id="coins-area">
-            <p>Monedas: <span id="coins">100</span></p>
-            <button id="pull-gacha">Tirar en el Gacha (10 Monedas)</button>
-        </div>
-    </div>
-
 
    <!-- Tab 2: Inventario -->
     <div id="tab2" class="tab" style="display: none;">
@@ -163,7 +147,6 @@ a ver si se muestra la imagen? 3
     <script type="module" src="script.js"></script>
     <script>
         function showTab(tab) {
-            document.getElementById('tab1').style.display = 'none';
             document.getElementById('tab2').style.display = 'none';
             document.getElementById('tab3').style.display = 'none';
             document.getElementById('tab4').style.display = 'none';
@@ -173,7 +156,6 @@ a ver si se muestra la imagen? 3
     <script src="genshinCharacters.js"></script>
     <script src="genshinWeapons.js"></script>
     <script src="script.js"></script> <!-- Archivo general -->
-    <script src="books.js"></script> <!-- Archivo para la pestaña de libros -->
     <link rel="stylesheet" href="genshin.css">
     <script src="genshin.js"></script> 
 </body>
