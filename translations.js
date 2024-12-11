@@ -19,10 +19,16 @@ function setLanguage(lang) {
 }
 
 function updateUI() {
+    const currentLang = 'es'; // Ejemplo de idioma actual
+
     document.getElementById('add-character-btn').innerText = translations[currentLang].addCharacter;
     document.getElementById('enable-drag-btn').innerText = translations[currentLang].moveCharacters;
-    document.getElementById('reset-data').innerText = translations[currentLang].byeData;
-    // Agrega más elementos según sea necesario
+    document.getElementById('reset-data').innerText = translations[currentLang].resetData;
+
+    // Traducción dinámica para nombres de armas
+    weaponsList.forEach(weapon => {
+        document.getElementById(weapon.type + '-filter').title = weapon.name[currentLang];
+    });
 }
 
 // Inicializa con el idioma por defecto
