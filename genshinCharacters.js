@@ -59,7 +59,7 @@ const genshinCharacters = [
         items: [
             { name: "Margarita Voladora", img: "assets/Items/recolleccion/Margatita voladora.png" },
             { name: "Néctar energético", img: "assets/Items/monstruitos/Nectar energetico.png" },
-            { name: "Coming Soon de Huracán", img: "assets/Items/minor boss/Coming Soon de huracan.png" }
+            { name: "Semilla de Huracán", img: "assets/Items/minor boss/Semilla de huracan.png" }
         ],
         weapons: [
             { name: "Filosofía de la Libertad", img: "assets/Items/Libritos/filosofia de la libertad.png" },
