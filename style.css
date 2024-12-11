@@ -27,16 +27,6 @@ nav button:hover {
     display: none;
 }
 
-#pet-area img {
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-#coins-area {
-    margin-top: 20px;
-}
-
 button {
     padding: 10px 20px;
     background-color: #28a745;
@@ -50,51 +40,6 @@ button:hover {
     background-color: #218838;
 }
 
-#inventory {
-    margin-top: 30px;
-}
-
-/* Estilo para las imágenes en el inventario y las mascotas */
-img {
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 8px;
-    margin: 5px;
-}
-
-/* Estilo para los elementos de inventario */
-#inventory-list, #pets-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#inventory-list li, .pet-item {
-    list-style-type: none;
-    margin: 10px;
-    text-align: center;
-}
-
-/* Estilo de los elementos del inventario */
-#inventory-list li img, .pet-item img {
-    width: 80px;  /* Establece un tamaño fijo */
-    height: 80px;  /* Establece un tamaño fijo */
-    border-radius: 8px;
-    margin: 5px;
-}
-
-#inventory-list li p, .pet-item p {
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-#pets-list .pet-item img {
-    width: 200px;  /* Establece un tamaño fijo para las imágenes de las mascotas */
-    height: 200px;  /* Establece un tamaño fijo para las imágenes de las mascotas */
-    border-radius: 8px;
-    margin: 5px;
-}
-
 button {
     padding: 10px 15px;
     font-size: 16px;
@@ -106,17 +51,6 @@ p {
     margin: 0;
 }
 
-@keyframes flashColor {
-    0% {
-        color: black; /* Color original */
-    }
-    50% {
-        color: #ff6347; /* Un color brillante para el destello (puedes usar otro) */
-    }
-    100% {
-        color: black; /* Vuelve al color original */
-    }
-}
 
 
 
