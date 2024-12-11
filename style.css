@@ -41,6 +41,10 @@ button:hover {
     display: none;
 }
 
+#tab6 {
+    display: block; /* Hace que la tab6 sea visible al cargar */
+}
+
 button {
     padding: 10px 15px;
     font-size: 16px;
