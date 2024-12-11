@@ -9,6 +9,8 @@
 <body>
     <nav>
         <button onclick="showTab('tab6')">Genshin</button>
+        <button onclick="setLanguage('es')">Español</button>
+        <button onclick="setLanguage('en')">Inglés</button>
         </nav>
     
 
@@ -17,14 +19,6 @@
             <button id="reset-data">Borrar Todos los Datos</button>
         </div>
     </div>
-
-<nav>
-    <label for="language-select">Idioma: </label>
-    <select id="language-select">
-        <option value="es">Español</option>
-        <option value="en">Inglés</option>
-    </select>
-</nav>
     
   <!-- Tab 6: Genshin -->
 <div id="tab6" class="tab">
@@ -101,6 +95,7 @@
     <link rel="stylesheet" href="genshin.css">
     <script src="genshinCharacters.js"></script>
     <script src="genshinWeapons.js" defer></script>
+    <script src="translations.js"></script>
     <script type="module" src="script.js" defer></script>
     <script src="script.js"></script> <!-- Archivo general -->
     <script src="genshin.js"></script> 
