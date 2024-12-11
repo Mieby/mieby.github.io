@@ -13,7 +13,6 @@ function importTranslations() {
 
 // Cargar traducciones
 importTranslations().then(translations => {
-
     function getTranslatedCharacters(lang) {
         return genshinCharacters.map(character => ({
             ...character,
@@ -53,11 +52,10 @@ importTranslations().then(translations => {
         characterGrid.innerHTML = '';  // Limpiar contenido anterior
 
         translatedCharacters.forEach(character => {
-            // Aquí se renderizan los personajes dinámicamente
             const characterElement = document.createElement('div');
             characterElement.classList.add('character');
             characterElement.innerHTML = `
-                <h2>${character.name}</h2>
+                <h2 data-i18n="characterName">${character.name}</h2>
                 <img src="${character.img}" alt="${character.name}">
                 <!-- Otros detalles -->
             `;
