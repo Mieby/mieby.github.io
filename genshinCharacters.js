@@ -1,7 +1,7 @@
 // Lista de personajes (nombre e imagen)
 const genshinCharacters = [
     { name: "Sayu", element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png",
-        reloj: "atk", caliz: "caca", corona: "atk", subs: "hp",
+        reloj: "none", caliz: "none", corona: "none", subs: "none",
         items: [
             { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
             { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
@@ -16,7 +16,7 @@ const genshinCharacters = [
         ]
     },
     { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "assets/characters/Lynette.png",
-             reloj: "pepito", caliz: "caramelo", corona: "oso", subs: "hp",
+             reloj: "none", caliz: "none", corona: "none", subs: "none",
         items: [
             { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" },
             { name: "Objeto 2", img: "ruta/a/imagen/objeto2.png" }
@@ -30,7 +30,7 @@ const genshinCharacters = [
         ]
     },
     { name: "Faruzán", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Faruzan-new.png",
-              reloj: "atk", caliz: "atk", corona: "atk", subs: "hp",
+              reloj: "none", caliz: "none", corona: "none", subs: "none",
         items: [
             { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" }
         ],
@@ -42,7 +42,7 @@ const genshinCharacters = [
         ]
     },
     { name: "Heizou", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Heizou-new.png",
-              reloj: "atk", caliz: "atk", corona: "atk", subs: "hp",
+              reloj: "none", caliz: "none", corona: "none", subs: "none",
         items: [
             { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" }
         ],
@@ -54,7 +54,7 @@ const genshinCharacters = [
         ]
     },
     { name: "Sacarosa", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png",
-              reloj: "atk", caliz: "atk", corona: "atk", subs: "hp",
+              reloj: "none", caliz: "none", corona: "none", subs: "none",
         items: [
             { name: "Objeto 1", img: "ruta/a/imagen/objeto1.png" }
         ],
