@@ -38,7 +38,7 @@ button:hover {
 
 
 .tab {
-    display: none;
+    display: block;
 }
 
 button {
