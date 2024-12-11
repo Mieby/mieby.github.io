@@ -1,5 +1,6 @@
 // Lista de personajes (nombre e imagen)
 const genshinCharacters = [
+                                                                                                                                                        //Anemo 4
     { name: "Sayu", element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png",
         reloj: "none", caliz: "none", corona: "none", subs: "none",
         items: [
@@ -64,5 +65,36 @@ const genshinCharacters = [
         artifacts: [
             { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" }
         ]
-    }
+    },
+                                                                                                                                                        // Anemo 5
+    { name: "Xiao", element: "Anemo", stars: 5, weaponType: "lance", img: "assets/characters/Sayu.png",
+        reloj: "none", caliz: "none", corona: "none", subs: "none",
+        items: [
+            { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
+            { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
+        ],
+        weapons: [
+            { name: "Espada de fuego", img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: "Espada legendaria", img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" },
+            { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Custom", element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png",
+        reloj: "none", caliz: "none", corona: "none", subs: "none",
+        items: [
+            { name: "Semilla", img: "ruta/a/imagen/semilla.png" },
+            { name: "Lucetta", img: "ruta/a/imagen/lucetta.png" }
+        ],
+        weapons: [
+            { name: "Espada de fuego", img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: "Espada legendaria", img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: "Artefacto 1", img: "ruta/a/imagen/artefacto1.png" },
+            { name: "Artefacto 2", img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
 ];
