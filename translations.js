@@ -2,12 +2,24 @@ const translations = {
     en: {
         addCharacter: "Add Character",
         moveCharacters: "Move Characters",
-        resetData: "Reset All Data"
+        resetData: "Reset All Data",
+        weapons: {
+            "Anemona Gemela": "Twin-Necklace",
+            "Espada del peñasco oscuro": "Dark Rock Sword",
+            "Espada de Favonius": "Favonius Sword"
+            // Agrega más armas según sea necesario
+        }
     },
     es: {
         addCharacter: "Agregar Personaje",
         moveCharacters: "Mover Personajes",
-        resetData: "Borrar Todos los Datos"
+        resetData: "Borrar Todos los Datos",
+        weapons: {
+            "Anemona Gemela": "Anemona Gemela",
+            "Espada del peñasco oscuro": "Espada del peñasco oscuro",
+            "Espada de Favonius": "Espada de Favonius"
+            // Agrega más armas según sea necesario
+        }
     }
 };
 
@@ -23,7 +35,17 @@ function updateUI() {
     document.getElementById('add-character-btn').innerText = translations[currentLang].addCharacter;
     document.getElementById('enable-drag-btn').innerText = translations[currentLang].moveCharacters;
     document.getElementById('reset-data').innerText = translations[currentLang].resetData;
+    updateWeaponsUI();
     // Agrega más elementos según sea necesario
+}
+
+function updateWeaponsUI() {
+    const weapons = translations[currentLang].weapons;
+    const weaponButtons = document.querySelectorAll('.weapon-filters img');
+    weaponButtons.forEach(button => {
+        const weaponName = button.alt;
+        button.alt = weapons[weaponName];
+    });
 }
 
 // Inicializa con el idioma por defecto
