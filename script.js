@@ -29,7 +29,6 @@ function getTranslatedCharacters(lang) {
     }));
 }
 
-// Función para manejar el cambio de idioma
 function changeLanguage(lang) {
     localStorage.setItem("preferredLanguage", lang);
     const elements = document.querySelectorAll("[data-i18n]");
@@ -38,16 +37,18 @@ function changeLanguage(lang) {
         el.textContent = translations[lang][key];
     });
 
-    genshinCharacters = getTranslatedCharacters(lang);
-    renderCharacters();
+    renderCharacters(lang);
 }
 
-// Inicializar idioma desde localStorage o por defecto
+function renderCharacters(lang) {
+    const translatedCharacters = getTranslatedCharacters(lang);
+    // Aquí se renderiza `translatedCharacters` en la UI
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const savedLang = localStorage.getItem("preferredLanguage") || (navigator.language.startsWith("es") ? "es" : "en");
     changeLanguage(savedLang);
 
-    // Cambiar el idioma al seleccionar una opción en el <select>
     document.getElementById("language-select").addEventListener("change", (e) => {
         changeLanguage(e.target.value);
     });
