@@ -1,4 +1,4 @@
-const weaponsList = [
+export const weaponsList = [
 
 // espadas 4 estrellas
     { name: { es: "Anemona Gemela", en: "Twin Nephrite" } , type: "sword", stars: 4, img: "assets/weapons/Amenoma Gemela.png"},
