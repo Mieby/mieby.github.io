@@ -14,6 +14,7 @@ function importTranslations() {
 importTranslations().then(translations => {
 
     function getTranslatedCharacters(lang) {
+        console.log('Fetching translations for lang:', lang);
         return genshinCharacters.map(character => ({
             ...character,
             reloj: translations[lang]?.characters?.[character.name]?.reloj || character.reloj,
@@ -40,6 +41,7 @@ importTranslations().then(translations => {
         const elements = document.querySelectorAll("[data-i18n]");
         elements.forEach(el => {
             const key = el.getAttribute("data-i18n");
+            console.log(`Key: ${key}, Translation: ${translations[lang][key]}`); //debug
             el.textContent = translations[lang][key];
         });
 
