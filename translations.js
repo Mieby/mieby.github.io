@@ -35,18 +35,13 @@ function updateUI() {
     document.getElementById('add-character-btn').innerText = translations[currentLang].addCharacter;
     document.getElementById('enable-drag-btn').innerText = translations[currentLang].moveCharacters;
     document.getElementById('reset-data').innerText = translations[currentLang].resetData;
-    updateWeaponsUI();
-    // Agrega más elementos según sea necesario
+    document.querySelectorAll(".weapon-item p").forEach(item => {
+        item.textContent = translations[currentLang].weapons[item.textContent] || item.textContent;
+    });
+    
 }
 
-function updateWeaponsUI() {
-    const weapons = translations[currentLang].weapons;
-    const weaponButtons = document.querySelectorAll('.weapon-filters img');
-    weaponButtons.forEach(button => {
-        const weaponName = button.alt;
-        button.alt = weapons[weaponName];
-    });
-}
+
 
 // Inicializa con el idioma por defecto
 updateUI();
