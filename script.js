@@ -58,7 +58,8 @@ importTranslations().then(translations => {
         changeLanguage(savedLang);
 
         document.getElementById("language-select").addEventListener("change", (e) => {
-            changeLanguage(e.target.value);
-        });
+    console.log('Selected language:', e.target.value);
+    changeLanguage(e.target.value);
+});
     });
 });
