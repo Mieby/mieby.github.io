@@ -4,10 +4,10 @@ function resetData() {
 // Adjunta el evento al botón 'Borrar Datos'
 document.getElementById('reset-data').addEventListener('click', resetData);
 
-// script.js
+// Importación dinámica de traducciones
 function importTranslations() {
     return import('./translations.js')
-        .then(module => module.default)
+        .then(module => module.default)  // Importar exportación por defecto
         .catch(err => console.error('Error al importar traducciones:', err));
 }
 
@@ -49,7 +49,20 @@ importTranslations().then(translations => {
 
     function renderCharacters(lang) {
         const translatedCharacters = getTranslatedCharacters(lang);
-        // Aquí se renderiza `translatedCharacters` en la UI
+        const characterGrid = document.getElementById('character-grid');
+        characterGrid.innerHTML = '';  // Limpiar contenido anterior
+
+        translatedCharacters.forEach(character => {
+            // Aquí se renderizan los personajes dinámicamente
+            const characterElement = document.createElement('div');
+            characterElement.classList.add('character');
+            characterElement.innerHTML = `
+                <h2>${character.name}</h2>
+                <img src="${character.img}" alt="${character.name}">
+                <!-- Otros detalles -->
+            `;
+            characterGrid.appendChild(characterElement);
+        });
     }
 
     document.addEventListener("DOMContentLoaded", () => {
