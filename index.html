@@ -82,17 +82,18 @@
     
 </div>
 
-    <script type="module" src="script.js"></script>
+    
     <script>
         function showTab(tab) {
             document.getElementById('tab6').style.display = 'none';
             document.getElementById(tab).style.display = 'block';
         }
     </script>
-    <script src="genshinCharacters.js"></script>
-    <script src="genshinWeapons.js"></script>
-    <script src="script.js"></script> <!-- Archivo general -->
     <link rel="stylesheet" href="genshin.css">
+    <script src="genshinCharacters.js"></script>
+    <script src="genshinWeapons.js" defer></script>
+    <script type="module" src="script.js" defer></script>
+    <script src="script.js"></script> <!-- Archivo general -->
     <script src="genshin.js"></script> 
 </body>
 </html>
