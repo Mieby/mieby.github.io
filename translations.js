@@ -24,7 +24,7 @@ function updateUI() {
 
     document.getElementById('add-character-btn').innerText = translations[currentLang].addCharacter;
     document.getElementById('enable-drag-btn').innerText = translations[currentLang].moveCharacters;
-    document.getElementById('reset-data').innerText = translations[currentLang].resetData;
+    document.getElementById('reset-data').innerText = translations[currentLang].byeData;
 
     // Traducción dinámica para nombres de armas
     weaponsList.forEach(weapon => {
