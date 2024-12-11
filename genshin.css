@@ -205,22 +205,25 @@
 
 /* Estilo para los textos (nombre, nivel, rango) del arma */
 .weapon-info div {
-    margin-left: 10px; /* Espacio entre la imagen y el texto */
+    display: flex;
+    flex-direction: column; /* Organiza los textos en una columna */
+    justify-content: center; /* Centra los textos verticalmente */
+    align-items: center; /* Centra los textos horizontalmente */
 }
 
 /* Estilo para el nombre del arma */
 .weapon-name {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     color: #333; /* Color oscuro para el texto */
-    margin-bottom: 5px; /* Espacio debajo del nombre */
+    margin-bottom: 3px; /* Espacio debajo del nombre */
 }
 
 /* Estilo para el nivel del arma */
 .weapon-level {
     font-size: 14px;
     color: #555; /* Color gris oscuro */
-    margin-bottom: 5px; /* Espacio debajo del nivel */
+    margin-bottom: 0px; /* Espacio debajo del nivel */
 }
 
 /* Estilo para el rango del arma */
