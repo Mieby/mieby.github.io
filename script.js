@@ -4,6 +4,8 @@ function resetData() {
 // Adjunta el evento al botón 'Borrar Datos'
 document.getElementById('reset-data').addEventListener('click', resetData);
 
+import translations from './translations.js';
+
 // Cargar traducciones desde genshinCharacters.js
 function getTranslatedCharacters(lang) {
     return genshinCharacters.map(character => ({
