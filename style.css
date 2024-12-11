@@ -43,9 +43,6 @@ button:hover {
 
 #tab6 {
     display: block; /* Hace que la tab6 sea visible al cargar */
-    background-color: #f0f8ff;
-    min-height: 100vh; /* Asegura que ocupe al menos la altura completa de la ventana */
-    margin: 0;
 }
 
 .hidden {
