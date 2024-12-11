@@ -6,6 +6,6 @@ const weaponsList = [
    // { name: { es: "Espada de Favonius", en: "Favonius Sword" } , type: "bow", stars: 5, img: "assets/weapons/favonius_sword.png" },
     //{ name: { es: "Espada de Favonius", en: "Favonius Sword" }, type: "catalist", stars: 5, img: "assets/weapons/favonius_sword.png" },
     //{ name: { es: "Espada de Favoniusa", en: "Favonius Sword" }, type: "claymore", stars: 5, img: "assets/weapons/favonius_sword.png"}
-    { name: Espada de Favonius, type: "claymore", stars: 5, img: "assets/weapons/favonius_sword.png"}
+    { name: "Espada de Favonius", type: "claymore", stars: 5, img: "assets/weapons/favonius_sword.png"}
 ];
 
