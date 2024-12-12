@@ -100,19 +100,18 @@ function updateCharacterItems() {
 }
 
 function updateCharacterNames() {
-    // Actualizar nombres en las tarjetas
-    const characterCardNames = document.querySelectorAll('.character-card h4');
-    characterCardNames.forEach(cardNameElement => {
-        const characterSpanishName = cardNameElement.dataset.characterName; // Usar dataset
-        if (characterSpanishName) {
-            const characterData = genshinCharacters.find(character => character.name.es === characterSpanishName);
+    const characterCards = document.querySelectorAll('.character-card h4');
+    characterCards.forEach(cardNameElement => {
+        const characterEnglishName = cardNameElement.dataset.characterName;
+        if (characterEnglishName) {
+            const characterData = genshinCharacters.find(character => character.name.en === characterEnglishName);
             if (characterData) {
                 cardNameElement.textContent = characterData.name[currentLanguage];
             }
         }
     });
 
-    // Actualizar nombres en el modal
+    //Actualizar nombres del modal
     const characterModalNames = document.querySelectorAll('.character-item p');
     characterModalNames.forEach((modalNameElement, index) => {
         if (genshinCharacters[index]) {
@@ -120,6 +119,7 @@ function updateCharacterNames() {
         }
     });
 }
+
 
 
 // Función para obtener los objetos predeterminados por personaje
@@ -307,11 +307,13 @@ function addCharacterCard(character, isLoading = false) {
     charCard.classList.add("character-card");
     charCard.setAttribute('id', `card-${character.name.es}`);
 
+    const displayName = character.name[currentLanguage];
+
     // HTML para la tarjeta de personaje
     charCard.innerHTML = `
         <div class="constellation editable" contenteditable="true">${character.constellation || 'C0'}</div>
         <img src="${character.img}" alt="${character.name.es}" class="character-img">
-        <h4 data-character-name="${character.name.es}">${character.name[currentLanguage]}</h4>
+        <h4 data-character-name="${character.name.es}">${displayName}</h4>
         <div class="level editable" contenteditable="true">${character.level || '20/40'}</div>
         <div class="talents">
             <div class="talent editable" contenteditable="true">${character.talent1 || '0'}</div>
@@ -373,6 +375,7 @@ function addCharacterCard(character, isLoading = false) {
 
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
+    saveCharacterState();
 
 
     // Agregar el evento para abrir el modal de armas
@@ -516,38 +519,52 @@ function toggleFilterButton(buttonId, isActive) {
                                                                                                                                     // Guardado en Localstorage
 // Guardar el estado de los personajes en localStorage
 function saveCharacterState() {
-    const characters = Array.from(document.querySelectorAll(".character-card")).map(card => ({
-        name: card.querySelector("h4").textContent,
-        img: card.querySelector("img").src,
-        constellation: card.querySelector(".constellation").textContent,
-        level: card.querySelector(".level").textContent,
-        talent1: card.querySelector(".talents .talent:nth-child(1)").textContent,
-        talent2: card.querySelector(".talents .talent:nth-child(2)").textContent,
-        talent3: card.querySelector(".talents .talent:nth-child(3)").textContent,
-        weaponImg: card.querySelector(".weapon-img").src,
-        weaponName: card.querySelector(".weapon-name").textContent,
-        weaponLevel: card.querySelector(".weapon-level").textContent,
-        weaponRank: card.querySelector(".weapon-rank").textContent,
-        reloj: card.querySelector(".reloj").textContent.replace("Reloj: ", "").trim(),
-        caliz: card.querySelector(".caliz").textContent.replace("Caliz: ", "").trim(),
-        corona: card.querySelector(".corona").textContent.replace("Corona: ", "").trim(),
-        subs: card.querySelector(".subs").textContent.replace("Subs: ", "").trim(),
-        additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
-        items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
-            name: item.querySelector("p").textContent,
-            img: item.querySelector("img").src
-        })) : [], // Guardar los objetos del personaje
-        weapons: card.querySelector(".character-weapons") ? Array.from(card.querySelectorAll(".character-weapons .item")).map(weapon => ({
-            name: weapon.querySelector("p").textContent,
-            img: weapon.querySelector("img").src
-        })) : [], // Guardar las armas del personaje
-        artifacts: card.querySelector(".character-artifacts") ? Array.from(card.querySelectorAll(".character-artifacts .item")).map(artifact => ({
-            name: artifact.querySelector("p").textContent,
-            img: artifact.querySelector("img").src
-        })) : [] // Guardar los artefactos del personaje
-    }));
-    console.log("Saving to localStorage:", characters); // Debug
-    localStorage.setItem("genshinCharacters", JSON.stringify(characters));
+    const characterCards = document.querySelectorAll('.character-card');
+    const savedCharacters = Array.from(characterCards).map(card => {
+        const characterEnglishName = card.querySelector('h4').dataset.characterName; // Obtener el nombre EN INGLÉS del dataset
+        const characterData = genshinCharacters.find(char => char.name.en === characterEnglishName); // Buscar el objeto original en genshinCharacters
+
+        if (!characterData) {
+            console.error("No se encontró el personaje en genshinCharacters:", characterEnglishName);
+            return null; // O manejar el error de otra forma
+        }
+
+        return {
+        return {
+            name: characterData.name, // Guardar el objeto name completo (con traducciones)
+            img: characterData.img, //Guardar la imagen del personaje
+            element: characterData.element,
+            stars: characterData.stars,
+            weaponType: characterData.weaponType,
+            constellation: card.querySelector('.constellation').textContent,
+            level: card.querySelector('.level').textContent,
+            talent1: card.querySelector('.talents .talent:nth-child(1)').textContent,
+            talent2: card.querySelector('.talents .talent:nth-child(2)').textContent,
+            talent3: card.querySelector('.talents .talent:nth-child(3)').textContent,
+            weaponImg: card.querySelector('.weapon-info .weapon-img').src,
+            weaponName: card.querySelector('.weapon-name').textContent,
+            weaponLevel: card.querySelector('.weapon-level').textContent,
+            weaponRank: card.querySelector('.weapon-rank').textContent,
+            reloj: card.querySelector(".reloj").textContent.split(":")[1].trim(),
+            caliz: card.querySelector(".caliz").textContent.split(":")[1].trim(),
+            corona: card.querySelector(".corona").textContent.split(":")[1].trim(),
+            subs: card.querySelector(".subs").textContent.split(":")[1].trim(),
+            additionalInfo: card.querySelector('.character-box .editable-text') ? card.querySelector('.character-box .editable-text').value : "",
+            items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
+                name: item.querySelector("p").textContent,
+                img: item.querySelector("img").src
+            })) : [],
+            weapons: card.querySelector(".character-weapons") ? Array.from(card.querySelectorAll(".character-weapons .item")).map(weapon => ({
+                name: weapon.querySelector("p").textContent,
+                img: weapon.querySelector("img").src
+            })) : [],
+            artifacts: card.querySelector(".character-artifacts") ? Array.from(card.querySelectorAll(".character-artifacts .item")).map(artifact => ({
+                name: artifact.querySelector("p").textContent,
+                img: artifact.querySelector("img").src
+            })) : []
+        };
+    }).filter(Boolean);//Filtrar valores null
+    localStorage.setItem("genshinCharacters", JSON.stringify(savedCharacters));
 }
 
 // Info +
@@ -663,7 +680,26 @@ document.addEventListener("DOMContentLoaded", () => {
         renderWeaponList();
         updateWeaponCardNames();
         updateCharacterItems();
-        updateCharacterNames();
+
+        const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage) {
+        currentLanguage = savedLanguage;
+        setLanguage(currentLanguage);
+    }
+    
+    const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
+
+    savedCharacters.forEach(character => {
+        const characterWithDefaultItems = {
+            ...character,
+            items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
+            weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
+            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
+        };
+
+        addCharacterCard(characterWithDefaultItems,true)
+    });
+    updateCharacterNames(); // Llamar después de restaurar las cartas
 
     const esButton = document.querySelector('button[onclick="setLanguage(\'es\')"]');
     const enButton = document.querySelector('button[onclick="setLanguage(\'en\')"]');
