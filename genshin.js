@@ -20,26 +20,30 @@ let currentLanguage = 'es'; // Variable para almacenar el idioma actual
 
 function setLanguage(lang) {
     currentLanguage = lang;
+    renderWeaponList();
     updateWeaponNames(); // Llama a la función de actualización
 }
 
 function updateWeaponNames() {
     const weaponNameElements = document.querySelectorAll('.weapon-item p'); // Selecciona todos los <p> dentro de .weapon-item
-
     weaponNameElements.forEach((element, index) => {
-        element.textContent = weaponsList[index].name[currentLanguage];
+        // Verifica que el índice exista dentro de weaponsList
+        if(weaponsList[index] && weaponsList[index].name[currentLanguage]){
+           element.textContent = weaponsList[index].name[currentLanguage]; 
+        }
+
     });
 
      //Actualizar el nombre en las tarjetas ya creadas:
      const weaponCardNames = document.querySelectorAll('.weapon-name');
 
-    weaponCardNames.forEach(element => {
-         const weaponEnglishName = element.textContent;
-         const weaponData = weaponsList.find(weapon => weapon.name.es === weaponEnglishName);
-        if(weaponData){
-            element.textContent = weaponData.name[currentLanguage];
-        }
-    });
+     weaponCardNames.forEach(element => {
+          const weaponEnglishName = element.textContent;
+          const weaponData = weaponsList.find(weapon => weapon.name.en === weaponEnglishName);
+         if(weaponData){
+             element.textContent = weaponData.name[currentLanguage];
+         }
+     });
 }
 
 // Función para obtener los objetos predeterminados por personaje
@@ -413,6 +417,7 @@ function renderWeaponList() {
         weaponItem.addEventListener("click", () => selectWeapon(weapon));
         weaponList.appendChild(weaponItem);
     });
+    updateWeaponNames();
 }
 
 // Alternar clases de botón activo
