@@ -294,10 +294,10 @@ function addCharacterCard(character, isLoading = false) {
     // Si isLoading es false, se realiza la verificación de duplicados
     if (!isLoading) {
         const existingCards = document.querySelectorAll(".character-card h4");
-        const isDuplicate = Array.from(existingCards).some(card => card.textContent === character.name);
+        const isDuplicate = Array.from(existingCards).some(card => card.dataset.characterName === character.name.es);
 
         if (isDuplicate) {
-            alert(`${character.name} ya ha sido agregado!`);
+            alert(`${character.name.es} ya ha sido agregado!`);
             return;  // Si el personaje ya está, no lo agregues.
         }
     }
@@ -375,7 +375,6 @@ function addCharacterCard(character, isLoading = false) {
 
     // Agregar la tarjeta al contenedor de personajes
     characterGrid.appendChild(charCard);
-    saveCharacterState();
 
 
     // Agregar el evento para abrir el modal de armas
@@ -687,18 +686,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
-
-    savedCharacters.forEach(character => {
-        const characterWithDefaultItems = {
-            ...character,
-            items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
-            weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
-            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
-        };
-
-        addCharacterCard(characterWithDefaultItems,true)
-    });
-    updateCharacterNames(); // Llamar después de restaurar las cartas
+    if (savedCharacters.length > 0) { // Solo ejecutar si hay personajes guardados
+        savedCharacters.forEach(characterData => {
+            const character = genshinCharacters.find(char => char.name.en === characterData.name.en);
+            if(character){
+                const characterToRender = {...character, ...characterData}; //Combinar datos guardados con originales
+                addCharacterCard(characterToRender, true); // isLoading = true para evitar duplicados al cargar
+            }
+        });
+        updateCharacterNames();//Actualizar despues de cargar
+    }
 
     const esButton = document.querySelector('button[onclick="setLanguage(\'es\')"]');
     const enButton = document.querySelector('button[onclick="setLanguage(\'en\')"]');
