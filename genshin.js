@@ -16,6 +16,31 @@ const clickCharacterModal = document.getElementById("click-character-modal");
 const deleteCharacterBtn = document.getElementById("delete-character-btn");
 const closeCharacterModalBtn = document.getElementById("close-character-modal");
 
+let currentLanguage = 'en'; // Variable para almacenar el idioma actual
+
+function setLanguage(lang) {
+    currentLanguage = lang;
+    updateWeaponNames(); // Llama a la función de actualización
+}
+
+function updateWeaponNames() {
+    const weaponNameElements = document.querySelectorAll('.weapon-item p'); // Selecciona todos los <p> dentro de .weapon-item
+
+    weaponNameElements.forEach((element, index) => {
+        element.textContent = weaponsList[index].name[currentLanguage];
+    });
+
+     //Actualizar el nombre en las tarjetas ya creadas:
+     const weaponCardNames = document.querySelectorAll('.weapon-name');
+
+    weaponCardNames.forEach(element => {
+         const weaponEnglishName = element.textContent;
+         const weaponData = weaponsList.find(weapon => weapon.name.en === weaponEnglishName);
+        if(weaponData){
+            element.textContent = weaponData.name[currentLanguage];
+        }
+    });
+}
 
 // Función para obtener los objetos predeterminados por personaje
 function getDefaultItemsForCharacter(characterName) {
@@ -298,13 +323,14 @@ function openWeaponModal(weaponElement) {
         const weaponItem = document.createElement("div");
         weaponItem.classList.add("weapon-item");
         weaponItem.innerHTML = `
-            <img src="${weapon.img}" alt="${weapon.name}" width="50">
+             <img src="${weapon.img}" alt="${weapon.name.en}" width="50"> <p>${weapon.name.en}</p>
             <p>${weapon.name}</p>
         `;
         weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));  // Pasar el contenedor completo
         weaponList.appendChild(weaponItem);
     });
     weaponModal.classList.remove("hidden");
+    updateWeaponNames();
 }
 
 // Cerrar el modal de armas
@@ -324,7 +350,7 @@ function selectWeapon(weapon) {
 
     // Actualizar la imagen y el nombre del arma
     weaponImg.src = weapon.img;
-    weaponName.textContent = `${weapon.name}`;
+    weaponName.textContent = weapon.name[currentLanguage];
 
     closeWeaponModal(); // Cerrar el modal
     saveCharacterState(); // Guardar el estado del personaje
@@ -551,6 +577,7 @@ function closeClickCharacterModal() {
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".character-img").forEach(img => {
         img.addEventListener("click", () => openCharacterModalForEdit(img));
+        updateWeaponNames();
     });
 
     // Configurar el botón de cerrar modal
