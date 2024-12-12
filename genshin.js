@@ -16,7 +16,7 @@ const clickCharacterModal = document.getElementById("click-character-modal");
 const deleteCharacterBtn = document.getElementById("delete-character-btn");
 const closeCharacterModalBtn = document.getElementById("close-character-modal");
 
-let currentLanguage = 'es'; // Variable para almacenar el idioma actual
+let currentLanguage = localStorage.getItem('preferredLanguage') || 'es'; // Variable para almacenar el idioma actual
 
 function setLanguage(lang) {
     currentLanguage = lang;
