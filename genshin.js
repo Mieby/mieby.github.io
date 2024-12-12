@@ -42,7 +42,7 @@ function updateWeaponNames() {
 
      weaponCardNames.forEach(element => {
           const weaponEnglishName = element.textContent;
-          const weaponData = weaponsList.find(weapon => weapon.name.en === weaponEnglishName);
+          const weaponData = weaponsList.find(weapon => weapon.name.es === weaponEnglishName);
          if(weaponData){
              element.textContent = weaponData.name[currentLanguage];
          }
@@ -142,8 +142,8 @@ function openCharacterModal() {
         const charItem = document.createElement("div");
         charItem.classList.add("character-item");
         charItem.innerHTML = `
-            <img src="${character.img}" alt="${character.name}" width="100">
-            <p>${character.name}</p>
+            <img src="${character.img}" alt="${character.name.es}" width="100">
+            <p>${character.name.es}</p>
         `;
         charItem.addEventListener("click", () => addCharacterCard(character));
         characterList.appendChild(charItem);
