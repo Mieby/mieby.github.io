@@ -21,7 +21,8 @@ let currentLanguage = 'es'; // Variable para almacenar el idioma actual
 function setLanguage(lang) {
     currentLanguage = lang;
     renderWeaponList();
-    updateWeaponNames(); // Llama a la función de actualización
+    updateWeaponNames();
+    updateWeaponCardNames()// Llama a la función de actualización
 }
 
 function updateWeaponNames() {
@@ -45,6 +46,22 @@ function updateWeaponNames() {
          }
      });
 }
+
+function updateWeaponCardNames(){
+    const characterCards = document.querySelectorAll('.character-card');
+    characterCards.forEach(card => {
+        const weaponNameElement = card.querySelector('.weapon-name');
+        const weaponEnglishName = weaponNameElement.textContent;
+
+        const weaponData = weaponsList.find(weapon => weapon.name.es === weaponEnglishName);
+
+        if(weaponData){
+            weaponNameElement.textContent = weaponData.name[currentLanguage];
+        }
+    });
+
+}
+
 
 // Función para obtener los objetos predeterminados por personaje
 function getDefaultItemsForCharacter(characterName) {
@@ -582,6 +599,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".character-img").forEach(img => {
         img.addEventListener("click", () => openCharacterModalForEdit(img));
         updateWeaponNames();
+        renderWeaponList();
+        updateWeaponCardNames();
     });
 
     // Configurar el botón de cerrar modal
