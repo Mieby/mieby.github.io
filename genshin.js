@@ -16,7 +16,7 @@ const clickCharacterModal = document.getElementById("click-character-modal");
 const deleteCharacterBtn = document.getElementById("delete-character-btn");
 const closeCharacterModalBtn = document.getElementById("close-character-modal");
 
-let currentLanguage = 'en'; // Variable para almacenar el idioma actual
+let currentLanguage = 'es'; // Variable para almacenar el idioma actual
 
 function setLanguage(lang) {
     currentLanguage = lang;
@@ -35,7 +35,7 @@ function updateWeaponNames() {
 
     weaponCardNames.forEach(element => {
          const weaponEnglishName = element.textContent;
-         const weaponData = weaponsList.find(weapon => weapon.name.en === weaponEnglishName);
+         const weaponData = weaponsList.find(weapon => weapon.name.es === weaponEnglishName);
         if(weaponData){
             element.textContent = weaponData.name[currentLanguage];
         }
@@ -323,8 +323,7 @@ function openWeaponModal(weaponElement) {
         const weaponItem = document.createElement("div");
         weaponItem.classList.add("weapon-item");
         weaponItem.innerHTML = `
-             <img src="${weapon.img}" alt="${weapon.name.en}" width="50"> <p>${weapon.name.en}</p>
-            <p>${weapon.name}</p>
+             <img src="${weapon.img}" alt="${weapon.name.es}" width="50"> <p>${weapon.name.es}</p>
         `;
         weaponItem.addEventListener("click", () => selectWeapon(weapon, weaponElement));  // Pasar el contenedor completo
         weaponList.appendChild(weaponItem);
@@ -408,8 +407,8 @@ function renderWeaponList() {
         const weaponItem = document.createElement("div");
         weaponItem.classList.add("weapon-item");
         weaponItem.innerHTML = `
-            <img src="${weapon.img}" alt="${weapon.name}" width="50">
-            <p>${weapon.name}</p>
+            <img src="${weapon.img}" alt="${weapon.name.es}" width="50">
+            <p>${weapon.name.es}</p>
         `;
         weaponItem.addEventListener("click", () => selectWeapon(weapon));
         weaponList.appendChild(weaponItem);
