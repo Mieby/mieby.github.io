@@ -23,7 +23,8 @@ function setLanguage(lang) {
     localStorage.setItem('preferredLanguage', lang);
     renderWeaponList();
     updateWeaponNames();
-    updateWeaponCardNames()// Llama a la función de actualización
+    updateWeaponCardNames();
+    updateCharacterItems(); // Llama a la función de actualización
 }
 
 function updateWeaponNames() {
@@ -61,6 +62,43 @@ function updateWeaponCardNames(){
         }
     });
 
+}
+
+function updateWeaponCardNames() {
+    // ... (código anterior para actualizar nombres en las tarjetas)
+}
+
+function updateCharacterItems() {
+    const characterCards = document.querySelectorAll('.character-card');
+
+    characterCards.forEach(card => {
+        // Actualizar nombres de items
+        const itemElements = card.querySelectorAll('.character-items .item p');
+        itemElements.forEach((element, index) => {
+            const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
+            if (character && character.items && character.items[index]) {
+                element.textContent = character.items[index].name[currentLanguage];
+            }
+        });
+
+        // Actualizar nombres de weapons
+        const weaponElements = card.querySelectorAll('.character-weapons .item p');
+        weaponElements.forEach((element, index) => {
+            const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
+            if (character && character.weapons && character.weapons[index]) {
+                element.textContent = character.weapons[index].name[currentLanguage];
+            }
+        });
+
+        // Actualizar nombres de artifacts
+        const artifactElements = card.querySelectorAll('.character-artifacts .item p');
+        artifactElements.forEach((element, index) => {
+            const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
+            if (character && character.artifacts && character.artifacts[index]) {
+                element.textContent = character.artifacts[index].name[currentLanguage];
+            }
+        });
+    });
 }
 
 
@@ -602,6 +640,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateWeaponNames();
         renderWeaponList();
         updateWeaponCardNames();
+        updateCharacterItems();
 
     const esButton = document.querySelector('button[onclick="setLanguage(\'es\')"]');
     const enButton = document.querySelector('button[onclick="setLanguage(\'en\')"]');
