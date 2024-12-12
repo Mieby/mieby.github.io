@@ -64,10 +64,6 @@ function updateWeaponCardNames(){
 
 }
 
-function updateWeaponCardNames() {
-    // ... (código anterior para actualizar nombres en las tarjetas)
-}
-
 function updateCharacterItems() {
     const characterCards = document.querySelectorAll('.character-card');
 
