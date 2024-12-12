@@ -131,9 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     subs: characterData.subs
                 };
             addCharacterCard(characterToRender, true); // isLoading = true para evitar duplicados al cargar
-            }
-        });
-        updateCharacterNames();//Actualizar despues de cargar
+         }
+       
     }
 
         // Rellenar el cuadro de texto adicional si existe
