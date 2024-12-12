@@ -49,7 +49,7 @@ function updateWeaponNames() {
 
      weaponCardNames.forEach(element => {
           const weaponEnglishName = element.textContent;
-          const weaponData = weaponsList.find(weapon => weapon.name.en === weaponEnglishName);
+          const weaponData = weaponsList.find(weapon => weapon.name.es === weaponEnglishName);
          if(weaponData){
              element.textContent = weaponData.name[currentLanguage];
          }
@@ -133,9 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Verificar si el personaje tiene objetos, si no asignarlos por defecto
     const characterWithDefaultItems = {
       ...character,
-      items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
-      weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
-      artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
+      items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name.es),
+      weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name.es),
+      artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name.es),
       reloj: character.reloj || 'undefined',
       caliz: character.caliz || 'undefined',
       corona: character.corona || 'undefined',
