@@ -530,7 +530,6 @@ function saveCharacterState() {
         }
 
         return {
-        return {
             name: characterData.name, // Guardar el objeto name completo (con traducciones)
             img: characterData.img, //Guardar la imagen del personaje
             element: characterData.element,
