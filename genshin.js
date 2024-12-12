@@ -106,18 +106,18 @@ function updateCharacterItems() {
 
 // Función para obtener los objetos predeterminados por personaje
 function getDefaultItemsForCharacter(characterName) {
-  const character = genshinCharacters.find(char => char.name === characterName);
-  return character ? character.items : [];
+    const character = genshinCharacters.find(char => char.name === characterName);
+    return character && character.items ? character.items : []; // Devuelve el array si existe, si no un array vacío
 }
 
 function getDefaultWeaponsForCharacter(characterName) {
-  const character = genshinCharacters.find(char => char.name === characterName);
-  return character ? character.weapons : [];
+    const character = genshinCharacters.find(char => char.name === characterName);
+    return character && character.weapons ? character.weapons : []; // Devuelve el array si existe, si no un array vacío
 }
 
 function getDefaultArtifactsForCharacter(characterName) {
-  const character = genshinCharacters.find(char => char.name === characterName);
-  return character ? character.artifacts : [];
+    const character = genshinCharacters.find(char => char.name === characterName);
+    return character && character.artifacts ? character.artifacts : []; // Devuelve el array si existe, si no un array vacío
 }
 
 document.addEventListener("DOMContentLoaded", () => {
