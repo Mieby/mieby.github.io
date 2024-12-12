@@ -1,7 +1,7 @@
 // Lista de personajes (nombre e imagen)
 const genshinCharacters = [
                                                                                                                                                         //Anemo 4
-    { name: {en: "Sayu", es: "Sayu" }, element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png",
+    { name: "Sayu", element: "Anemo", stars: 4, weaponType: "claymore", img: "assets/characters/Sayu.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
@@ -16,7 +16,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: {en: "Lynette", es: "Lynette" }, element: "Anemo", stars: 4, weaponType: "sword", img: "assets/characters/Lynette.png",
+    { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "assets/characters/Lynette.png",
              reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/objeto1.png" },
@@ -30,7 +30,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: {en: "Faruzán", es: "Faru" }, element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Faruzan-new.png",
+    { name: "Faruzán", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Faruzan-new.png",
               reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/objeto1.png" }
@@ -42,7 +42,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" }
         ]
     },
-    { name: {en: "Heizou", es: "Heizou" }, element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Heizou-new.png",
+    { name: "Heizou", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Heizou-new.png",
               reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/objeto1.png" }
@@ -54,7 +54,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" }
         ]
     },
-    { name: {en: "Sacarosa", es: "Sacarosa" }, element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png",
+    { name: "Sacarosa", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png",
               reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Margarita Voladora", es: "Margarita Voladora" }, img: "assets/Items/recolleccion/Margatita voladora.png" },
@@ -69,7 +69,7 @@ const genshinCharacters = [
             { name:  { en: "Coming soon", es: "Margarita Voladora" }, img: "ruta/a/imagen/artefacto1.png" }
         ]
     },                                                                                                                                                     // Anemo 5
-    { name: {en: "Xiao", es: "Xiao" }, element: "Anemo", stars: 5, weaponType: "lance", img: "assets/characters/Anemo5/Xiao.png",
+    { name: "Xiao", element: "Anemo", stars: 5, weaponType: "lance", img: "assets/characters/Anemo5/Xiao.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
@@ -84,7 +84,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: {en: "Jean", es: "Jean" }, element: "Anemo", stars: 5, weaponType: "sword", img: "assets/characters/Anemo5/Jean.png",
+    { name: "Jean", element: "Anemo", stars: 5, weaponType: "sword", img: "assets/characters/Anemo5/Jean.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
@@ -99,7 +99,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: {en: "Kazuha", es: "Kazuha" }, element: "Anemo", stars: 5, weaponType: "sword", img: "assets/characters/Anemo5/Kazuha.png",
+    { name: "Kazuha", element: "Anemo", stars: 5, weaponType: "sword", img: "assets/characters/Anemo5/Kazuha.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
@@ -114,7 +114,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: {en: "Venti", es: "Venti" }, element: "Anemo", stars: 5, weaponType: "bow", img: "assets/characters/Anemo5/Venti.png",
+    { name: "Venti", element: "Anemo", stars: 5, weaponType: "bow", img: "assets/characters/Anemo5/Venti.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
@@ -129,7 +129,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: {en: "Chasca", es: "Chasca" }, element: "Anemo", stars: 5, weaponType: "bow", img: "assets/characters/Anemo5/Chasca.png",
+    { name: "Chasca", element: "Anemo", stars: 5, weaponType: "bow", img: "assets/characters/Anemo5/Chasca.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
@@ -144,7 +144,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: {en: "Scaramuccia", es: "Scara" }, element: "Anemo", stars: 5, weaponType: "catalist", img: "assets/characters/Anemo5/Scara.png",
+    { name: "Scaramuccia", element: "Anemo", stars: 5, weaponType: "catalist", img: "assets/characters/Anemo5/Scara.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
@@ -159,7 +159,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: {en: "Xianyun", es: "Xianyun" }, element: "Anemo", stars: 5, weaponType: "catalist", img: "assets/characters/Anemo5/Xianyun.png",
+    { name: "Xianyun", element: "Anemo", stars: 5, weaponType: "catalist", img: "assets/characters/Anemo5/Xianyun.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
