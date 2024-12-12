@@ -43,7 +43,7 @@ function updateWeaponNames() {
 
      weaponCardNames.forEach(element => {
           const weaponEnglishName = element.textContent;
-          const weaponData = weaponsList.find(weapon => weapon.name.en === weaponEnglishName);
+          const weaponData = weaponsList.find(weapon => weapon.name.es === weaponEnglishName);
          if(weaponData){
              element.textContent = weaponData.name[currentLanguage];
          }
@@ -102,9 +102,9 @@ function updateCharacterItems() {
 function updateCharacterNames() {
     const characterCards = document.querySelectorAll('.character-card h4');
     characterCards.forEach(cardNameElement => {
-        const characterEnglishName = cardNameElement.dataset.characterName;
-        if (characterEnglishName) {
-            const characterData = genshinCharacters.find(character => character.name.en === characterEnglishName);
+        const characterSpanishName = cardNameElement.dataset.characterName;
+        if (characterSpanishName) {
+            const characterData = genshinCharacters.find(character => character.name.es === characterSpanishName);
             if (characterData) {
                 cardNameElement.textContent = characterData.name[currentLanguage];
             }
@@ -521,11 +521,11 @@ function toggleFilterButton(buttonId, isActive) {
 function saveCharacterState() {
     const characterCards = document.querySelectorAll('.character-card');
     const savedCharacters = Array.from(characterCards).map(card => {
-        const characterEnglishName = card.querySelector('h4').dataset.characterName; // Obtener el nombre EN INGLÉS del dataset
-        const characterData = genshinCharacters.find(char => char.name.en === characterEnglishName); // Buscar el objeto original en genshinCharacters
+        const characterSpanishName = card.querySelector('h4').dataset.characterName; // Obtener el nombre EN INGLÉS del dataset
+        const characterData = genshinCharacters.find(char => char.name.es === characterSpanishName); // Buscar el objeto original en genshinCharacters
 
         if (!characterData) {
-            console.error("No se encontró el personaje en genshinCharacters:", characterEnglishName);
+            console.error("No se encontró el personaje en genshinCharacters:", characterSpanishName);
             return null; // O manejar el error de otra forma
         }
 
