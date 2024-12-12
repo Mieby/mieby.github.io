@@ -307,7 +307,7 @@ function addCharacterCard(character, isLoading = false) {
         ${Array.isArray(character.items) && character.items.length > 0 ? 
         character.items.map(item => `
             <div class="item">
-                <img src="${weapon.img}" alt="${weapon.name[currentLanguage]}" class="item-img">
+                <img src="${item.img}" alt="${item.name[currentLanguage]}" class="item-img">
                 <p>${weapon.name[currentLanguage]}</p>
             </div>
         `).join('') : '<p>No hay objetos disponibles</p>'}
@@ -318,7 +318,7 @@ function addCharacterCard(character, isLoading = false) {
         ${Array.isArray(character.weapons) && character.weapons.length > 0 ? 
         character.weapons.map(weapon => `
             <div class="item">
-                <img src="${artifact.img}" alt="${artifact.name[currentLanguage]}" class="item-img">
+                <img src="${weapon.img}" alt="${weapon.name[currentLanguage]}" class="item-img">
                 <p>${artifact.name[currentLanguage]}</p>>
             </div>
         `).join('') : '<p>No hay armas disponibles</p>'}
