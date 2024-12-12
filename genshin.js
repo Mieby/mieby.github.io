@@ -100,15 +100,19 @@ function updateCharacterItems() {
 }
 
 function updateCharacterNames() {
+    // Actualizar nombres en las tarjetas
     const characterCardNames = document.querySelectorAll('.character-card h4');
     characterCardNames.forEach(cardNameElement => {
-      const characterEnglishName = cardNameElement.textContent;
-      const characterData = genshinCharacters.find(character => character.name.es === characterEnglishName);
-      if(characterData){
-          cardNameElement.textContent = characterData.name[currentLanguage];
-      }
+        const characterEnglishName = cardNameElement.dataset.characterName; // Usar dataset
+        if (characterSpanishName) {
+            const characterData = genshinCharacters.find(character => character.name.es === characterSpanishName);
+            if (characterData) {
+                cardNameElement.textContent = characterData.name[currentLanguage];
+            }
+        }
     });
 
+    // Actualizar nombres en el modal
     const characterModalNames = document.querySelectorAll('.character-item p');
     characterModalNames.forEach((modalNameElement, index) => {
         if (genshinCharacters[index]) {
@@ -165,6 +169,7 @@ function openCharacterModal() {
             <img src="${character.img}" alt="${character.name.es}" width="100">
             <p>${character.name.es}</p>
         `;
+        charItem.dataset.characterName = character.name.es;
         charItem.addEventListener("click", () => addCharacterCard(character));
         characterList.appendChild(charItem);
     });
@@ -300,13 +305,13 @@ function addCharacterCard(character, isLoading = false) {
     // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
-    charCard.setAttribute('id', `card-${character.name}`);
+    charCard.setAttribute('id', `card-${character.name.es}`);
 
     // HTML para la tarjeta de personaje
     charCard.innerHTML = `
         <div class="constellation editable" contenteditable="true">${character.constellation || 'C0'}</div>
-        <img src="${character.img}" alt="${character.name}" class="character-img">
-        <h4>${character.name}</h4>
+        <img src="${character.img}" alt="${character.name.es}" class="character-img">
+        <h4 data-character-name="${character.name.es}">${character.name[currentLanguage]}</h4>
         <div class="level editable" contenteditable="true">${character.level || '20/40'}</div>
         <div class="talents">
             <div class="talent editable" contenteditable="true">${character.talent1 || '0'}</div>
