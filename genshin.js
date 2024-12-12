@@ -72,29 +72,35 @@ function updateCharacterItems() {
         const itemElements = card.querySelectorAll('.character-items .item p');
         itemElements.forEach((element, index) => {
             const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
-            if (character && character.items && character.items[index]) {
-                element.textContent = character.items[index].name[currentLanguage];
-            }
-        });
+            if (character && character.items && character.items[index] && character.items[index].name && character.items[index].name[currentLanguage]) {
+        element.textContent = character.items[index].name[currentLanguage];
+      } else {
+        element.textContent = "Sin Objeto"; // O cualquier otro texto predeterminado
+      }
+    });
 
         // Actualizar nombres de weapons
-        const weaponElements = card.querySelectorAll('.character-weapons .item p');
-        weaponElements.forEach((element, index) => {
-            const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
-            if (character && character.weapons && character.weapons[index]) {
-                element.textContent = character.weapons[index].name[currentLanguage];
-            }
-        });
-
-        // Actualizar nombres de artifacts
-        const artifactElements = card.querySelectorAll('.character-artifacts .item p');
-        artifactElements.forEach((element, index) => {
-            const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
-            if (character && character.artifacts && character.artifacts[index]) {
-                element.textContent = character.artifacts[index].name[currentLanguage];
-            }
-        });
+    const weaponElements = card.querySelectorAll('.character-weapons .item p');
+    weaponElements.forEach((element, index) => {
+      const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
+      if (character && character.weapons && character.weapons[index] && character.weapons[index].name && character.weapons[index].name[currentLanguage]) {
+        element.textContent = character.weapons[index].name[currentLanguage];
+      } else {
+        element.textContent = "Sin Arma";
+      }
     });
+
+    // Actualizar nombres de artifacts
+    const artifactElements = card.querySelectorAll('.character-artifacts .item p');
+    artifactElements.forEach((element, index) => {
+      const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
+      if (character && character.artifacts && character.artifacts[index] && character.artifacts[index].name && character.artifacts[index].name[currentLanguage]) {
+        element.textContent = character.artifacts[index].name[currentLanguage];
+      } else {
+        element.textContent = "Sin Artefacto";
+      }
+    });
+  });
 }
 
 
