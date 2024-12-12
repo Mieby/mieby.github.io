@@ -106,34 +106,19 @@ function getDefaultItemsForCharacter(characterName) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
-    if (savedCharacters.length > 0) { // Solo ejecutar si hay personajes guardados
-        savedCharacters.forEach(characterData => {
-            const character = genshinCharacters.find(char => char.name.en === characterData.name.en);
-            if(character){
-            const characterToRender = {
-                    ...character, 
-                    ...characterData,
-                    items: characterData.items.map(savedItem => {
-                        const originalItem = character.items.find(original => original.name.en === savedItem.name)
-                        return originalItem? originalItem : savedItem;
-                    }),
-                    weapons: characterData.weapons.map(savedWeapon => {
-                        const originalWeapon = character.weapons.find(original => original.name.en === savedWeapon.name);
-                        return originalWeapon? originalWeapon : savedWeapon;
-                    }),
-                    artifacts: characterData.artifacts.map(savedArtifact => {
-                        const originalArtifact = character.artifacts.find(original => original.name.en === savedArtifact.name);
-                        return originalArtifact? originalArtifact : savedArtifact;
-                    }),
-                    reloj: characterData.reloj,
-                    caliz: characterData.caliz,
-                    corona: characterData.corona,
-                    subs: characterData.subs
-                };
-            addCharacterCard(characterToRender, true); // isLoading = true para evitar duplicados al cargar
-         }
-       
-    }
+    savedCharacters.forEach(character => {
+        // Verificar si el personaje tiene objetos, si no asignarlos por defecto
+        const characterWithDefaultItems = {
+            ...character,
+            items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
+            weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
+            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
+            reloj: character.reloj || 'undefined', 
+            caliz: character.caliz || 'undefined',  
+            corona: character.corona || 'undefined',
+            subs: character.subs || 'undefined',
+        };
+        addCharacterCard(characterWithDefaultItems, true);
 
         // Rellenar el cuadro de texto adicional si existe
         const card = Array.from(document.querySelectorAll(".character-card")).find(card => {
