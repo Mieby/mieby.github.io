@@ -106,25 +106,35 @@ function updateCharacterItems() {
 
 // Función para obtener los objetos predeterminados por personaje
 function getDefaultItemsForCharacter(characterName) {
-    const character = genshinCharacters.find(char => char.name === characterName);
-    return character ? character.items : [];
+  const character = genshinCharacters.find(char => char.name === characterName);
+  return character ? character.items : [];
+}
+
+function getDefaultWeaponsForCharacter(characterName) {
+  const character = genshinCharacters.find(char => char.name === characterName);
+  return character ? character.weapons : [];
+}
+
+function getDefaultArtifactsForCharacter(characterName) {
+  const character = genshinCharacters.find(char => char.name === characterName);
+  return character ? character.artifacts : [];
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
-    savedCharacters.forEach(character => {
-        // Verificar si el personaje tiene objetos, si no asignarlos por defecto
-        const characterWithDefaultItems = {
-            ...character,
-            items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
-            weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
-            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
-            reloj: character.reloj || 'undefined', 
-            caliz: character.caliz || 'undefined',  
-            corona: character.corona || 'undefined',
-            subs: character.subs || 'undefined',
-        };
-        addCharacterCard(characterWithDefaultItems, true);
+  const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
+  savedCharacters.forEach(character => {
+    // Verificar si el personaje tiene objetos, si no asignarlos por defecto
+    const characterWithDefaultItems = {
+      ...character,
+      items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
+      weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
+      artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
+      reloj: character.reloj || 'undefined',
+      caliz: character.caliz || 'undefined',
+      corona: character.corona || 'undefined',
+      subs: character.subs || 'undefined',
+    };
+    addCharacterCard(characterWithDefaultItems, true);
 
         // Rellenar el cuadro de texto adicional si existe
         const card = Array.from(document.querySelectorAll(".character-card")).find(card => {
