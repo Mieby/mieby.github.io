@@ -16,14 +16,7 @@ const clickCharacterModal = document.getElementById("click-character-modal");
 const deleteCharacterBtn = document.getElementById("delete-character-btn");
 const closeCharacterModalBtn = document.getElementById("close-character-modal");
 
-let currentLanguage = localStorage.getItem('preferredLanguage') || 'es'; // Valor por defecto 'es'
-const availableLanguages = ['es', 'en']; // Lista de idiomas disponibles
-
-if (!availableLanguages.includes(currentLanguage)) {
-    console.warn(`Idioma "${currentLanguage}" no disponible. Usando "es" por defecto.`);
-    currentLanguage = 'es'; // Si el idioma guardado no es válido, usa 'es'
-    localStorage.setItem('preferredLanguage', 'es'); // Actualiza el localStorage para la proxima vez
-}
+let currentLanguage = localStorage.getItem('preferredLanguage') || 'es'; // Variable para almacenar el idioma actua
 
 function setLanguage(lang) {
     currentLanguage = lang;
@@ -49,7 +42,7 @@ function updateWeaponNames() {
 
      weaponCardNames.forEach(element => {
           const weaponEnglishName = element.textContent;
-          const weaponData = weaponsList.find(weapon => weapon.name.es === weaponEnglishName);
+          const weaponData = weaponsList.find(weapon => weapon.name.en === weaponEnglishName);
          if(weaponData){
              element.textContent = weaponData.name[currentLanguage];
          }
@@ -79,69 +72,53 @@ function updateCharacterItems() {
         const itemElements = card.querySelectorAll('.character-items .item p');
         itemElements.forEach((element, index) => {
             const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
-            if (character && character.items && character.items[index] && character.items[index].name && character.items[index].name[currentLanguage]) {
-        element.textContent = character.items[index].name[currentLanguage];
-      } else {
-        element.textContent = "Sin Objeto"; // O cualquier otro texto predeterminado
-      }
-    });
+            if (character && character.items && character.items[index]) {
+                element.textContent = character.items[index].name[currentLanguage];
+            }
+        });
 
         // Actualizar nombres de weapons
-    const weaponElements = card.querySelectorAll('.character-weapons .item p');
-    weaponElements.forEach((element, index) => {
-      const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
-      if (character && character.weapons && character.weapons[index] && character.weapons[index].name && character.weapons[index].name[currentLanguage]) {
-        element.textContent = character.weapons[index].name[currentLanguage];
-      } else {
-        element.textContent = "Sin Arma";
-      }
-    });
+        const weaponElements = card.querySelectorAll('.character-weapons .item p');
+        weaponElements.forEach((element, index) => {
+            const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
+            if (character && character.weapons && character.weapons[index]) {
+                element.textContent = character.weapons[index].name[currentLanguage];
+            }
+        });
 
-    // Actualizar nombres de artifacts
-    const artifactElements = card.querySelectorAll('.character-artifacts .item p');
-    artifactElements.forEach((element, index) => {
-      const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
-      if (character && character.artifacts && character.artifacts[index] && character.artifacts[index].name && character.artifacts[index].name[currentLanguage]) {
-        element.textContent = character.artifacts[index].name[currentLanguage];
-      } else {
-        element.textContent = "Sin Artefacto";
-      }
+        // Actualizar nombres de artifacts
+        const artifactElements = card.querySelectorAll('.character-artifacts .item p');
+        artifactElements.forEach((element, index) => {
+            const character = genshinCharacters.find(char => char.name === card.querySelector('h4').textContent);
+            if (character && character.artifacts && character.artifacts[index]) {
+                element.textContent = character.artifacts[index].name[currentLanguage];
+            }
+        });
     });
-  });
 }
 
 
 // Función para obtener los objetos predeterminados por personaje
 function getDefaultItemsForCharacter(characterName) {
-  const character = genshinCharacters.find(char => char.name === characterName);
-  return character ? character.items : [];
-}
-
-function getDefaultWeaponsForCharacter(characterName) {
-  const character = genshinCharacters.find(char => char.name === characterName);
-  return character ? character.weapons : [];
-}
-
-function getDefaultArtifactsForCharacter(characterName) {
-  const character = genshinCharacters.find(char => char.name === characterName);
-  return character ? character.artifacts : [];
+    const character = genshinCharacters.find(char => char.name === characterName);
+    return character ? character.items : [];
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
-  savedCharacters.forEach(character => {
-    // Verificar si el personaje tiene objetos, si no asignarlos por defecto
-    const characterWithDefaultItems = {
-      ...character,
-      items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
-      weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
-      artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
-      reloj: character.reloj || 'undefined',
-      caliz: character.caliz || 'undefined',
-      corona: character.corona || 'undefined',
-      subs: character.subs || 'undefined',
-    };
-    addCharacterCard(characterWithDefaultItems, true);
+    const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
+    savedCharacters.forEach(character => {
+        // Verificar si el personaje tiene objetos, si no asignarlos por defecto
+        const characterWithDefaultItems = {
+            ...character,
+            items: character.items && character.items.length > 0 ? character.items : getDefaultItemsForCharacter(character.name),
+            weapons: character.weapons && character.weapons.length > 0 ? character.weapons : getDefaultWeaponsForCharacter(character.name),
+            artifacts: character.artifacts && character.artifacts.length > 0 ? character.artifacts : getDefaultArtifactsForCharacter(character.name),
+            reloj: character.reloj || 'undefined', 
+            caliz: character.caliz || 'undefined',  
+            corona: character.corona || 'undefined',
+            subs: character.subs || 'undefined',
+        };
+        addCharacterCard(characterWithDefaultItems, true);
 
         // Rellenar el cuadro de texto adicional si existe
         const card = Array.from(document.querySelectorAll(".character-card")).find(card => {
@@ -299,26 +276,6 @@ function addCharacterCard(character, isLoading = false) {
         }
     }
 
-    try {
-        // Asignar valores predeterminados (CON manejo de errores) ANTES de usar character.items, weapons o artifacts
-        character.items = character.items || getDefaultItemsForCharacter(character.name) || [];
-        character.weapons = character.weapons || getDefaultWeaponsForCharacter(character.name) || [];
-        character.artifacts = character.artifacts || getDefaultArtifactsForCharacter(character.name) || [];
-
-        // Verificar que items, weapons y artifacts sean arrays y no null/undefined:
-        if (!Array.isArray(character.items)) {
-          console.error("Error: character.items no es un array para:", character);
-          character.items = []; // Asignar un array vacío para evitar errores posteriores
-        }
-        if (!Array.isArray(character.weapons)) {
-            console.error("Error: character.weapons no es un array para:", character);
-            character.weapons = [];
-        }
-        if (!Array.isArray(character.artifacts)) {
-            console.error("Error: character.artifacts no es un array para:", character);
-            character.artifacts = [];
-        }
-
     // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
@@ -410,11 +367,9 @@ function addCharacterCard(character, isLoading = false) {
     } else {
         disableDrag(charCard);
     }
-} catch (error) {
-        console.error("Error al crear la tarjeta del personaje:", character, error);
-        // Aquí podrías agregar un manejo de errores más robusto, como mostrar un mensaje al usuario
-    }
 }
+
+
                                                                                                                                              //open Weapon Modal    
 // Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
