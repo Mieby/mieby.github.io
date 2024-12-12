@@ -24,7 +24,8 @@ function setLanguage(lang) {
     renderWeaponList();
     updateWeaponNames();
     updateWeaponCardNames();
-    updateCharacterItems(); // Llama a la función de actualización
+    updateCharacterItems();
+    updateCharacterNames();// Llama a la función de actualización
 }
 
 function updateWeaponNames() {
@@ -86,6 +87,7 @@ function updateCharacterItems() {
             }
         });
 
+
         // Actualizar nombres de artifacts
         const artifactElements = card.querySelectorAll('.character-artifacts .item p');
         artifactElements.forEach((element, index) => {
@@ -94,6 +96,24 @@ function updateCharacterItems() {
                 element.textContent = character.artifacts[index].name[currentLanguage];
             }
         });
+    });
+}
+
+function updateCharacterNames() {
+    const characterCardNames = document.querySelectorAll('.character-card h4');
+    characterCardNames.forEach(cardNameElement => {
+      const characterEnglishName = cardNameElement.textContent;
+      const characterData = genshinCharacters.find(character => character.name.es === characterEnglishName);
+      if(characterData){
+          cardNameElement.textContent = characterData.name[currentLanguage];
+      }
+    });
+
+    const characterModalNames = document.querySelectorAll('.character-item p');
+    characterModalNames.forEach((modalNameElement, index) => {
+        if (genshinCharacters[index]) {
+            modalNameElement.textContent = genshinCharacters[index].name[currentLanguage];
+        }
     });
 }
 
@@ -142,13 +162,14 @@ function openCharacterModal() {
         const charItem = document.createElement("div");
         charItem.classList.add("character-item");
         charItem.innerHTML = `
-            <img src="${character.img}" alt="${character.name}" width="100">
-            <p>${character.name}</p>
+            <img src="${character.img}" alt="${character.name.es}" width="100">
+            <p>${character.name.es}</p>
         `;
         charItem.addEventListener("click", () => addCharacterCard(character));
         characterList.appendChild(charItem);
     });
     characterModal.classList.remove("hidden");
+    updateCharacterNames();
 }
 
 // Cerrar el modal
@@ -637,6 +658,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderWeaponList();
         updateWeaponCardNames();
         updateCharacterItems();
+        updateCharacterNames();
 
     const esButton = document.querySelector('button[onclick="setLanguage(\'es\')"]');
     const enButton = document.querySelector('button[onclick="setLanguage(\'en\')"]');
