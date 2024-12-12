@@ -319,7 +319,7 @@ function addCharacterCard(character, isLoading = false) {
         character.weapons.map(weapon => `
             <div class="item">
                 <img src="${weapon.img}" alt="${weapon.name[currentLanguage]}" class="item-img">
-                <p>${weapon.name[currentLanguage]}</p>>
+                <p>${weapon.name[currentLanguage]}</p>
             </div>
         `).join('') : '<p>No hay armas disponibles</p>'}
         </div>
