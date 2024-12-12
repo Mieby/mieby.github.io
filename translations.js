@@ -1,4 +1,4 @@
-const translations = {
+/*const translations = {
     en: {
         addCharacter: "Add Character",
         moveCharacters: "Move Characters",
@@ -43,5 +43,5 @@ function updateUI() {
 
 
 
-// Inicializa con el idioma por defecto
+// Inicializa con el idioma por defecto*/
 updateUI();
