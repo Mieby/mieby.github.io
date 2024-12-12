@@ -103,7 +103,7 @@ function updateCharacterNames() {
     // Actualizar nombres en las tarjetas
     const characterCardNames = document.querySelectorAll('.character-card h4');
     characterCardNames.forEach(cardNameElement => {
-        const characterEnglishName = cardNameElement.dataset.characterName; // Usar dataset
+        const characterSpanishName = cardNameElement.dataset.characterName; // Usar dataset
         if (characterSpanishName) {
             const characterData = genshinCharacters.find(character => character.name.es === characterSpanishName);
             if (characterData) {
