@@ -292,6 +292,10 @@ function addCharacterCard(character, isLoading = false) {
         }
     }
 
+    character.items = character.items || getDefaultItemsForCharacter(character.name);
+    character.weapons = character.weapons || getDefaultWeaponsForCharacter(character.name);
+    character.artifacts = character.artifacts || getDefaultArtifactsForCharacter(character.name);
+
     // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
     charCard.classList.add("character-card");
