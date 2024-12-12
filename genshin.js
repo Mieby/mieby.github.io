@@ -16,7 +16,14 @@ const clickCharacterModal = document.getElementById("click-character-modal");
 const deleteCharacterBtn = document.getElementById("delete-character-btn");
 const closeCharacterModalBtn = document.getElementById("close-character-modal");
 
-let currentLanguage = localStorage.getItem('preferredLanguage') || 'es'; // Variable para almacenar el idioma actua
+let currentLanguage = localStorage.getItem('preferredLanguage') || 'es'; // Valor por defecto 'es'
+const availableLanguages = ['es', 'en']; // Lista de idiomas disponibles
+
+if (!availableLanguages.includes(currentLanguage)) {
+    console.warn(`Idioma "${currentLanguage}" no disponible. Usando "es" por defecto.`);
+    currentLanguage = 'es'; // Si el idioma guardado no es válido, usa 'es'
+    localStorage.setItem('preferredLanguage', 'es'); // Actualiza el localStorage para la proxima vez
+}
 
 function setLanguage(lang) {
     currentLanguage = lang;
