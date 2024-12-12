@@ -20,6 +20,7 @@ let currentLanguage = 'es'; // Variable para almacenar el idioma actual
 
 function setLanguage(lang) {
     currentLanguage = lang;
+    localStorage.setItem('preferredLanguage', lang);
     renderWeaponList();
     updateWeaponNames();
     updateWeaponCardNames()// Llama a la función de actualización
@@ -601,6 +602,15 @@ document.addEventListener("DOMContentLoaded", () => {
         updateWeaponNames();
         renderWeaponList();
         updateWeaponCardNames();
+
+    const esButton = document.querySelector('button[onclick="setLanguage(\'es\')"]');
+    const enButton = document.querySelector('button[onclick="setLanguage(\'en\')"]');
+
+    if(currentLanguage === 'en'){
+        enButton.classList.add('active');
+    }else{
+        esButton.classList.add('active');
+    }
     });
 
     // Configurar el botón de cerrar modal
