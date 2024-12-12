@@ -106,18 +106,18 @@ function updateCharacterItems() {
 
 // Función para obtener los objetos predeterminados por personaje
 function getDefaultItemsForCharacter(characterName) {
-    const character = genshinCharacters.find(char => char.name === characterName);
-    return character && character.items ? character.items : []; // Devuelve el array si existe, si no un array vacío
+  const character = genshinCharacters.find(char => char.name === characterName);
+  return character ? character.items : [];
 }
 
 function getDefaultWeaponsForCharacter(characterName) {
-    const character = genshinCharacters.find(char => char.name === characterName);
-    return character && character.weapons ? character.weapons : []; // Devuelve el array si existe, si no un array vacío
+  const character = genshinCharacters.find(char => char.name === characterName);
+  return character ? character.weapons : [];
 }
 
 function getDefaultArtifactsForCharacter(characterName) {
-    const character = genshinCharacters.find(char => char.name === characterName);
-    return character && character.artifacts ? character.artifacts : []; // Devuelve el array si existe, si no un array vacío
+  const character = genshinCharacters.find(char => char.name === characterName);
+  return character ? character.artifacts : [];
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -292,9 +292,25 @@ function addCharacterCard(character, isLoading = false) {
         }
     }
 
-    character.items = character.items || getDefaultItemsForCharacter(character.name);
-    character.weapons = character.weapons || getDefaultWeaponsForCharacter(character.name);
-    character.artifacts = character.artifacts || getDefaultArtifactsForCharacter(character.name);
+    try {
+        // Asignar valores predeterminados (CON manejo de errores) ANTES de usar character.items, weapons o artifacts
+        character.items = character.items || getDefaultItemsForCharacter(character.name) || [];
+        character.weapons = character.weapons || getDefaultWeaponsForCharacter(character.name) || [];
+        character.artifacts = character.artifacts || getDefaultArtifactsForCharacter(character.name) || [];
+
+        // Verificar que items, weapons y artifacts sean arrays y no null/undefined:
+        if (!Array.isArray(character.items)) {
+          console.error("Error: character.items no es un array para:", character);
+          character.items = []; // Asignar un array vacío para evitar errores posteriores
+        }
+        if (!Array.isArray(character.weapons)) {
+            console.error("Error: character.weapons no es un array para:", character);
+            character.weapons = [];
+        }
+        if (!Array.isArray(character.artifacts)) {
+            console.error("Error: character.artifacts no es un array para:", character);
+            character.artifacts = [];
+        }
 
     // Crear la tarjeta de personaje
     const charCard = document.createElement("div");
@@ -387,9 +403,11 @@ function addCharacterCard(character, isLoading = false) {
     } else {
         disableDrag(charCard);
     }
+} catch (error) {
+        console.error("Error al crear la tarjeta del personaje:", character, error);
+        // Aquí podrías agregar un manejo de errores más robusto, como mostrar un mensaje al usuario
+    }
 }
-
-
                                                                                                                                              //open Weapon Modal    
 // Mostrar el modal de armas
 function openWeaponModal(weaponElement) {
