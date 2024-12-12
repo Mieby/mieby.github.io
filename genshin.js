@@ -308,7 +308,7 @@ function addCharacterCard(character, isLoading = false) {
         character.items.map(item => `
             <div class="item">
                 <img src="${item.img}" alt="${item.name[currentLanguage]}" class="item-img">
-                <p>${weapon.name[currentLanguage]}</p>
+                <p>${item.name[currentLanguage]}</p>
             </div>
         `).join('') : '<p>No hay objetos disponibles</p>'}
         </div>
@@ -319,7 +319,7 @@ function addCharacterCard(character, isLoading = false) {
         character.weapons.map(weapon => `
             <div class="item">
                 <img src="${weapon.img}" alt="${weapon.name[currentLanguage]}" class="item-img">
-                <p>${artifact.name[currentLanguage]}</p>>
+                <p>${weapon.name[currentLanguage]}</p>>
             </div>
         `).join('') : '<p>No hay armas disponibles</p>'}
         </div>
