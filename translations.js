@@ -1,34 +1,21 @@
-/*const translations = {
+const translations = {
     en: {
         addCharacter: "Add Character",
         moveCharacters: "Move Characters",
         resetData: "Reset All Data",
-        weapons: {
-            "Anemona Gemela": "Twin-Necklace",
-            "Espada del peñasco oscuro": "Dark Rock Sword",
-            "Espada de Favonius": "Favonius Sword"
-            // Agrega más armas según sea necesario
-        }
+        reloj: 'Reloj',
+        caliz: 'Cáliz',
+        corona: 'Corona'
     },
     es: {
         addCharacter: "Agregar Personaje",
         moveCharacters: "Mover Personajes",
         resetData: "Borrar Todos los Datos",
-        weapons: {
-            "Anemona Gemela": "Anemona Gemela",
-            "Espada del peñasco oscuro": "Espada del peñasco oscuro",
-            "Espada de Favonius": "Espada de Favonius"
-            // Agrega más armas según sea necesario
-        }
+        reloj: 'Hourglass',
+        caliz: 'Goblet',
+        corona: 'Crown',
     }
 };
-
-let currentLang = 'es'; // Establece el idioma por defecto como español
-
-function setLanguage(lang) {
-    currentLang = lang;
-    updateUI();
-}
 
 
 function updateUI() {
@@ -40,6 +27,8 @@ function updateUI() {
     });
     
 }
+
+export default translations;
 
 
 
