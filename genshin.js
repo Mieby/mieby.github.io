@@ -330,7 +330,7 @@ function addCharacterCard(character, isLoading = false) {
         character.artifacts.map(artifact => `
             <div class="item">
                 <img src="${artifact.img}" alt="${artifact.name[currentLanguage]}" class="item-img">
-                <p>${artifact.name}</p>
+                <p>${artifact.name[currentLanguage]}</p>
             </div>
         `).join('') : '<p>No hay artefactos disponibles</p>'}
         </div>
