@@ -1,4 +1,4 @@
-const translations = {
+/*const translations = {
     en: {
         addCharacter: "Add Character",
         moveCharacters: "Move Characters",
@@ -15,7 +15,7 @@ const translations = {
         caliz: 'Goblet',
         corona: 'Crown',
     }
-};
+};*/
 
 
 //function updateUI() {
@@ -26,6 +26,6 @@ const translations = {
     
 //}
 //updateUI();
-export default translations;
+//export default translations;
 
 
