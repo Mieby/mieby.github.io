@@ -18,14 +18,14 @@ const translations = {
 };
 
 
-function updateUI() {
-    document.getElementById('add-character-btn').innerText = translations[currentLang].addCharacter;
-    document.getElementById('enable-drag-btn').innerText = translations[currentLang].moveCharacters;
-    document.getElementById('reset-data').innerText = translations[currentLang].resetData;
+//function updateUI() {
+//    document.getElementById('add-character-btn').innerText = translations[currentLang].addCharacter;
+//    document.getElementById('enable-drag-btn').innerText = translations[currentLang].moveCharacters;
+//    document.getElementById('reset-data').innerText = translations[currentLang].resetData;
 
     
-}
-updateUI();
-module.exports = translations;
+//}
+//updateUI();
+export default translations;
 
 
