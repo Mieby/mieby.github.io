@@ -1,4 +1,4 @@
-import translations from './translations.js';
+const translations = require('./translations.js');
 
 // Elementos del DOM
 const characterGrid = document.getElementById("character-grid");
