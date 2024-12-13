@@ -22,15 +22,10 @@ function updateUI() {
     document.getElementById('add-character-btn').innerText = translations[currentLang].addCharacter;
     document.getElementById('enable-drag-btn').innerText = translations[currentLang].moveCharacters;
     document.getElementById('reset-data').innerText = translations[currentLang].resetData;
-    document.querySelectorAll(".weapon-item p").forEach(item => {
-        item.textContent = translations[currentLang].weapons[item.textContent] || item.textContent;
-    });
+
     
 }
-
-export default translations;
-
-
-
-// Inicializa con el idioma por defecto*/
 updateUI();
+module.exports = translations;
+
+
