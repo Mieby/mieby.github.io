@@ -1,5 +1,3 @@
-const translations = require('./translations.js');
-
 // Elementos del DOM
 const characterGrid = document.getElementById("character-grid");
 const characterModal = document.getElementById("character-modal");
