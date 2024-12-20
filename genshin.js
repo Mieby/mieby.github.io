@@ -171,9 +171,9 @@ const enableDragBtn = document.getElementById("enable-drag-btn");
 
 function updateDragButtonText() {
     if (currentLanguage === 'es') {
-        enableDragBtn.textContent = dragEnabled ? 'Deshabilitar Mover Personajes' : 'Habilitar Mover Personajes';
+        enableDragBtn.textContent = dragEnabled ? 'Deshabilitar arrastre' : 'Cambiar order';
     } else if (currentLanguage === 'en') {
-        enableDragBtn.textContent = dragEnabled ? 'Disable Move Characters' : 'Enable Move Characters';
+        enableDragBtn.textContent = dragEnabled ? 'Disable dragging' : 'Change order';
     }
     // Puedes añadir más idiomas aquí
 }
