@@ -660,6 +660,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderWeaponList();
         updateWeaponCardNames();
         updateCharacterItems();
+        updateCharacterLabels();
 
     const esButton = document.querySelector('button[onclick="setLanguage(\'es\')"]');
     const enButton = document.querySelector('button[onclick="setLanguage(\'en\')"]');
