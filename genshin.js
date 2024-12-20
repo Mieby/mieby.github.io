@@ -351,7 +351,7 @@ function addCharacterCard(character, isLoading = false) {
         </div>
 
         <div class="character-objects">
-            <div class="reloj"><strong>${currentLanguage === 'en' ? 'Clock:' : 'Reloj:'}</strong> ${character.reloj}</div>
+            <div class="reloj"><strong>Reloj:</strong> ${character.reloj}</div>
             <div class="caliz"><strong>${currentLanguage === 'en' ? 'Goblet:' : 'Caliz:'}</strong> ${character.caliz}</div>
             <div class="corona"><strong>${currentLanguage === 'en' ? 'Circlet:' : 'Corona:'}</strong> ${character.corona}</div>
             <div class="subs"><strong>Subs:</strong> ${character.subs}</div>
