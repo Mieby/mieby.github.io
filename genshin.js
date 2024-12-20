@@ -118,10 +118,6 @@ function getDefaultItemsForCharacter(characterName) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
-
-    const characterGrid = document.getElementById("characterGrid");
-    characterGrid.innerHTML = '';
-    
     savedCharacters.forEach(character => {
         // Verificar si el personaje tiene objetos, si no asignarlos por defecto
         const characterWithDefaultItems = {
