@@ -288,17 +288,17 @@ function addCharacterCard(character, isLoading = false) {
         <div class="constellation editable" contenteditable="true">${character.constellation || 'C0'}</div>
         <img src="${character.img}" alt="${character.name}" class="character-img">
         <h4>${character.name}</h4>
-        <div class="level editable" contenteditable="true">${character.level || '20/40'}</div>
+        <div class="level editable" contenteditable="true">${character.level || '1/20'}</div>
         <div class="talents">
-            <div class="talent editable" contenteditable="true">${character.talent1 || '0'}</div>
-            <div class="talent editable" contenteditable="true">${character.talent2 || '0'}</div>
-            <div class="talent editable" contenteditable="true">${character.talent3 || '0'}</div>
+            <div class="talent editable" contenteditable="true">${character.talent1 || '1'}</div>
+            <div class="talent editable" contenteditable="true">${character.talent2 || '1'}</div>
+            <div class="talent editable" contenteditable="true">${character.talent3 || '1'}</div>
         </div>
         <div class="weapon-info">
             <img src="${character.weaponImg || 'assets/Baby kougra.png'}" alt="Weapon" class="weapon-img" />
             <div>
-                <div class="weapon-name editable" contenteditable="true">${character.weaponName || 'Ninguna'}</div>
-                <div class="weapon-level editable" contenteditable="true">${character.weaponLevel || '20/40'}</div>
+                <div class="weapon-name editable" contenteditable="true">${character.weaponName || 'None'}</div>
+                <div class="weapon-level editable" contenteditable="true">${character.weaponLevel || '1/20'}</div>
                 <div class="weapon-rank editable" contenteditable="true">${character.weaponRank || 'R1'}</div>
            </div>
         </div>
