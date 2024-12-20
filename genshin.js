@@ -678,12 +678,12 @@ function updateButtonLabels() {
         addCharacterBtn.textContent = 'Agregar Personaje';
         enableDragBtn.textContent = 'Mover Personajes';
         closeModalBtn.textContent = 'Cerrar';
-        close-weapon-modal.textContent = 'Cerrar';
+        closeWeaponModalBtn.textContent = 'Cerrar';
     } else if (currentLanguage === 'en') {
         addCharacterBtn.textContent = 'Add Character';
         enableDragBtn.textContent = 'Move Characters';
         closeModalBtn.textContent = 'Close';
-        close-weapon-modal.textContent = 'Close';
+        closeWeaponModalBtn.textContent = 'Close';
     }
     // Puedes añadir más idiomas aquí
 }                                                                                                                                        //traducciones de botones
