@@ -506,7 +506,7 @@ function saveCharacterState() {
         weaponRank: card.querySelector(".weapon-rank").textContent,
         reloj: card.querySelector(".reloj").textContent.replace("Reloj: ", "").trim(),
         caliz: card.querySelector(".caliz").textContent.replace("Caliz: ", "").trim(),
-        corona: card.querySelector(".corona").textContent.replace("Corona: ", "").trim(),
+        corona: card.querySelector(".corona").textContent.replace("🜲: ", "").trim(),
         subs: card.querySelector(".subs").textContent.replace("Subs: ", "").trim(),
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
         items: card.querySelector(".character-items") ? Array.from(card.querySelectorAll(".character-items .item")).map(item => ({
