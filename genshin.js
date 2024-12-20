@@ -338,9 +338,9 @@ function addCharacterCard(character, isLoading = false) {
         </div>
 
         <div class="character-objects">
-    <div class="reloj"><strong>Reloj:</strong> ${character.reloj}</div>
-    <div class="caliz"><strong>Caliz:</strong> ${character.caliz}</div>
-    <div class="corona"><strong>Corona:</strong> ${character.corona}</div>
+    <div class="reloj"><strong>${translate('reloj')}:</strong> ${character.reloj}</div>
+    <div class="caliz"><strong>${translate('caliz')}:</strong> ${character.caliz}</div>
+    <div class="corona"><strong>${translate('corona')}:</strong> ${character.corona}</div>
     <div class="subs"><strong>Subs:</strong> ${character.subs}</div>
         </div>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
@@ -582,9 +582,9 @@ function toggleCharacterInfo() {
             characterBox.innerHTML = `
                 <h5>${card.querySelector("h4").textContent}</h5>
                 <div class="character-objects">
-        <div class="reloj"><strong>Reloj:</strong> ${character.reloj}</div>
-        <div class="caliz"><strong>Caliz:</strong> ${character.caliz}</div>
-        <div class="corona"><strong>Corona:</strong> ${character.corona}</div>
+        <div class="reloj"><strong>${translate('reloj')}:</strong> ${character.reloj}</div>
+        <div class="caliz"><strong>${translate('caliz')}:</strong> ${character.caliz}</div>
+        <div class="corona"><strong>${translate('corona')}:</strong> ${character.corona}</div>
     </div>
                 <textarea class="editable-text">${card.querySelector("h4").textContent || ''}</textarea>
             `;
@@ -670,3 +670,21 @@ document.addEventListener("input", event => {
         saveCharacterState();
     }
 });
+
+                                                                                                                                            //TRADUCCION DE TEXTOS
+const transTextos = {
+    es: {
+        reloj: "Reloj",
+        caliz: "Caliz",
+        corona: "Corona"
+    },
+    en: {
+        reloj: "Timepiece",
+        caliz: "Goblet",
+        corona: "Crown"
+    }
+};
+
+function translate(key) {
+    return translations[currentLanguage][key] || key;
+}
