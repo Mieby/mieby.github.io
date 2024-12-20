@@ -27,6 +27,7 @@ function setLanguage(lang) {
     updateWeaponNames();
     updateWeaponCardNames();
     updateCharacterItems(); // Llama a la función de actualización
+    updateButtonLabels()
 }
 
 function updateWeaponNames() {
@@ -639,6 +640,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderWeaponList();
         updateWeaponCardNames();
         updateCharacterItems();
+        updateButtonLabels() 
 
     const esButton = document.querySelector('button[onclick="setLanguage(\'es\')"]');
     const enButton = document.querySelector('button[onclick="setLanguage(\'en\')"]');
@@ -670,3 +672,18 @@ document.addEventListener("input", event => {
         saveCharacterState();
     }
 });
+
+function updateButtonLabels() {
+    if (currentLanguage === 'es') {
+        addCharacterBtn.textContent = 'Agregar Personaje';
+        enableDragBtn.textContent = 'Mover Personajes';
+        closeModalBtn.textContent = 'Cerrar';
+    } else if (currentLanguage === 'en') {
+        addCharacterBtn.textContent = 'Add Character';
+        enableDragBtn.textContent = 'Move Characters';
+        closeModalBtn.textContent = 'Close';
+    }
+    // Puedes añadir más idiomas aquí
+}                                                                                                                                        //traducciones de botones
+
+
