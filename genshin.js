@@ -27,7 +27,8 @@ function setLanguage(lang) {
     updateWeaponNames();
     updateWeaponCardNames();
     updateCharacterItems(); // Llama a la función de actualización
-    updateButtonLabels()
+    updateButtonLabels();
+    updateDragButtonText();
 }
 
 function updateWeaponNames() {
@@ -168,10 +169,20 @@ let dragEnabled = false;
 // Obtener el botón para habilitar el arrastre
 const enableDragBtn = document.getElementById("enable-drag-btn");
 
+function updateDragButtonText() {
+    if (currentLanguage === 'es') {
+        enableDragBtn.textContent = dragEnabled ? 'Deshabilitar Mover Personajes' : 'Habilitar Mover Personajes';
+    } else if (currentLanguage === 'en') {
+        enableDragBtn.textContent = dragEnabled ? 'Disable Move Characters' : 'Enable Move Characters';
+    }
+    // Puedes añadir más idiomas aquí
+}
+
 // Función para habilitar o deshabilitar el arrastre
 enableDragBtn.addEventListener("click", () => {
     dragEnabled = !dragEnabled; // Cambiar el estado
-    enableDragBtn.textContent = dragEnabled ? "Deshabilitar Mover Personajes" : "Habilitar Mover Personajes";
+    //enableDragBtn.textContent = dragEnabled ? "Deshabilitar Mover Personajes" : "Habilitar Mover Personajes";
+    updateDragButtonText();
     const characterCards = document.querySelectorAll(".character-card");
     characterCards.forEach(card => {
         if (dragEnabled) {
