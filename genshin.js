@@ -672,20 +672,23 @@ document.addEventListener("input", event => {
         saveCharacterState();
     }
 });
-
+                                                                                                                                        //traducciones de botones
 function updateButtonLabels() {
     if (currentLanguage === 'es') {
         addCharacterBtn.textContent = 'Agregar Personaje';
         enableDragBtn.textContent = 'Mover Personajes';
         closeModalBtn.textContent = 'Cerrar';
         closeWeaponModalBtn.textContent = 'Cerrar';
+        deleteCharacterBtn.textContent = 'Borrar';
+        closeCharacterModalBtn.textContent = 'Cerrar';
     } else if (currentLanguage === 'en') {
         addCharacterBtn.textContent = 'Add Character';
         enableDragBtn.textContent = 'Move Characters';
         closeModalBtn.textContent = 'Close';
         closeWeaponModalBtn.textContent = 'Close';
+        deleteCharacterBtn.textContent = 'Delete';
+        closeCharacterModalBtn.textContent = 'Close';
     }
     // Puedes añadir más idiomas aquí
-}                                                                                                                                        //traducciones de botones
-
+}                                                                                                                                        
 
