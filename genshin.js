@@ -338,8 +338,8 @@ function addCharacterCard(character, isLoading = false) {
         </div>
 
         <div class="character-objects">
-    <div class="reloj"><strong>Reloj:</strong> ${character.reloj}</div>
-    <div class="caliz"><strong>Caliz:</strong> ${character.caliz}</div>
+    <div class="reloj"><strong>ⴵ:</strong> ${character.reloj}</div>
+    <div class="caliz"><strong>♖:</strong> ${character.caliz}</div>
     <div class="corona"><strong>🜲:</strong> ${character.corona}</div>
     <div class="subs"><strong>Subs:</strong> ${character.subs}</div>
         </div>
@@ -504,8 +504,8 @@ function saveCharacterState() {
         weaponName: card.querySelector(".weapon-name").textContent,
         weaponLevel: card.querySelector(".weapon-level").textContent,
         weaponRank: card.querySelector(".weapon-rank").textContent,
-        reloj: card.querySelector(".reloj").textContent.replace("Reloj: ", "").trim(),
-        caliz: card.querySelector(".caliz").textContent.replace("Caliz: ", "").trim(),
+        reloj: card.querySelector(".reloj").textContent.replace("ⴵ: ", "").trim(),
+        caliz: card.querySelector(".caliz").textContent.replace("♖: ", "").trim(),
         corona: card.querySelector(".corona").textContent.replace("🜲: ", "").trim(),
         subs: card.querySelector(".subs").textContent.replace("Subs: ", "").trim(),
         additionalInfo: card.querySelector(".character-box .editable-text") ? card.querySelector(".character-box .editable-text").value : "", // Guardar el contenido del textarea
@@ -582,8 +582,8 @@ function toggleCharacterInfo() {
             characterBox.innerHTML = `
                 <h5>${card.querySelector("h4").textContent}</h5>
                 <div class="character-objects">
-        <div class="reloj"><strong>Reloj:</strong> ${character.reloj}</div>
-        <div class="caliz"><strong>Caliz:</strong> ${character.caliz}</div>
+        <div class="reloj"><strong>ⴵ:</strong> ${character.reloj}</div>
+        <div class="caliz"><strong>♖:</strong> ${character.caliz}</div>
         <div class="corona"><strong>🜲:</strong> ${character.corona}</div>
     </div>
                 <textarea class="editable-text">${card.querySelector("h4").textContent || ''}</textarea>
