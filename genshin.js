@@ -106,9 +106,17 @@ function updateCharacterLabels() {
     const relojElement = card.querySelector('.reloj strong');
     const calizElement = card.querySelector('.caliz strong');
     const coronaElement = card.querySelector('.corona strong');
-    relojElement.textContent = currentLanguage === 'en' ? 'Clock:' : 'Reloj:';
-    calizElement.textContent = currentLanguage === 'en' ? 'Goblet:' : 'Caliz:';
-    coronaElement.textContent = currentLanguage === 'en' ? 'Circlet:' : 'Corona:';
+
+    // Update only if the current text doesn't match the desired translation
+    if (relojElement.textContent !== (currentLanguage === 'en' ? 'Clock:' : 'Reloj:')) {
+      relojElement.textContent = currentLanguage === 'en' ? 'Clock:' : 'Reloj:';
+    }
+    if (calizElement.textContent !== (currentLanguage === 'en' ? 'Goblet:' : 'Caliz:')) {
+      calizElement.textContent = currentLanguage === 'en' ? 'Goblet:' : 'Caliz:';
+    }
+    if (coronaElement.textContent !== (currentLanguage === 'en' ? 'Circlet:' : 'Corona:')) {
+      coronaElement.textContent = currentLanguage === 'en' ? 'Circlet:' : 'Corona:';
+    }
   });
 }
 
@@ -653,6 +661,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderWeaponList();
         updateWeaponCardNames();
         updateCharacterItems();
+        updateCharacterLabels();
 
     const esButton = document.querySelector('button[onclick="setLanguage(\'es\')"]');
     const enButton = document.querySelector('button[onclick="setLanguage(\'en\')"]');
