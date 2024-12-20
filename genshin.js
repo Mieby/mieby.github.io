@@ -106,17 +106,6 @@ function updateCharacterLabels() {
     const relojElement = card.querySelector('.reloj strong');
     const calizElement = card.querySelector('.caliz strong');
     const coronaElement = card.querySelector('.corona strong');
-
-    // Update only if the current text doesn't match the desired translation
-    if (relojElement.textContent !== (currentLanguage === 'en' ? 'Clock:' : 'Reloj:')) {
-      relojElement.textContent = currentLanguage === 'en' ? 'Clock:' : 'Reloj:';
-    }
-    if (calizElement.textContent !== (currentLanguage === 'en' ? 'Goblet:' : 'Caliz:')) {
-      calizElement.textContent = currentLanguage === 'en' ? 'Goblet:' : 'Caliz:';
-    }
-    if (coronaElement.textContent !== (currentLanguage === 'en' ? 'Circlet:' : 'Corona:')) {
-      coronaElement.textContent = currentLanguage === 'en' ? 'Circlet:' : 'Corona:';
-    }
   });
 }
 
@@ -129,6 +118,10 @@ function getDefaultItemsForCharacter(characterName) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const savedCharacters = JSON.parse(localStorage.getItem("genshinCharacters")) || [];
+
+    const characterGrid = document.getElementById("characterGrid");
+    characterGrid.innerHTML = '';
+    
     savedCharacters.forEach(character => {
         // Verificar si el personaje tiene objetos, si no asignarlos por defecto
         const characterWithDefaultItems = {
@@ -603,8 +596,6 @@ function toggleCharacterInfo() {
             characterBox.innerHTML = `
                 <h5>${card.querySelector("h4").textContent}</h5>
                 <div class="character-objects">
-        <div class="reloj"><strong>Reloj:</strong> ${character.reloj}</div>
-        <div class="caliz"><strong>Caliz:</strong> ${character.caliz}</div>
         
     </div>
                 <textarea class="editable-text">${card.querySelector("h4").textContent || ''}</textarea>
