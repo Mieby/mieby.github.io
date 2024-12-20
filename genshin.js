@@ -686,5 +686,5 @@ const transTextos = {
 };
 
 function translate(key) {
-    return translations[currentLanguage][key] || key;
+    return transTextos[currentLanguage][key] || key;
 }
