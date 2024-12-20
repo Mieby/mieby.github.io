@@ -181,7 +181,6 @@ function updateDragButtonText() {
 // Función para habilitar o deshabilitar el arrastre
 enableDragBtn.addEventListener("click", () => {
     dragEnabled = !dragEnabled; // Cambiar el estado
-    //enableDragBtn.textContent = dragEnabled ? "Deshabilitar Mover Personajes" : "Habilitar Mover Personajes";
     updateDragButtonText();
     const characterCards = document.querySelectorAll(".character-card");
     characterCards.forEach(card => {
@@ -687,14 +686,14 @@ document.addEventListener("input", event => {
 function updateButtonLabels() {
     if (currentLanguage === 'es') {
         addCharacterBtn.textContent = 'Agregar Personaje';
-        enableDragBtn.textContent = 'Mover Personajes';
+        enableDragBtn.textContent = 'Cambiar orden';
         closeModalBtn.textContent = 'Cerrar';
         closeWeaponModalBtn.textContent = 'Cerrar';
         deleteCharacterBtn.textContent = 'Borrar';
         closeCharacterModalBtn.textContent = 'Cerrar';
     } else if (currentLanguage === 'en') {
         addCharacterBtn.textContent = 'Add Character';
-        enableDragBtn.textContent = 'Move Characters';
+        enableDragBtn.textContent = 'Change order';
         closeModalBtn.textContent = 'Close';
         closeWeaponModalBtn.textContent = 'Close';
         deleteCharacterBtn.textContent = 'Delete';
