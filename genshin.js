@@ -27,7 +27,6 @@ function setLanguage(lang) {
     updateWeaponNames();
     updateWeaponCardNames();
     updateCharacterItems(); // Llama a la función de actualización
-    updateCharacterLabels();
 }
 
 function updateWeaponNames() {
@@ -98,15 +97,6 @@ function updateCharacterItems() {
             }
         });
     });
-}
-
-function updateCharacterLabels() {
-  const characterCards = document.querySelectorAll('.character-card');
-  characterCards.forEach(card => {
-    const relojElement = card.querySelector('.reloj strong');
-    const calizElement = card.querySelector('.caliz strong');
-    const coronaElement = card.querySelector('.corona strong');
-  });
 }
 
 
@@ -646,7 +636,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderWeaponList();
         updateWeaponCardNames();
         updateCharacterItems();
-        updateCharacterLabels();
 
     const esButton = document.querySelector('button[onclick="setLanguage(\'es\')"]');
     const enButton = document.querySelector('button[onclick="setLanguage(\'en\')"]');
