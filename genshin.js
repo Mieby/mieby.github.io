@@ -340,7 +340,7 @@ function addCharacterCard(character, isLoading = false) {
         <div class="character-objects">
     <div class="reloj"><strong>Reloj:</strong> ${character.reloj}</div>
     <div class="caliz"><strong>Caliz:</strong> ${character.caliz}</div>
-    <div class="corona"><strong>Corona:</strong> ${character.corona}</div>
+    <div class="corona"><strong>🜲:</strong> ${character.corona}</div>
     <div class="subs"><strong>Subs:</strong> ${character.subs}</div>
         </div>
             <textarea class="editable-text">${character.additionalInfo || ''}</textarea>
