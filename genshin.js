@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+    updateCharacterLabels();
 });
 
 // Mostrar lista de personajes en el modal
