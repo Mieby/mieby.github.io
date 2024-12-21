@@ -316,7 +316,7 @@ function addCharacterCard(character, isLoading = false) {
             <div class="talent editable" contenteditable="true">${character.talent3 || '1'}</div>
         </div>
         <div class="weapon-info">
-            <img src="${character.weaponImg || 'assets/Baby kougra.png'}" alt="Weapon" class="weapon-img" />
+            <img src="${character.weaponImg || 'assets/icons/sword.png'}" alt="Weapon" class="weapon-img" />
             <div>
                 <div class="weapon-name editable" contenteditable="true">${character.weaponName || 'None'}</div>
                 <div class="weapon-level editable" contenteditable="true">${character.weaponLevel || '1/20'}</div>
