@@ -210,6 +210,7 @@
     flex-direction: column; /* Organiza los textos en una columna */
     justify-content: center; /* Centra los textos verticalmente */
     align-items: center; /* Centra los textos horizontalmente */
+    text-align: center;
 }
 
 /* Estilo para el nombre del arma */
