@@ -211,6 +211,7 @@
     justify-content: center; /* Centra los textos verticalmente */
     align-items: center; /* Centra los textos horizontalmente */
     text-align: center;
+    margin: 0 auto;
 }
 
 /* Estilo para el nombre del arma */
