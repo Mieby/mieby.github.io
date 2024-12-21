@@ -621,10 +621,19 @@ function openCharacterModalForEdit(characterElement) {
     // Mostrar el modal
     characterModal.classList.remove("hidden");
 }
+function deleteCharacter(characterCard) {
+    let confirmationMessage = "";
+
+    // Determinar el mensaje de confirmación basado en el idioma actual
+    if (currentLanguage === 'es') {
+        confirmationMessage = "¿Estás seguro de que deseas borrar este personaje?";
+    } else if (currentLanguage === 'en') {
+        confirmationMessage = "Are you sure you want to delete this character?";
+    }
 
 // Función para eliminar un personaje
 function deleteCharacter(characterCard) {
-    if (confirm("¿Estás seguro de que deseas borrar este personaje?")) {
+    if (confirm(confirmationMessage)) {
         const parent = characterCard.parentElement;
 
         // Eliminar la tarjeta del personaje
