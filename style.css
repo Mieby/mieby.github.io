@@ -7,11 +7,12 @@ body {
 
 nav {
     margin-bottom: 20px;
+    position: relative;
 }
 
 nav button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: transparent;
     color: white;
     border: none;
     border-radius: 5px;
