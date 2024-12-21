@@ -29,6 +29,7 @@ function setLanguage(lang) {
     updateCharacterItems(); // Llama a la función de actualización
     updateButtonLabels();
     updateDragButtonText();
+    updateTexts();
 }
 
 function updateWeaponNames() {
@@ -716,5 +717,29 @@ function updateButtonLabels() {
         closeCharacterModalBtn.textContent = 'Close';
     }
     // Puedes añadir más idiomas aquí
-}                                                                                                                                        
+}     
+
+const transtexts = {
+    es: {
+        characterManagement: "Gestión de Personajes de Genshin",
+        selectCharacter: "Seleccionar Personaje",
+        selectWeapon: "Seleccionar Arma"
+    },
+    en: {
+        characterManagement: "Genshin Character Management",
+        selectCharacter: "Select Character",
+        selectWeapon: "Select Weapon"
+    }
+    // Puedes agregar más idiomas aquí
+};
+function updateTexts() {
+    const lang = currentLanguage; // Obtener el idioma actual (asume que tienes 'currentLanguage' ya definido)
+    
+    // Actualizar títulos según el idioma
+    document.getElementById('character-management-title').textContent = transtexts[lang].characterManagement;
+    //document.getElementById('select-character-title').textContent = transtexts[lang].selectCharacter;
+    //document.getElementById('select-weapon-title').textContent = transtexts[lang].selectWeapon;
+}
+
+
 
