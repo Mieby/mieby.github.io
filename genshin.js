@@ -632,7 +632,6 @@ function deleteCharacter(characterCard) {
     }
 
 // Función para eliminar un personaje
-function deleteCharacter(characterCard) {
     if (confirm(confirmationMessage)) {
         const parent = characterCard.parentElement;
 
