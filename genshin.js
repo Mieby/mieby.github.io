@@ -284,7 +284,15 @@ function addCharacterCard(character, isLoading = false) {
         const isDuplicate = Array.from(existingCards).some(card => card.textContent === character.name);
 
         if (isDuplicate) {
-            alert(`${character.name} ya ha sido agregado!`);
+            let duplicateMessage = "";
+
+            if (currentLanguage === 'es') {
+                duplicateMessage = `${character.name} ya ha sido agregado!`;
+            } else if (currentLanguage === 'en') {
+                duplicateMessage = `${character.name} has already been added!`;
+            }
+         
+            alert(duplicateMessage);
             return;  // Si el personaje ya está, no lo agregues.
         }
     }
