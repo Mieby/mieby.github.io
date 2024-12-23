@@ -57,13 +57,13 @@ const genshinCharacters = [
     { name: "Sucrose", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png",
               reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
-            { name: { en: "Margarita Voladora", es: "Margarita Voladora" }, img: "assets/Items/recolleccion/Margatita voladora.png" },
-            { name: { en:"Néctar energético", es: "Margarita Voladora" }, img: "assets/Items/monstruitos/Nectar energetico.png" },
-            { name: { en:"Semilla de Huracán", es: "Margarita Voladora" }, img: "assets/Items/minor boss/Semilla de huracan.png" }
+            { name: { en: "Windwheel Aster", es: "Margarita Voladora" }, img: "assets/Items/recolleccion/Margatita voladora.png" },
+            { name: { en:"Energy Nectar", es: "Néctar energético" }, img: "assets/Items/monstruitos/Nectar energetico.png" },
+            { name: { en:"Hur­ri­cane Seed", es: "Semilla de Huracán" }, img: "assets/Items/minor boss/Semilla de huracan.png" }
         ],
         weapons: [
-            { name: { en: "Filosofía de la Libertad", es: "Margarita Voladora" }, img: "assets/Items/Libritos/filosofia de la libertad.png" },
-            { name: { en: "Alma de Boreas", es: "Margarita Voladora" }, img: "assets/Items/weekly boss/Alma de Boreas.png" },
+            { name: { en: "Philosophies of Freedom", es: "Filosofía de la Libertad" }, img: "assets/Items/Libritos/filosofia de la libertad.png" },
+            { name: { en: "Spirit Locket of Boreas", es: "Alma de Boreas" }, img: "assets/Items/weekly boss/Alma de Boreas.png" },
         ],
         artifacts: [
             { name:  { en: "Coming soon", es: "Margarita Voladora" }, img: "ruta/a/imagen/artefacto1.png" }
