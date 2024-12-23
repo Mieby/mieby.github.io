@@ -341,5 +341,126 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-   
+                                                                                                                                                      //cryo 4
+    { name: "Kaeya", element: "Cryo", stars: 4, weaponType: "sword", img: "assets/characters/cryo4/Kaeya.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Layla", element: "Cryo", stars: 4, weaponType: "sword", img: "assets/characters/cryo4/Layla.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Chongyun", element: "Cryo", stars: 4, weaponType: "claymore", img: "assets/characters/cryo4/Chongyun.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Freminet", element: "Cryo", stars: 4, weaponType: "claymore", img: "assets/characters/cryo4/Freminet.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Mika", element: "Cryo", stars: 4, weaponType: "lance", img: "assets/characters/cryo4/Mika.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Rosaria", element: "Cryo", stars: 4, weaponType: "lance", img: "assets/characters/cryo4/Rosaria.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Diona", element: "Cryo", stars: 4, weaponType: "bow", img: "assets/characters/cryo4/Diona.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Charlotte", element: "Cryo", stars: 4, weaponType: "bow", img: "assets/characters/cryo4/Charlotte.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+     
 ];
