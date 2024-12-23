@@ -235,7 +235,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: "Ningguang", element: "Geo", stars: 4, weaponType: "catalist", img: "assets/characters/Geo4/Yun Jin.png",
+    { name: "Ningguang", element: "Geo", stars: 4, weaponType: "catalist", img: "assets/characters/Geo4/Ninguang.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
