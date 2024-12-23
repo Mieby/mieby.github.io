@@ -447,7 +447,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: "Charlotte", element: "Cryo", stars: 4, weaponType: "bow", img: "assets/characters/cryo4/Charlotte.png",
+    { name: "Charlotte", element: "Cryo", stars: 4, weaponType: "catalist", img: "assets/characters/cryo4/Charlotte.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
