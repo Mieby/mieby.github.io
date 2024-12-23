@@ -249,6 +249,97 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
-    },              
+    }, 
+                                                                                                                                                        //Geo 5
+    { name: "Albedo", element: "Geo", stars: 5, weaponType: "sword", img: "assets/characters/geo5/Albedo.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Chiori", element: "Geo", stars: 5, weaponType: "sword", img: "assets/characters/geo5/Chiori.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Xilonen", element: "Geo", stars: 5, weaponType: "sword", img: "assets/characters/geo5/Xilonen.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Navia", element: "Geo", stars: 5, weaponType: "catalist", img: "assets/characters/geo5/Navia.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Itto", element: "Geo", stars: 5, weaponType: "catalist", img: "assets/characters/geo5/Itto.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Zhongli", element: "Geo", stars: 5, weaponType: "lance", img: "assets/characters/geo5/Zhongli.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
    
 ];
