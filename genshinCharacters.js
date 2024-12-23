@@ -462,5 +462,21 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
+                                                                                                                                                  //Cryo5
+    { name: "Ayaka", element: "Cryo", stars: 5, weaponType: "sword", img: "assets/characters/cryo4/Charlotte.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
      
 ];
