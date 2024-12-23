@@ -4,6 +4,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
 #weapon-list .weapon-item {
