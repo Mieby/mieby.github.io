@@ -30,7 +30,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: "Faruzán", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Faruzan-new.png",
+    { name: "Faruzan", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Faruzan-new.png",
               reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/objeto1.png" }
@@ -54,7 +54,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" }
         ]
     },
-    { name: "Sacarosa", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png",
+    { name: "Sucrose", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Sacarosa.png",
               reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Margarita Voladora", es: "Margarita Voladora" }, img: "assets/Items/recolleccion/Margatita voladora.png" },
@@ -68,7 +68,7 @@ const genshinCharacters = [
         artifacts: [
             { name:  { en: "Coming soon", es: "Margarita Voladora" }, img: "ruta/a/imagen/artefacto1.png" }
         ]
-    },                                                                                                                                                     // Anemo 5
+    },                                                                                                                                                  // Anemo 5
     { name: "Xiao", element: "Anemo", stars: 5, weaponType: "lance", img: "assets/characters/Anemo5/Xiao.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
@@ -144,7 +144,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
-    { name: "Scaramuccia", element: "Anemo", stars: 5, weaponType: "catalist", img: "assets/characters/Anemo5/Scara.png",
+    { name: "Scaramouche", element: "Anemo", stars: 5, weaponType: "catalist", img: "assets/characters/Anemo5/Scara.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
@@ -174,5 +174,81 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
         ]
     },
+                                                                                                                                                          //geo 4
+    { name: "Gorou", element: "Geo", stars: 4, weaponType: "bow", img: "assets/characters/Geo4/Gorou.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Noelle", element: "Geo", stars: 4, weaponType: "claymore", img: "assets/characters/Geo4/Noelle.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Kachina", element: "Geo", stars: 4, weaponType: "lance", img: "assets/characters/Geo4/Kachina.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Yun Jin", element: "Geo", stars: 4, weaponType: "lance", img: "assets/characters/Geo4/Yun Jin.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },
+    { name: "Ningguang", element: "Geo", stars: 4, weaponType: "catalist", img: "assets/characters/Geo4/Yun Jin.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/Coming Soon.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto2.png" }
+        ]
+    },              
    
 ];
