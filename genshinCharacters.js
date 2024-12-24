@@ -568,5 +568,141 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ]
     },
+  //
+    { name: "Kuki", element: "Electro", stars: 4, weaponType: "sword", img: "assets/characters/Electro4/Kuki.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Beidou", element: "Electro", stars: 4, weaponType: "claymore", img: "assets/characters/Electro4/Beidou.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Dori", element: "Electro", stars: 4, weaponType: "claymore", img: "assets/characters/Electro4/Dori.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Razor", element: "Electro", stars: 4, weaponType: "claymore", img: "assets/characters/Electro4/Razor.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Fischl", element: "Electro", stars: 4, weaponType: "bow", img: "assets/characters/Electro4/Fischl.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Kojou Sara", element: "Electro", stars: 4, weaponType: "bow", img: "assets/characters/Electro4/Kujou Sara.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Ororon", element: "Electro", stars: 4, weaponType: "bow", img: "assets/characters/Electro4/Ororon.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Ororon", element: "Electro", stars: 4, weaponType: "bow", img: "assets/characters/Electro4/sethos.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Lisa", element: "Electro", stars: 4, weaponType: "bow", img: "assets/characters/Electro4/Lisa.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
      
 ];
