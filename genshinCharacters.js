@@ -19,11 +19,11 @@ const genshinCharacters = [
     { name: "Lynette", element: "Anemo", stars: 4, weaponType: "sword", img: "assets/characters/Lynette.png",
              reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/objeto1.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/objeto2.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: "Espada de viento", img: "ruta/a/imagen/espada_de_viento.png" }
+            { name: "Espada de viento", img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
@@ -33,10 +33,10 @@ const genshinCharacters = [
     { name: "Faruzan", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Faruzan-new.png",
               reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/objeto1.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/caliz_de_viento.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
@@ -45,10 +45,10 @@ const genshinCharacters = [
     { name: "Heizou", element: "Anemo", stars: 4, weaponType: "catalyst", img: "assets/characters/Heizou-new.png",
               reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/objeto1.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/varita_del_viento.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
