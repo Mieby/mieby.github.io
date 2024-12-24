@@ -846,7 +846,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ]
     },
-    { name: "Yelan", element: "Hydro", stars: 5, weaponType: "bow, img: "assets/characters/Hydro5/Yelan.png",
+    { name: "Yelan", element: "Hydro", stars: 5, weaponType: "bow", img: "assets/characters/Hydro5/Yelan.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
