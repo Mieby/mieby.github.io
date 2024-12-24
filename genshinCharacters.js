@@ -462,5 +462,111 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ]
     },
+                                                                                                                                                      //Cryo 5
+    { name: "Ayaka", element: "Cryo", stars: 5, weaponType: "sword", img: "assets/characters/Cryo5/Ayaka.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Qiqi", element: "Cryo", stars: 5, weaponType: "sword", img: "assets/characters/Cryo5/Qiqi.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Eula", element: "Cryo", stars: 5, weaponType: "claymore", img: "assets/characters/Cryo5/Eula.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Shenhe", element: "Cryo", stars: 5, weaponType: "claymore", img: "assets/characters/Cryo5/Shenhe.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Aloy", element: "Cryo", stars: 5, weaponType: "bow", img: "assets/characters/Cryo5/Aloy.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Ganyu", element: "Cryo", stars: 5, weaponType: "bow", img: "assets/characters/Cryo5/Ganyu.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Wriothesley", element: "Cryo", stars: 5, weaponType: "catalist", img: "assets/characters/Cryo5/Wriothesley.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
      
 ];
