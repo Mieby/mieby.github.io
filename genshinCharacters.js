@@ -780,5 +780,90 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ]
     },
+  
+    //dendro4
+    //Dendro5
+    { name: "Alhaitham", element: "Dendro", stars: 5, weaponType: "sword", img: "assets/characters/Dendro5/Alhaitham.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Tighnari", element: "Dendro", stars: 5, weaponType: "bow", img: "assets/characters/Dendro5/Tighnari.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Nahida", element: "Dendro", stars: 5, weaponType: "catalist", img: "assets/characters/Dendro5/Nahida.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+      
+    //hydro4
+    //hydro5
+    { name: "Furina", element: "Hydro", stars: 5, weaponType: "sword", img: "assets/characters/Hydro5/Furina.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+    { name: "Yelan", element: "Hydro", stars: 5, weaponType: "bow, img: "assets/characters/Hydro5/Yelan.png",
+        reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
+        items: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        weapons: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ],
+        artifacts: [
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
+        ]
+    },
+
+    //pyro4
+    
+  
      
 ];
