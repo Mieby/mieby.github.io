@@ -8,8 +8,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -76,8 +76,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -91,8 +91,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -106,8 +106,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -121,8 +121,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -136,8 +136,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -151,8 +151,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -166,8 +166,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -182,8 +182,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -197,8 +197,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -212,8 +212,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -227,8 +227,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -242,8 +242,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -258,8 +258,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -273,8 +273,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -288,8 +288,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -303,8 +303,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -318,8 +318,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -333,8 +333,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -349,8 +349,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -364,8 +364,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -379,8 +379,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -394,8 +394,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -409,8 +409,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -424,8 +424,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -439,8 +439,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
@@ -454,8 +454,8 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         weapons: [
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_de_fuego.png" },
-            { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/espada_legendaria.png" }
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
+            { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ],
         artifacts: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "ruta/a/imagen/artefacto1.png" },
