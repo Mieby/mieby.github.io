@@ -720,7 +720,7 @@ const genshinCharacters = [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" }
         ]
     },
-    { name: "Keqing", element: "Electro", stars: 4, weaponType: "sword", img: "assets/characters/Electro5/Clorinde.png",
+    { name: "Keqing", element: "Electro", stars: 4, weaponType: "sword", img: "assets/characters/Electro5/Keqing.png",
         reloj: "Coming Soon", caliz: "Coming Soon", corona: "Coming Soon", subs: "Coming Soon",
         items: [
             { name: { en: "Coming Soon", es: "Próximamente" }, img: "assets/soon1.png" },
